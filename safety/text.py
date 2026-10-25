@@ -73,5 +73,10 @@ def normalize_for_model(text: str) -> str:
     return _SPACES.sub(" ", t).strip()
 
 
+def normalize_quotes(text: str) -> str:
+    """Curly quotes and backticks -> plain ASCII, nothing else changed (used on companion replies)."""
+    return (text or "").translate(_QUOTES)
+
+
 def word_count(text: str) -> int:
     return len(re.findall(r"[A-Za-z0-9']+", text or ""))

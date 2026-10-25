@@ -39,3 +39,42 @@ crisis_support_directives:
   - "Do not give advice about medicine, diagnosis or methods of harm."
   - "Do not promise to keep secrets."
   - "End with this exact sentence: {support_line}"
+
+# Fixed replies when the user presses a button (demo/orchestrator.py). Keys are the exact
+# button labels used above and in helplines.yaml. `call` is a SafetyAgent method to run first.
+# {support_line} is filled from helplines.yaml and is also appended while a crisis hold is on.
+events:
+  "I am safe now. Go back to practice":
+    call: release_crisis_hold
+    text: "Okay. I am glad you are safe. We can go back to practice. Take your time."
+  "Keep talking with you":
+    text: "I am here. You can tell me what is on your mind."
+    choices: ["Stop for today", "I am safe now. Go back to practice"]
+  "Stop for today":
+    end: true
+    text: "Okay. We stop here for today. Thank you for talking with me."
+  "Take a short break":
+    text: |-
+      Okay. Let's take a short break.
+      Look away from the screen, drink some water, or go somewhere quiet.
+      I will wait here. There is no rush.
+    choices: ["I am back", "Stop for today"]
+  "I am back":
+    call: user_chose_continue
+    text: "Welcome back. We can continue when you are ready."
+  "I did it":
+    call: user_chose_continue
+    text: "Thank you for trying it. What would you like to do now?"
+    choices: ["Go back to practice", "Take a short break", "Stop for today"]
+  "Keep going":
+    call: user_chose_continue
+    text: "Okay. Let's keep going."
+  "Go back to practice":
+    call: user_chose_continue
+    text: "Okay. Let's go back to practice. Say the next thing when you are ready."
+  "Something else":
+    next_prompt: true        # offer the next Level 2 prompt from the list above
+  feelings:                  # the answers to the name_the_feeling prompt
+    labels: ["Tired", "Worried", "Angry", "Too loud or too much"]
+    text: "Thank you for telling me. It is okay to feel like that. What would you like to do now?"
+    choices: ["Take a short break", "Go back to practice", "Stop for today"]

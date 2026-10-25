@@ -1,6 +1,6 @@
-"""Step 5a - TF-IDF + logistic regression baseline (CPU, seconds).
+"""TF-IDF + logistic regression baseline (CPU, seconds). Usually run through scripts/train.py.
 
-    python scripts/train_baseline.py
+    python scripts/train_baseline.py                      # data/synthetic -> runs/full/models/baseline
 
 Serves two purposes: a baseline row in the results table, and a fallback
 classifier for the demo if the transformer is not available on the demo laptop.
@@ -14,7 +14,7 @@ from pathlib import Path
 import _common  # noqa: F401
 import joblib
 import numpy as np
-from _common import FULL, ROOT, read_jsonl
+from _common import DATA, FULL, read_jsonl
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import f1_score, recall_score
 from sklearn.pipeline import FeatureUnion, Pipeline
@@ -34,8 +34,8 @@ def make_pipe(C: float) -> Pipeline:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--train", default=str(FULL / "data/processed/train.jsonl"))
-    ap.add_argument("--val", default=str(FULL / "data/processed/val.jsonl"))
+    ap.add_argument("--train", default=str(DATA / "train.jsonl"))
+    ap.add_argument("--val", default=str(DATA / "val.jsonl"))
     ap.add_argument("--out", default=str(FULL / "models/baseline"))
     args = ap.parse_args()
 

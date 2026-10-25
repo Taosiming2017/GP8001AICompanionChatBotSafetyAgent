@@ -85,9 +85,19 @@ class TransformerClassifier(BaseClassifier):
         from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
         self.torch = torch
-        self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
         self.tok = AutoTokenizer.from_pretrained(self.model_dir)
-        self.model = AutoModelForSequenceClassification.from_pretrained(self.model_dir).to(self.device).eval()
+        model = AutoModelForSequenceClassification.from_pretrained(self.model_dir)
+        want = device if device and device != "auto" else ("cuda" if torch.cuda.is_available() else "cpu")
+        try:
+            self.model = model.to(want).eval()
+            self.device = want
+        except RuntimeError as e:  # typically CUDA out of memory because LM Studio holds the GPU
+            if want == "cpu":
+                raise
+            print(f"[safety] classifier cannot use {want} ({str(e).splitlines()[0][:80]}); using CPU")
+            torch.cuda.empty_cache()
+            self.model = model.to("cpu").eval()
+            self.device = "cpu"
         meta = self.model_dir / "meta.json"
         self.max_len = json.loads(meta.read_text(encoding="utf-8")).get("max_len", max_len) if meta.exists() else max_len
 
@@ -103,8 +113,11 @@ class TransformerClassifier(BaseClassifier):
         return np.concatenate(out, axis=0)
 
 
-def load_classifier(model_dir: str | Path) -> Optional[BaseClassifier]:
-    """Load whatever is in model_dir; None if it does not hold a trained model."""
+def load_classifier(model_dir: str | Path, device: Optional[str] = None) -> Optional[BaseClassifier]:
+    """Load whatever is in model_dir; None if it does not hold a trained model.
+
+    device: None/"auto" (GPU if free, else CPU), "cpu" or "cuda"; transformer only.
+    """
     d = Path(model_dir)
     meta = d / "meta.json"
     if not meta.exists():
@@ -113,7 +126,7 @@ def load_classifier(model_dir: str | Path) -> Optional[BaseClassifier]:
     if kind == "tfidf_lr":
         return TfidfClassifier(d)
     if kind == "transformer":
-        return TransformerClassifier(d)
+        return TransformerClassifier(d, device=device)
     raise ValueError(f"unknown model_type {kind!r} in {meta}")
 
 
@@ -129,22 +142,22 @@ class ClassifierLayer:
         p_crisis = float(p[Level.CRISIS])
         top = int(np.argmax(p))
         conf = float(p[top])
-        reasons, wants_llm = [], False
+        reasons, wants_llm, risk = [], False, False
 
         if p_crisis >= self.th["crisis_hi"]:
             level = Level.CRISIS
             reasons.append(f"p_crisis {p_crisis:.2f} >= crisis_hi {self.th['crisis_hi']:.2f}")
         elif p_crisis >= self.th["crisis_lo"] or top == Level.CRISIS:
             level = Level(top)
-            wants_llm = True
+            wants_llm = risk = True   # a possible crisis: the LLM decides, and fail-safe applies if it cannot
             reasons.append(f"p_crisis {p_crisis:.2f} in grey zone [{self.th['crisis_lo']:.2f}, {self.th['crisis_hi']:.2f})")
         else:
             level = Level(top)
             if level == Level.OVERWHELMED and conf < self.th["min_conf"]:
-                wants_llm = True
+                wants_llm = True      # unsure between 1 and 2 only; not a crisis signal
                 reasons.append(f"uncertain overwhelmed (conf {conf:.2f})")
 
         return LayerResult(
-            layer="classifier", level=level, confidence=conf, probs=probs,
-            reasons=reasons, wants_llm=wants_llm, latency_ms=(time.perf_counter() - t0) * 1000,
+            layer="classifier", level=level, confidence=conf, probs=probs, reasons=reasons,
+            wants_llm=wants_llm, risk_signal=risk, latency_ms=(time.perf_counter() - t0) * 1000,
         )

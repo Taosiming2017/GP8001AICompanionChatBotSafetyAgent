@@ -54,16 +54,17 @@ class CachingProvider:
 
 
 def run_mode(agent, test):
-    preds, cats, llm_flags, lat, layers_log = [], [], [], [], []
+    preds, cats, llm_flags, lat, layers_log, llm_errors = [], [], [], [], [], 0
     for r in test:
         t0 = time.perf_counter()
-        level, cat, layers, llm_called, notes = agent.assess_message(r["text"], r.get("context"), r.get("scenario"))
+        a = agent.assess_message(r["text"], r.get("context"), r.get("scenario"))
         lat.append((time.perf_counter() - t0) * 1000)
-        preds.append(int(level))
-        cats.append(cat)
-        llm_flags.append(llm_called)
-        layers_log.append({"layers": [(l.layer, None if l.level is None else int(l.level)) for l in layers], "notes": notes})
-    return np.array(preds), cats, np.array(llm_flags), np.array(lat), layers_log
+        preds.append(int(a.level))
+        cats.append(a.category)
+        llm_flags.append(a.llm_called)
+        llm_errors += any(l.layer == "llm" and l.error for l in a.layers)
+        layers_log.append({"layers": [(l.layer, None if l.level is None else int(l.level)) for l in a.layers], "notes": a.notes})
+    return np.array(preds), cats, np.array(llm_flags), np.array(lat), layers_log, llm_errors
 
 
 def metrics(test, y, p, llm_flags, lat):
@@ -143,7 +144,7 @@ def main():
 
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
-    results, missed_rows = {}, []
+    results, missed_rows, preds = {}, [], {}
     for mode in args.modes.split(","):
         needs_clf = mode in ("classifier", "rules+classifier", "full")
         if needs_clf and clf is None:
@@ -151,9 +152,19 @@ def main():
             continue
         agent = SafetyAgent(classifier=clf if needs_clf else None,
                             llm_provider=provider if mode in ("rules+llm", "full") else None, mode=mode)
-        p, cats, llm_flags, lat, log = run_mode(agent, test)
+        p, cats, llm_flags, lat, log, llm_errors = run_mode(agent, test)
         m = metrics(test, y, p, llm_flags, lat)
+        m["llm_errors"] = int(llm_errors)
+        if llm_errors:
+            first = next(n for lg in log for n in lg["notes"] if n.startswith("LLM failed"))
+            print(f"\nWARNING: {mode}: {llm_errors} of {int(llm_flags.sum())} LLM calls FAILED, so the fail-safe decided "
+                  f"instead of the model and this row is NOT a real result.\n         {first[:160]}\n"
+                  "         Is LM Studio running with the model loaded? Check with: python scripts/check_llm.py\n")
+        m["crisis_recall_by_subtype"] = {   # subtype -> [caught, total], for the per-subtype figure
+            st: [int(((p == 3) & (y == 3) & (sub == st)).sum()), int(((y == 3) & (sub == st)).sum())]
+            for sub in [np.array([r["subtype"] for r in test])] for st in sorted(set(sub[y == 3]))}
         results[mode] = m
+        preds[mode] = [int(v) for v in p]
         plot_confusion(m["confusion"], f"{mode}  (n={len(y)})", out / f"confusion_{mode.replace('+', '_')}.png")
         for r, pred, lg in zip(test, p, log):
             if r["level"] == 3 and pred < 3:
@@ -164,14 +175,24 @@ def main():
               f"macro-F1 {m['macro_f1']:.2f}  LLM calls {m['llm_call_rate']:.2f}")
 
     meta = {"test_file": test_path.name, "n_test": len(test), "classifier": args.model_dir if clf else None,
-            "llm": f"{provider.name}/{provider.model}", "llm_api_calls": provider.calls}
+            "llm": f"{provider.name}/{provider.model}", "llm_api_calls": provider.calls,
+            "llm_errors": {m: r["llm_errors"] for m, r in results.items() if r.get("llm_errors")}}
     (out / "eval_results.json").write_text(json.dumps({"meta": meta, "results": results}, indent=2), encoding="utf-8")
     with open(out / "missed_crises.csv", "w", newline="", encoding="utf-8-sig") as f:
         w = csv.writer(f)
         w.writerow(["mode", "id", "subtype", "predicted_level", "text", "layers"])
         w.writerows(missed_rows)
+    with open(out / "predictions.csv", "w", newline="", encoding="utf-8-sig") as f:  # every item, every mode
+        w = csv.writer(f)
+        w.writerow(["id", "subtype", "scenario", "gold", *[f"pred_{m}" for m in preds], "text"])
+        for i, r in enumerate(test):
+            w.writerow([r["id"], r["subtype"], r.get("scenario", ""), r["level"], *[preds[m][i] for m in preds], r["text"]])
 
-    lines = ["# Safety agent evaluation", "", f"Test file: `{meta['test_file']}` (n={len(test)}); classifier: `{meta['classifier']}`; LLM: `{meta['llm']}`", "",
+    lines = ["# Safety agent evaluation", "", f"Test file: `{meta['test_file']}` (n={len(test)}); classifier: `{meta['classifier']}`; LLM: `{meta['llm']}`", ""]
+    if meta["llm_errors"]:
+        lines += [f"> **WARNING: LLM calls failed** ({meta['llm_errors']}). The fail-safe decided those messages, so the "
+                  "rules+llm and full rows are NOT real results. Start LM Studio and re-run the evaluate step.", ""]
+    lines += [
              "| mode | crisis recall (95% CI) | crisis precision | style false-crisis | tense-safe false-crisis | macro-F1 | weighted cost | LLM call rate | mean latency (ms) |",
              "|---|---|---|---|---|---|---|---|---|"]
     for mode, m in results.items():
@@ -179,7 +200,8 @@ def main():
         lines.append(f"| {mode} | {m['crisis_recall']:.2f} ({lo:.2f}-{hi:.2f}) | {m['crisis_precision']:.2f} | "
                      f"{m['style_false_crisis_rate']:.2f} | {m['tense_safe_false_crisis_rate']:.2f} | {m['macro_f1']:.2f} | "
                      f"{m['severity_weighted_cost']:.2f} | {m['llm_call_rate']:.2f} | {m['latency_ms_mean']:.0f} |")
-    lines += ["", "Missed crises are listed in `missed_crises.csv`; review every one by hand."]
+    lines += ["", "Missed crises are listed in `missed_crises.csv`; review every one by hand. "
+              "All predictions: `predictions.csv`. Slide figures: `python scripts/plot_results.py`."]
     (out / "eval_report.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"\nwrote {out / 'eval_report.md'}")
 

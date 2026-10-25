@@ -1,15 +1,16 @@
+# Core (agent + demo pages): enough to run start_demo.bat with LM Studio (reached with the standard library)
 numpy
-scikit-learn>=1.3
 pyyaml
-joblib
-pandas
-# classifier training / inference (for an NVIDIA GPU, install torch from https://pytorch.org/get-started/locally/)
+# Classifier training / inference. For an NVIDIA GPU install torch first from
+# https://pytorch.org/get-started/locally/ (RTX 50-series: --index-url https://download.pytorch.org/whl/cu128)
 torch
 transformers>=4.40
-# LLM providers: install the one(s) you use
+scikit-learn>=1.3
+joblib
+# Cloud LLM options (only if llm.provider is openai / gemini)
 openai>=1.40
 google-genai>=1.0
-# demo, plots, tests
-streamlit
+# Pipeline extras, plots, tests
+pandas
 matplotlib
 pytest

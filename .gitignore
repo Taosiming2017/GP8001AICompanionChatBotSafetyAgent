@@ -10,11 +10,13 @@
 !*.yml
 !*.md
 !requirements*.txt
+!pytest.ini
 !*.html
 !*.bat
 !.gitignore
 !.gitattributes
 !.gitkeep
+!data/synthetic/*.csv
 
 # ...but never these, even when the file type is allowed above
 .venv/
@@ -38,3 +40,4 @@ data/interim/
 data/processed/
 data/review/
 README_old.md
+_to_delete/

@@ -1,9 +1,0 @@
-# Light dependencies for the online test page. Streamlit Community Cloud uses this file
-# (not the one in the repo root) because it sits next to safety_panel.py.
-# No torch here: the online page runs the rules + LLM check, without the classifier.
-streamlit
-pandas
-numpy
-pyyaml
-openai>=1.40
-google-genai>=1.0

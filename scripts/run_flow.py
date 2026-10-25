@@ -1,9 +1,15 @@
-"""Run the whole pipeline in one go, in quick or full mode.
+"""The data-generation pipeline, end to end: make training data with an LLM, check it, then train.
 
     python scripts/run_flow.py                     # asks which mode
     python scripts/run_flow.py --mode quick        # tiny data, minutes; writes only to runs/quick/
-    python scripts/run_flow.py --mode full         # the real run; writes to data/, models/, reports/
-    python scripts/run_flow.py --mode full --start-at transformer   # resume a full run from a step
+    python scripts/run_flow.py --mode full         # the real run; writes to runs/full/
+    python scripts/run_flow.py --mode full --start-at clean   # resume a full run from a step
+
+You do NOT need this if the training data already exists (data/synthetic/): run scripts/train.py.
+This script is for making or re-checking data with a local/cloud LLM:
+
+    generate -> clean -> relabel -> review -> split      (data steps, this file)
+    baseline -> transformer -> evaluate -> multiturn    (training steps, delegated to scripts/train.py)
 
 quick  5 messages per label + the 126 seeds, relabel check on 20 items, 32 test messages.
        Writes only to runs/quick/, which is wiped at every start. Its numbers only show that the flow works.
@@ -11,15 +17,11 @@ full   every step at full size, written to runs/full/. Generation resumes where 
        It pauses when you need to act (switch models in LM Studio, review runs/full/data/review/to_review.csv,
        free GPU memory before training). Before it overwrites trained models, reports or the
        review sheet, it copies the old ones to runs/archive/<date-time>/.
-
-Full-mode steps (names for --start-at / --stop-after):
-    generate, clean, relabel, review, split, baseline, transformer, evaluate, multiturn
 """
 from __future__ import annotations
 
 import argparse
 import json
-import os
 import random
 import shutil
 import subprocess
@@ -35,7 +37,9 @@ from _common import FULL, ROOT, RUNS, read_jsonl, write_jsonl
 PY = sys.executable
 QUICK = RUNS / "quick"     # same layout as runs/full/, tiny data
 ARCHIVE = RUNS / "archive"
-FULL_STEPS = ["generate", "clean", "relabel", "review", "split", "baseline", "transformer", "evaluate", "multiturn"]
+DATA_STEPS = ["generate", "clean", "relabel", "review", "split"]
+TRAIN_STEPS = ["baseline", "transformer", "evaluate", "multiturn"]
+FULL_STEPS = DATA_STEPS + TRAIN_STEPS
 
 
 class Flow:
@@ -70,38 +74,11 @@ class Flow:
         print(f"  total {sum(r[3] for r in self.log) / 60:.1f} min")
 
 
-# ---------------------------------------------------------------------------- version check
-# Options run_flow.py passes to the other scripts. An older copy of a script lacks them.
-REQUIRED_OPTIONS = {
-    "generate_synthetic.py": ["--calls-per-subtype", "--items-per-call", "--timeout"],
-    "clean_dedup.py": ["--reports"],
-    "relabel_check.py": ["--review-dir", "--reports", "--timeout"],
-    "run_multiturn_tests.py": ["--out"],
-    "split.py": ["--outdir"],
-    "evaluate.py": ["--llm-model"],
-}
-
-
-def check_scripts():
-    stale = []
-    for name, opts in REQUIRED_OPTIONS.items():
-        path = ROOT / "scripts" / name
-        text = path.read_text(encoding="utf-8") if path.exists() else ""
-        missing = [o for o in opts if f'"{o}"' not in text]
-        if missing:
-            stale.append(f"  scripts/{name} (missing {', '.join(missing)})")
-    if stale:
-        sys.exit("These scripts are older versions than run_flow.py needs:\n" + "\n".join(stale) +
-                 "\nReplace the whole scripts folder with the latest one, then run again.")
-
-
 # ---------------------------------------------------------------------------- LM Studio helpers
 def lmstudio_ids():
-    from openai import OpenAI
+    from safety.llm_providers import LMStudioProvider
 
-    url = os.environ.get("LMSTUDIO_BASE_URL", "http://localhost:1234/v1")
-    client = OpenAI(base_url=url, api_key="lm-studio", timeout=10, max_retries=0)
-    return [m.id for m in client.models.list().data]
+    return LMStudioProvider(model="probe", timeout_s=10).list_models()
 
 
 def ensure_lmstudio(flow, model, role):
@@ -126,6 +103,14 @@ def ensure_lmstudio(flow, model, role):
         print(f"LM Studio OK. {role}: {chosen}")
         return chosen
     sys.exit("LM Studio not ready.")
+
+
+def train_args(args, provider, model, extra):
+    """Options passed through to scripts/train.py (it does its own LM Studio pauses)."""
+    out = ["--llm-provider", provider, "--no-archive"] + (["--llm-model", model] if model else [])
+    if args.no_pause:
+        out.append("--no-pause")
+    return out + extra
 
 
 # ---------------------------------------------------------------------------- quick mode
@@ -178,32 +163,10 @@ def run_quick(args, cfg):
              ["--provider", args.provider, *margs, "--inp", qd / "interim/clean.jsonl", "--out", qd / "interim/relabeled_sample.jsonl",
               "--sample", args.relabel_sample, "--workers", 1, "--review-dir", qd / "review", "--reports", QUICK / "reports"])
     flow.run("split train / validation", "split.py", ["--inp", qd / "interim/clean.jsonl", "--outdir", qd / "processed"])
-    tv = ["--train", qd / "processed/train.jsonl", "--val", qd / "processed/val.jsonl"]
-    flow.run("train TF-IDF baseline", "train_baseline.py", [*tv, "--out", QUICK / "models/baseline"])
-    flow.run("calibrate baseline", "calibrate.py", ["--model-dir", QUICK / "models/baseline"])
-    model_dir = QUICK / "models/baseline"
-    if not args.skip_transformer:
-        if lm:
-            flow.pause("LM Studio: eject the model so training can use the GPU memory.")
-        flow.run("train DistilRoBERTa", "train_transformer.py",
-                 [*tv, "--out", QUICK / "models/transformer", "--epochs", args.epochs, "--lr", 5e-5])
-        flow.run("calibrate DistilRoBERTa", "calibrate.py", ["--model-dir", QUICK / "models/transformer"])
-        model_dir = QUICK / "models/transformer"
-        if lm:
-            flow.pause(f"LM Studio: load the model again ({model}) and keep the server on.")
-            ensure_lmstudio(flow, model, "model")
 
-    flow.run("evaluate on the quick test set", "evaluate.py",
-             ["--test", qd / "test_quick.jsonl", "--model-dir", model_dir, "--llm-provider", args.provider,
-              *(["--llm-model", model] if model else []), "--out", QUICK / "reports"])
-
-    qcfg = dict(cfg)
-    qcfg["classifier"] = {"model_dir": "models/transformer", "fallback_dir": "models/baseline"}
-    qcfg["llm"] = {**cfg.get("llm", {}), "provider": args.provider, "model": model,
-                   "timeout_s": 300 if lm else cfg.get("llm", {}).get("timeout_s", 20)}
-    (QUICK / "config.yaml").write_text(yaml.safe_dump(qcfg, sort_keys=False), encoding="utf-8")
-    flow.run("multi-turn tests", "run_multiturn_tests.py",
-             ["--config", QUICK / "config.yaml", "--out", QUICK / "reports/multiturn_results.md"])
+    extra = ["--train", qd / "processed/train.jsonl", "--val", qd / "processed/val.jsonl", "--test", qd / "test_quick.jsonl",
+             "--out", QUICK, "--epochs", args.epochs, "--lr", 5e-5] + (["--skip-transformer"] if args.skip_transformer else [])
+    flow.run("train, calibrate, evaluate, multi-turn (scripts/train.py)", "train.py", train_args(args, args.provider, model, extra))
 
     flow.summary()
     print_results(QUICK / "reports")
@@ -242,7 +205,7 @@ def run_full(args, cfg):
     if "relabel" in steps and (relabel_model is None or relabel_model == model):
         print("note: the relabel check will use the same model that generated the data; agreement will look too good.")
     flow.pause("This can take hours. Ready to start?")
-    if not args.no_archive and set(steps) & {"relabel", "review", "baseline", "transformer", "evaluate", "multiturn"}:
+    if not args.no_archive and set(steps) & {"relabel", "review", *TRAIN_STEPS}:
         archive_outputs()
 
     P = args.provider
@@ -274,23 +237,12 @@ def run_full(args, cfg):
             print("\n(no review sheet found; run the relabel step first)")
     if "split" in steps:
         flow.run("split train / validation", "split.py", [])
-    if "baseline" in steps:
-        flow.run("train TF-IDF baseline", "train_baseline.py", [])
-        flow.run("calibrate baseline", "calibrate.py", ["--model-dir", FULL / "models/baseline"])
-    if "transformer" in steps:
-        if lm:
-            flow.pause("LM Studio: eject all models so training can use the GPU memory.")
-        flow.run("train DistilRoBERTa", "train_transformer.py", [])
-        flow.run("calibrate DistilRoBERTa", "calibrate.py", ["--model-dir", FULL / "models/transformer"])
-    if "evaluate" in steps:
-        if lm:
-            flow.pause(f"LM Studio: load model A ({model or 'the safety-check model'}) and turn on the server.")
-            model = ensure_lmstudio(flow, model, "model A")
-        mdir = FULL / ("models/transformer" if (FULL / "models/transformer/meta.json").exists() else "models/baseline")
-        flow.run("evaluate on the test set", "evaluate.py",
-                 ["--model-dir", mdir, "--llm-provider", P, *(["--llm-model", model] if model else [])])
-    if "multiturn" in steps:
-        flow.run("multi-turn tests", "run_multiturn_tests.py", ["--provider", P])
+
+    train_steps = [s for s in steps if s in TRAIN_STEPS]
+    if train_steps:
+        extra = ["--train", FULL / "data/processed/train.jsonl", "--val", FULL / "data/processed/val.jsonl", "--out", FULL,
+                 "--start-at", train_steps[0], "--stop-after", train_steps[-1]]
+        flow.run("train, calibrate, evaluate, multi-turn (scripts/train.py)", "train.py", train_args(args, P, model, extra))
 
     flow.summary()
     if "evaluate" in steps:
@@ -306,7 +258,7 @@ def print_results(reports):
         m = res["full"]
         print(f"\nfull mode on {m['n']} test messages: crisis recall {m['crisis_recall']:.2f}, "
               f"macro-F1 {m['macro_f1']:.2f}, LLM call rate {m['llm_call_rate']:.2f}")
-    print(f"Details: {reports / 'eval_report.md'} and {reports / 'multiturn_results.md'}")
+    print(f"Details: {reports / 'eval_report.md'} and {reports / 'multiturn_results.md'}; or: python scripts/show_results.py")
 
 
 def main():
@@ -339,7 +291,6 @@ def main():
         if not args.mode:
             sys.exit("No mode chosen.")
 
-    check_scripts()
     cfg = yaml.safe_load((ROOT / "config.yaml").read_text(encoding="utf-8"))
     (run_quick if args.mode == "quick" else run_full)(args, cfg)
 

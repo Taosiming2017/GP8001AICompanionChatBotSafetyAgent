@@ -67,8 +67,8 @@ def main():
         tag = f"{int(r.level)} {LABELS[int(r.level)]}" + (" (asks LLM)" if r.wants_llm else "")
         line = f"{(m[:43] + '...') if len(m) > 46 else m:<46} {probs}  {tag}"
         if agent:
-            level, cat, layers, llm_called, notes = agent.assess_message(m, args.context, args.scenario)
-            line += f"   {int(level)} {LABELS[int(level)]}" + (f" [{notes[-1]}]" if notes else "")
+            a = agent.assess_message(m, args.context, args.scenario)
+            line += f"   {int(a.level)} {LABELS[int(a.level)]}" + (f" [{a.notes[-1]}]" if a.notes else "")
         print(line)
 
 

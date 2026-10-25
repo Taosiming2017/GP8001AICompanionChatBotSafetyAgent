@@ -1,16 +1,29 @@
-# CompanionAI safety agent configuration.
+# CompanionAI safety agent + demo configuration.
 # mode: rules | classifier | rules+classifier | rules+llm | full
 mode: full
 
 classifier:
-  model_dir: runs/full/models/transformer   # fine-tuned DistilRoBERTa (made by the full run)
+  model_dir: runs/full/models/transformer   # fine-tuned DistilRoBERTa (made by scripts/train.py)
   fallback_dir: runs/full/models/baseline   # TF-IDF + logistic regression, used if the above is missing
+  device: cpu                               # cpu | cuda | auto. The demo shares the GPU with LM Studio, and
+                                            # DistilRoBERTa needs only ~50 ms per message on the CPU, so keep it there.
+                                            # auto = GPU if it has room (fine for evaluate.py when LM Studio is off).
 
+# The LLM that checks unclear messages (layer 3). Also the default for the companion below.
 llm:
   provider: lmstudio     # openai | gemini | lmstudio | mock   (keys: OPENAI_API_KEY / GEMINI_API_KEY)
   model: qwen/qwen3.8-27b         # null = provider default; for lmstudio = the model id shown in LM Studio
   timeout_s: 10        # lmstudio uses at least 60 (local models are slower)
   base_url: null       # lmstudio only; null = http://localhost:1234/v1
+
+# The companion that talks to the user (demo/companion.py). Same provider as `llm`.
+companion:
+  model: null          # null = same model as llm.model
+  temperature: 0.7
+  max_tokens: 160      # about 3 short sentences; the output guard flags replies over 70 words anyway
+  history_turns: 12    # how many previous messages the companion sees
+  timeout_s: 120
+  disable_thinking: true   # Qwen3: ask LM Studio to skip the "thinking" block (faster, shorter)
 
 # If a message carries a risk signal and the LLM cannot be reached, treat it as a crisis.
 fail_safe: true

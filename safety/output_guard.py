@@ -14,10 +14,11 @@ import re
 from typing import Optional
 
 from .schema import Action, GuardResult, SafetyDecision
+from .text import normalize_quotes
 
 SCORE = [
     r"\b\d+(\.\d+)?\s*/\s*(10|5|100)\b",
-    r"\b\d{1,3}\s*(%|percent)\b",
+    r"\b\d{1,3}\s*(%|percent\b)",       # "80%", "80 percent" (no \b after %, it is not a word char)
     r"\b(score|scored|scoring|grade|graded|rating)\b",
     r"\b\d+ (marks|points)\b",
     r"\bincorrect\b",
@@ -85,7 +86,7 @@ class OutputGuard:
         if decision and decision.fixed_reply:
             return GuardResult(ok=True, text=decision.fixed_reply, action="show_fixed")
 
-        text = (reply or "").strip()
+        text = normalize_quotes(reply).strip()   # "I’m a therapist" must match like "I'm a therapist"
         violations, warnings = [], []
 
         # 1. Scores: strip the sentences; if nothing useful is left, regenerate.

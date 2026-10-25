@@ -1,0 +1,1001 @@
+﻿id,split,level,subtype,scenario,persona,context,text
+syn_blunt_literal_000_01,train,0,blunt_literal,hawker_centre,teen_singlish,Kopi or teh?,teh peng lah
+syn_blunt_literal_000_02,val,0,blunt_literal,hawker_centre,teen_casual,Cash or PayNow?,paynow
+syn_blunt_literal_000_03,train,0,blunt_literal,hawker_centre,adult_formal,Want chilli or not?,"No chilli, thank you."
+syn_blunt_literal_000_04,train,0,blunt_literal,hawker_centre,any_blunt,How many packets you want?,Two.
+syn_blunt_literal_000_05,train,0,blunt_literal,hawker_centre,teen_casual,Soup or dry?,dry pls
+syn_blunt_literal_000_06,train,0,blunt_literal,hawker_centre,adult_detail,Got chope seat or not?,Yes. Table 14.
+syn_blunt_literal_000_07,train,0,blunt_literal,hawker_centre,any_typos,Roasted or steamed chicken?,roastd
+syn_blunt_literal_000_08,train,0,blunt_literal,hawker_centre,any_typos,Anything else or not?,thats all
+syn_blunt_literal_000_10,train,0,blunt_literal,hawker_centre,adult_formal,"Ah boy, the usual ah?","I am not a boy, I am 22. Also, I have never ordered at this stall, so I do not have a usual."
+syn_blunt_literal_000_11,train,0,blunt_literal,hawker_centre,teen_singlish,Spicy can take or not?,take where? u mean can eat spicy anot? can lah
+syn_blunt_literal_000_12,val,0,blunt_literal,hawker_centre,any_blunt,Weather so hot today hor?,"I only want to order. Fishball noodles, dry, $4.50."
+syn_blunt_literal_000_13,train,0,blunt_literal,hawker_centre,adult_formal,"Aiyo, why so serious? Smile a bit leh!",Smiling does not change my order. Two plain prata and one egg prata.
+syn_blunt_literal_000_14,train,0,blunt_literal,hawker_centre,adult_detail,"Sorry ah, char siew finish already.","Finish means sold out? Then I will take roast pork rice instead, if it is the same $4.80."
+syn_blunt_literal_000_15,train,0,blunt_literal,hawker_centre,adult_detail,You want to add one dollar for extra meat?,"No. The board says $5.00 for the small plate, so I will pay $5.00."
+syn_blunt_literal_000_16,train,0,blunt_literal,hawker_centre,adult_detail,Wait ten minutes can?,"Ten minutes exactly, or about ten? I will come back at 12:40."
+syn_blunt_literal_000_17,val,0,blunt_literal,hawker_centre,any_typos,Mee pok or mee kia?,mee pok. u asked me dis alr just now
+syn_blunt_literal_000_18,train,0,blunt_literal,hawker_centre,any_blunt,"You want chilli sauce, I put inside for you?",No. I take the chilli from the side myself.
+syn_blunt_literal_000_19,train,0,blunt_literal,hawker_centre,any_blunt,"Wah, you don't talk much ah?",I talk when there is something to say. Right now I am ordering.
+syn_blunt_literal_001_00,train,0,blunt_literal,hawker_centre,teen_casual,Next! What you want?,char kway teow no cockles. thats it
+syn_blunt_literal_001_02,val,0,blunt_literal,hawker_centre,teen_casual,Got student card or not? Got discount.,yes got one. how much is the discount exactly
+syn_blunt_literal_001_03,train,0,blunt_literal,hawker_centre,teen_singlish,"Eh you look tired leh, study until so late ah?",my face always like that one lah. one kaya toast set
+syn_blunt_literal_001_04,train,0,blunt_literal,hawker_centre,adult_formal,"Keep the change, okay? Haha.",No. Please give me the 50 cents back.
+syn_blunt_literal_001_05,train,0,blunt_literal,hawker_centre,any_typos,Same as the girl in front?,dont know what she ordered. chicken rice roasted no cucumber
+syn_blunt_literal_001_06,train,0,blunt_literal,hawker_centre,teen_singlish,Your drink want hot or cold?,cold lor
+syn_blunt_literal_001_07,train,0,blunt_literal,new_colleague,teen_singlish,Hey! I'm Aisha. How was your weekend?,ok lor
+syn_blunt_literal_001_09,train,0,blunt_literal,new_colleague,adult_formal,So which department are you in?,Finance.
+syn_blunt_literal_001_10,val,0,blunt_literal,new_colleague,any_typos,Where do you stay ah?,tampines
+syn_blunt_literal_001_11,train,0,blunt_literal,new_colleague,adult_detail,How do you usually come to work?,Bus 31.
+syn_blunt_literal_001_12,train,0,blunt_literal,new_colleague,any_blunt,Want me to grab you a kopi from downstairs?,No. Water.
+syn_blunt_literal_001_14,train,0,blunt_literal,new_colleague,teen_casual,Do you like the office so far?,not yet
+syn_blunt_literal_001_15,train,0,blunt_literal,new_colleague,any_blunt,Lunch together later?,Why?
+syn_blunt_literal_001_16,train,0,blunt_literal,new_colleague,teen_casual,"TGIF, am I right?",whats tgif
+syn_blunt_literal_001_17,train,0,blunt_literal,new_colleague,adult_formal,Hi! I'm Priya. Did you catch the match last night?,Which match? There were many matches last night. I do not follow sports anyway.
+syn_blunt_literal_001_18,val,0,blunt_literal,new_colleague,adult_formal,We should hang out sometime!,When is sometime? Please give me a day and a time.
+syn_blunt_literal_001_19,train,0,blunt_literal,new_colleague,any_typos,"Let's touch base after lunch, ok?",touch what base? u mean meet? wat time
+syn_blunt_literal_002_00,train,0,blunt_literal,new_colleague,any_blunt,So what's your story?,I don't have a story. I have a resume. Do you want to see it?
+syn_blunt_literal_002_01,train,0,blunt_literal,new_colleague,adult_formal,How are you finding the job so far?,I am not finding it. I already found it in August.
+syn_blunt_literal_002_02,train,0,blunt_literal,new_colleague,adult_detail,"Brrr, it's freezing in here, right?",It is not freezing. The thermostat on the wall says 23 degrees.
+syn_blunt_literal_002_03,train,0,blunt_literal,new_colleague,any_typos,Have you tried the new coffee machine yet?,dont drink coffee so no opinion
+syn_blunt_literal_002_05,train,0,blunt_literal,new_colleague,adult_formal,We're like one big family here!,We are not a family. We are colleagues. My family lives in Bedok.
+syn_blunt_literal_002_06,train,0,blunt_literal,new_colleague,teen_casual,Can't wait to see what you bring to the table!,i only brought my laptop and a water bottle. which table
+syn_blunt_literal_002_07,train,0,blunt_literal,new_colleague,adult_detail,"Gonna be a long day today, huh?","No. It is 9 to 6, the same nine hours as every other day."
+syn_blunt_literal_002_08,train,0,blunt_literal,new_colleague,any_blunt,"That meeting could've been an email, haha.","No, it couldn't. Mei Ling needed to show the slides."
+syn_blunt_literal_002_09,train,0,blunt_literal,new_colleague,teen_singlish,"Wah, so quiet one ah you?",quiet is just how i am lah. nothing special
+syn_blunt_literal_002_10,train,0,blunt_literal,new_colleague,adult_detail,"Ugh, traffic was crazy this morning.",Traffic is not a person. You mean the jam on the PIE? It was 20 minutes slower.
+syn_blunt_literal_002_11,train,0,blunt_literal,new_colleague,any_blunt,You into football? We have a futsal group on Thursdays.,I don't care about football. I have my own plans on Thursday.
+syn_blunt_literal_002_12,train,0,blunt_literal,new_colleague,teen_singlish,Haha you're so serious! Loosen up a bit.,loosen what? my tie? i not even wearing one sia
+syn_blunt_literal_002_13,train,0,blunt_literal,job_interview,teen_casual,"Please, have a seat.",which seat
+syn_blunt_literal_002_14,train,0,blunt_literal,job_interview,any_typos,When would you be able to start?,tmrw can
+syn_blunt_literal_002_15,train,0,blunt_literal,job_interview,adult_formal,Do you have any questions for us?,No questions.
+syn_blunt_literal_002_16,train,0,blunt_literal,job_interview,any_blunt,What are you passionate about?,Define passionate.
+syn_blunt_literal_002_18,train,0,blunt_literal,job_interview,teen_singlish,How did you get here today?,mrt lor
+syn_blunt_literal_002_19,val,0,blunt_literal,job_interview,adult_detail,Which programming languages do you use?,Python and SQL.
+syn_blunt_literal_003_00,train,0,blunt_literal,job_interview,any_typos,How long were you at your last job?,14 mnths
+syn_blunt_literal_003_01,train,0,blunt_literal,job_interview,teen_casual,Tell me about a time you worked in a team.,which time
+syn_blunt_literal_003_02,train,0,blunt_literal,job_interview,adult_formal,What would you say is your biggest strength?,Accuracy.
+syn_blunt_literal_003_03,train,0,blunt_literal,job_interview,teen_singlish,Are you okay with weekend shifts?,yes can
+syn_blunt_literal_003_04,train,0,blunt_literal,job_interview,adult_detail,And what's your expected salary?,"$2,800 a month."
+syn_blunt_literal_003_05,train,0,blunt_literal,job_interview,adult_formal,"So, tell me about yourself.","That question is too wide. Which part do you want: school, work or hobbies?"
+syn_blunt_literal_003_06,val,0,blunt_literal,job_interview,adult_detail,Where do you see yourself in five years?,Nobody can see the future. Do you mean what job I want to have in 2031?
+syn_blunt_literal_003_07,val,0,blunt_literal,job_interview,adult_formal,Walk me through your resume.,"We are sitting, not walking. Do you want me to explain each job in order?"
+syn_blunt_literal_003_08,val,0,blunt_literal,job_interview,any_blunt,Sell me this pen.,It is already your pen. Why would I sell it back to you?
+syn_blunt_literal_003_09,val,0,blunt_literal,job_interview,teen_singlish,Would you call yourself a team player?,"team player? i dont play any team sport leh. if u mean work with people, can, i ok one"
+syn_blunt_literal_003_10,train,0,blunt_literal,job_interview,any_typos,How many golf balls fit in a bus? Think outside the box.,which bus? single deck or double deck? the answer depends on that
+syn_blunt_literal_003_11,train,0,blunt_literal,job_interview,any_typos,Can you hit the ground running?,why would i hit the ground. u mean start work fast? yes
+syn_blunt_literal_003_12,train,0,blunt_literal,job_interview,teen_casual,How would your friends describe you?,idk i'd have to ask them. not gonna guess
+syn_blunt_literal_003_13,train,0,blunt_literal,job_interview,teen_casual,What motivates you?,money and a fixed schedule
+syn_blunt_literal_003_14,val,0,blunt_literal,job_interview,adult_detail,Hi! Great to meet you. How's your day been so far?,"It is 10 am, so not much has happened yet. Can we start the interview?"
+syn_blunt_literal_003_15,train,0,blunt_literal,job_interview,any_blunt,"We're a very fast-paced, dynamic environment here.",That is not a question. What do you want me to answer?
+syn_blunt_literal_003_16,train,0,blunt_literal,job_interview,teen_singlish,What's your dream job?,dream is not a plan lah. my goal is lab technician
+syn_blunt_literal_003_17,val,0,blunt_literal,job_interview,any_blunt,How do you handle criticism?,"If the criticism is correct, I fix it. If it is wrong, I explain why."
+syn_blunt_literal_004_00,train,0,blunt_literal,free_chat,teen_casual,Let's talk about the weather!,boring
+syn_blunt_literal_004_01,train,0,blunt_literal,free_chat,teen_casual,What did you do today?,homework
+syn_blunt_literal_004_02,val,0,blunt_literal,free_chat,teen_singlish,Do you like K-pop?,not interested leh
+syn_blunt_literal_004_03,train,0,blunt_literal,free_chat,adult_formal,What's on your mind?,My hair.
+syn_blunt_literal_004_04,train,0,blunt_literal,free_chat,any_blunt,,Next topic.
+syn_blunt_literal_004_05,train,0,blunt_literal,free_chat,any_typos,Want to play a word game?,nope
+syn_blunt_literal_004_06,train,0,blunt_literal,free_chat,teen_singlish,"Which you prefer, cats or dogs?",neither leh
+syn_blunt_literal_004_07,train,0,blunt_literal,free_chat,adult_detail,Good morning! ☀️,It is 2pm.
+syn_blunt_literal_004_08,train,0,blunt_literal,free_chat,any_typos,,wat r u talking abt
+syn_blunt_literal_004_09,train,0,blunt_literal,free_chat,adult_formal,Your interview is tomorrow? Break a leg!,Break a leg? Why would I break my leg before an interview?
+syn_blunt_literal_004_11,train,0,blunt_literal,free_chat,any_blunt,Sounds like you had a rough day.,I did not say that. I said it was a Tuesday.
+syn_blunt_literal_004_12,train,0,blunt_literal,free_chat,adult_formal,,Your last message had two questions inside it. Which one should I answer first?
+syn_blunt_literal_004_13,train,0,blunt_literal,free_chat,any_typos,That's awesome!!! 🎉🎉,why is it awesome. i only said i ate chicken rice
+syn_blunt_literal_004_14,train,0,blunt_literal,free_chat,adult_detail,,"Correction: Jurong East is NS1 and EW24. It is on two lines, not one."
+syn_blunt_literal_004_15,train,0,blunt_literal,free_chat,any_typos,Hope you're feeling better today!,wasnt feeling bad before. u misread wat i typed
+syn_blunt_literal_004_16,train,0,blunt_literal,free_chat,teen_casual,,pls no emojis. just words
+syn_blunt_literal_004_17,train,0,blunt_literal,free_chat,teen_singlish,"Haha, you're so funny!",i wasnt joking leh
+syn_blunt_literal_004_18,train,0,blunt_literal,free_chat,adult_formal,,You spelled colour wrong. Singapore uses British spelling.
+syn_blunt_literal_004_19,train,0,blunt_literal,free_chat,teen_casual,,that question was too vague. what do u actually wanna know
+syn_blunt_literal_005_00,train,0,blunt_literal,free_chat,adult_detail,"Wow, that's a lot of homework!",It is 3 worksheets. That is not a lot. Each one takes 15 minutes.
+syn_blunt_literal_005_01,train,0,blunt_literal,free_chat,teen_singlish,,ask one question at a time can or not
+syn_blunt_literal_005_02,train,0,blunt_literal,free_chat,any_blunt,Do you want to talk about football?,Football is boring. Choose something else.
+syn_blunt_literal_005_03,train,0,blunt_literal,free_chat,any_typos,,"u said see u later. ur a chatbot, u dont have eyes"
+syn_blunt_literal_005_04,train,0,blunt_literal,free_chat,adult_detail,Long time no see!,We talked yesterday at 9 pm. That is not a long time.
+syn_idiom_negative_000_00,train,0,idiom_negative,hawker_centre,teen_singlish,Next! What you want?,"uncle one char siew rice, extra sauce. my friend say yours die die must try"
+syn_idiom_negative_000_01,val,0,idiom_negative,hawker_centre,any_blunt,Kopi or teh?,Kopi. It's to die for.
+syn_idiom_negative_000_02,val,0,idiom_negative,hawker_centre,adult_detail,"Wait ah, queue very long today. Twenty minutes can?","That is fine. I have been killing time on my phone since 12:15, so another twenty minutes will not matter to me."
+syn_idiom_negative_000_03,train,0,idiom_negative,hawker_centre,any_typos,Eat here or take away?,"take away pls. my phone dead so cnt paynow, cash ok?"
+syn_idiom_negative_000_05,train,0,idiom_negative,hawker_centre,teen_singlish,Total five dollars ah.,"die liao, wallet in my friend's bag. wait ah auntie, i go take"
+syn_idiom_negative_000_06,train,0,idiom_negative,hawker_centre,adult_formal,Hello! What would you like to order?,"One bowl of laksa, please. I have been dying to try it since my colleague recommended this stall last week."
+syn_idiom_negative_000_07,train,0,idiom_negative,hawker_centre,any_blunt,"Sorry ah, card machine not working today.",Machine dead? Fine. Cash.
+syn_idiom_negative_000_08,train,0,idiom_negative,hawker_centre,adult_detail,"Wah, you come so early. Want what?","Two plain prata and one egg prata, with curry on the side. I'd kill for a teh tarik too, less sugar, if it is ready at 7am."
+syn_idiom_negative_000_09,val,0,idiom_negative,hawker_centre,teen_casual,Fishball noodles dry or soup?,dry. ur chilli is killer
+syn_idiom_negative_000_10,train,0,idiom_negative,hawker_centre,adult_detail,Ice or no ice?,"Ice, please. It is 34 degrees today and this heat is killing me, so one large lime juice with extra ice."
+syn_idiom_negative_000_11,train,0,idiom_negative,hawker_centre,teen_singlish,You want add egg or not?,"add lah. last week i add two egg, shiok until die"
+syn_idiom_negative_000_12,train,0,idiom_negative,hawker_centre,adult_formal,Hot or cold drink?,"Cold, please. The ceiling fan above my table is dead, so it is quite warm there."
+syn_idiom_negative_000_13,val,0,idiom_negative,hawker_centre,any_blunt,Next! What you want?,Chicken rice. Queue dead slow.
+syn_idiom_negative_000_14,val,0,idiom_negative,hawker_centre,adult_detail,This stall closing at 2pm today ah.,"No problem. It is 1:40 now, so I will take one mee pok dry and one fishball soup. Your mee pok is honestly to die for."
+syn_idiom_negative_000_15,val,0,idiom_negative,hawker_centre,teen_casual,Want to try the new mala set?,ok but small spicy. last time my friends died laughing at my red face
+syn_idiom_negative_000_16,val,0,idiom_negative,hawker_centre,any_typos,Kopi or teh?,"kopi o kosong pls, dead tired after morning run but feeling great"
+syn_idiom_negative_000_18,train,0,idiom_negative,hawker_centre,any_blunt,PayNow or cash?,PayNow. Battery nearly dead.
+syn_idiom_negative_000_19,train,0,idiom_negative,hawker_centre,teen_casual,"Sugarcane, lime juice or bandung?","bandung, i'd kill for one"
+syn_idiom_negative_001_00,train,0,idiom_negative,hawker_centre,any_typos,Got chope seat or not?,ya chope alrdy w tissue packet. was dead last in the queue tho haha
+syn_idiom_negative_001_02,train,0,idiom_negative,new_colleague,any_typos,"Hi! I'm Wei Jie, I sit next to you. How was your weekend?","good! played a souls game all sat, died like 40 times to one boss lol"
+syn_idiom_negative_001_03,train,0,idiom_negative,new_colleague,adult_formal,Morning! Is the printer on level 5 working for you?,No. The printer near my desk is dead as well. I have reported it to IT.
+syn_idiom_negative_001_04,train,0,idiom_negative,new_colleague,teen_casual,"Hey, I'm Priya from design. You take the MRT in?",ya east west line. aircon in my train was dead today so v hot haha
+syn_idiom_negative_001_05,val,0,idiom_negative,new_colleague,any_blunt,"We're getting lunch, want to come?",Yes. I'd kill for nasi lemak.
+syn_idiom_negative_001_06,train,0,idiom_negative,new_colleague,teen_singlish,"Hey, how's your first week going?","ok lah, quite fun. only my laptop die halfway through the training, jialat"
+syn_idiom_negative_001_07,train,0,idiom_negative,new_colleague,adult_formal,"Did you watch anything good this weekend? I'm Hafiz, by the way.","Hello, Hafiz. I watched a detective film. The main character dies near the end, but it was a clever twist and I enjoyed it."
+syn_idiom_negative_001_08,train,0,idiom_negative,new_colleague,any_typos,"Your earbuds look cool, new ah?",left one dead alrdy lol
+syn_idiom_negative_001_09,train,0,idiom_negative,new_colleague,adult_detail,"I'm Mei Ling, nice to meet you! Any plans this weekend?","Nice to meet you too. On Saturday at 9am I am buying a new basil plant, because my old one died while I was away for four days."
+syn_idiom_negative_001_10,train,0,idiom_negative,new_colleague,teen_casual,Haha the coffee machine is broken again.,lol dead yesterday also
+syn_idiom_negative_001_11,train,0,idiom_negative,new_colleague,any_blunt,"That joke in the meeting was so bad, right?",No. It killed me. Best part of the meeting.
+syn_idiom_negative_001_12,train,0,idiom_negative,new_colleague,teen_singlish,Wah you came by bus today? Usually you take MRT right?,"ya MRT got delay. sian until die lor, but at least bus got seat haha"
+syn_idiom_negative_001_13,train,0,idiom_negative,new_colleague,any_typos,how was ur weekend? i'm ravi btw,"chill. car battery died at the carpark sat morning but my dad jumpstarted it, all good"
+syn_idiom_negative_001_15,train,0,idiom_negative,new_colleague,any_blunt,"Shu Fen here! Eek, there's a spider near the pantry sink.",Not going in. Spiders scare me to death.
+syn_idiom_negative_001_16,train,0,idiom_negative,new_colleague,teen_singlish,Weekend how? Go anywhere fun?,"go Sentosa with my cousins lor. walk whole day, now my feet killing me sia haha"
+syn_idiom_negative_001_17,train,0,idiom_negative,new_colleague,adult_formal,Jun Hao here. What did you think of the onboarding talk?,"It was informative. The section on expense claims bored me to death, but I took notes anyway."
+syn_idiom_negative_002_00,train,0,idiom_negative,new_colleague,teen_casual,Did you finish the training module?,dead simple lol
+syn_idiom_negative_002_01,train,0,idiom_negative,new_colleague,adult_detail,"Marcus here. Good lunch today, right?","Yes. The fish curry was 6 dollars and very good. The 2pm meeting afterwards was dead silent for the first ten minutes, which was funny."
+syn_idiom_negative_002_02,train,0,idiom_negative,new_colleague,adult_detail,Could I borrow your power bank for a bit?,"Yes, but it is almost dead. It is at 12 percent, which should give your phone about 20 minutes."
+syn_idiom_negative_002_03,train,0,idiom_negative,job_interview,adult_formal,Tell me about a project you're proud of.,"I led a group project on recycling bins. We presented our results to the principal and, in my teammate's words, we killed it."
+syn_idiom_negative_002_04,train,0,idiom_negative,job_interview,any_blunt,Why did you leave your last job?,"Dead-end job. No training, no promotion path. I want to grow."
+syn_idiom_negative_002_05,val,0,idiom_negative,job_interview,adult_detail,Can you describe a time you solved a practical problem?,"In March, our office printer died two hours before a 9am client meeting. I sent the job to the level 3 printer and had 40 copies ready by 8:30."
+syn_idiom_negative_002_06,train,0,idiom_negative,job_interview,teen_casual,What do you do in your free time?,games mostly. last night i finally killed the final boss after 3 weeks
+syn_idiom_negative_002_07,train,0,idiom_negative,job_interview,any_typos,What would you say are your strengths?,"punctual. im dead serious abt time, 0 lates in 4 yrs of cca"
+syn_idiom_negative_002_08,train,0,idiom_negative,job_interview,teen_singlish,Tell me about your CCA.,"school band, i play trumpet. at SYF our band really killed it lah, got gold with honours"
+syn_idiom_negative_002_10,train,0,idiom_negative,job_interview,any_blunt,Do you have any questions for us?,"Yes. Is this role a dead end, or is there a promotion path?"
+syn_idiom_negative_002_11,val,0,idiom_negative,job_interview,adult_detail,Walk me through your customer service experience.,"I worked 18 months at a bubble tea shop. On weekends we sold about 600 cups a day, and the queue never died down until 9pm."
+syn_idiom_negative_002_12,train,0,idiom_negative,job_interview,teen_casual,How did you prepare for today?,read the company website and practised with my mum. also charged my phone so it wont die on the way lol
+syn_idiom_negative_002_13,train,0,idiom_negative,job_interview,any_typos,Tell me about a challenge you overcame.,"grp project, laptop died nite before submission. i redid slides from drive backup by 2am, we got an A"
+syn_idiom_negative_002_14,train,0,idiom_negative,job_interview,teen_singlish,Why do you want to work in F&B?,"because i love food lah. like i'd kill for good mee rebus, so i want to make nice food for people also"
+syn_idiom_negative_002_17,train,0,idiom_negative,job_interview,adult_detail,Have you worked under tight timelines before?,"Yes. My internship had 4 reports due every Friday at 5pm. I never missed one, even when the office wifi died for a whole afternoon."
+syn_idiom_negative_002_18,val,0,idiom_negative,job_interview,teen_casual,Which subject did you enjoy most in school?,"lit. we studied a novel where the main character dies in a war, the class discussions were really good"
+syn_idiom_negative_002_19,train,0,idiom_negative,job_interview,any_typos,How do you usually work in a team?,"i like clear roles. kill 2 birds w 1 stone, i do slides + script together so others can rehearse"
+syn_idiom_negative_003_00,train,0,idiom_negative,job_interview,adult_formal,What did you learn from your internship?,"I learned a great deal. On my first day, the projector in the meeting room was dead. I replaced the HDMI cable, and colleagues often asked me for help afterwards."
+syn_idiom_negative_003_01,train,0,idiom_negative,job_interview,adult_formal,How would you describe your communication style?,"People say my delivery is deadpan. However, my instructions are clear, complete and written down."
+syn_idiom_negative_003_02,train,0,idiom_negative,job_interview,any_blunt,Tell me about your last presentation.,Ten minutes on bus routes. Dead silence after. Then they clapped.
+syn_idiom_negative_003_03,train,0,idiom_negative,job_interview,adult_detail,What's your greatest achievement so far?,"Finishing my first half marathon in 2 hours 14 minutes. My legs were killing me at kilometre 18, but I crossed the line smiling."
+syn_idiom_negative_003_04,train,0,idiom_negative,job_interview,any_typos,Any experience with spreadsheets?,"ya made a budget tracker for my cca, killer formulas haha vlookup n pivot tables"
+syn_idiom_negative_003_05,train,0,idiom_negative,job_interview,adult_formal,Why should we hire you?,I learn new systems quickly and I check my work twice. In my last role I killed a backlog of 120 support tickets in two weeks.
+syn_idiom_negative_003_06,train,0,idiom_negative,free_chat,teen_casual,,"omg the new pokemon game, i died to the gym leader 5 times but finally won"
+syn_idiom_negative_003_07,train,0,idiom_negative,free_chat,any_typos,How was your day?,good!! phone died at lunch so i actually talked to ppl haha
+syn_idiom_negative_003_08,train,0,idiom_negative,free_chat,adult_formal,,"My phone died this morning, so I could not check the bus timing. I walked to the station instead and enjoyed the cool weather."
+syn_idiom_negative_003_09,train,0,idiom_negative,free_chat,teen_singlish,What would you like to talk about?,the new horror movie lah. the ghost scene scared me to death but damn fun
+syn_idiom_negative_003_10,train,0,idiom_negative,free_chat,adult_detail,Did anything funny happen today?,Yes. At 4pm my 6-year-old nephew told me a joke about a chicken and a durian. We were dying of laughter for five minutes.
+syn_idiom_negative_003_11,val,0,idiom_negative,free_chat,any_blunt,,Pineapple pizza? Over my dead body.
+syn_idiom_negative_003_12,train,0,idiom_negative,free_chat,teen_casual,What's new with you?,"my plant on the windowsill died lol but i got a cactus now, cant kill a cactus right"
+syn_idiom_negative_003_13,train,0,idiom_negative,free_chat,adult_detail,,"The wifi at home has been dead since 8:15pm, so I am using mobile data. I still have 14GB left this month."
+syn_idiom_negative_003_14,train,0,idiom_negative,free_chat,teen_singlish,How was school today?,"ok lah. PE 2.4km run, i came dead last but still pass sia"
+syn_idiom_negative_003_15,train,0,idiom_negative,free_chat,adult_formal,What are you reading at the moment?,"A mystery novel. A character dies in chapter three, and the detective has to work out what happened. I enjoy the clues."
+syn_idiom_negative_003_16,val,0,idiom_negative,free_chat,any_blunt,How are you feeling today?,Dead tired. Badminton was great.
+syn_idiom_negative_003_17,train,0,idiom_negative,free_chat,any_typos,,"minecraft w cousin, got killed by a creeper twice lmao then built a huge castle"
+syn_idiom_negative_003_18,train,0,idiom_negative,free_chat,teen_singlish,,"jialat, earbuds dead halfway thru my MRT ride. now must listen to uncle talking on his phone haha"
+syn_idiom_negative_003_19,train,0,idiom_negative,free_chat,adult_detail,What did you have for lunch?,"Chicken rice from Block 410, 4 dollars 50. The chilli was so strong it was killing my tongue, but I finished all of it."
+syn_idiom_negative_004_00,train,0,idiom_negative,free_chat,any_blunt,What did you do today?,Boss fight. Died 30 times. Won.
+syn_idiom_negative_004_01,train,0,idiom_negative,free_chat,teen_casual,How's your week been so far?,"busy but good. sec 3 math test was dead easy, think i got full marks"
+syn_idiom_negative_004_02,train,0,idiom_negative,free_chat,any_typos,Anything you're looking forward to?,"new bubble tea shop opening near my hdb, dying to try the brown sugar one"
+syn_idiom_negative_004_03,train,0,idiom_negative,free_chat,teen_singlish,Tell me something fun!,"my cousin name her goldfish Death Star leh, she damn into star wars"
+syn_idiom_negative_004_04,train,0,idiom_negative,free_chat,adult_formal,,"The old shopping centre near my home is a dead mall now, but the bookshop on level 2 is still open and pleasantly quiet."
+syn_idiom_negative_004_05,train,0,idiom_negative,free_chat,adult_formal,,"My favourite game mechanic is respawning. When your character dies, it returns five seconds later at the last checkpoint."
+syn_idiom_negative_004_06,train,0,idiom_negative,hawker_centre,teen_casual,Small plate or big plate?,big. dead hungry
+syn_idiom_negative_004_07,train,0,idiom_negative,hawker_centre,teen_singlish,Total four fifty ah.,"alamak die liao, paynow can?"
+syn_idiom_negative_004_08,train,0,idiom_negative,new_colleague,any_blunt,Did you try the brownies someone left in the pantry?,Yes. Brownies to die for.
+syn_idiom_negative_004_09,train,0,idiom_negative,new_colleague,adult_detail,Are you coming to the 3pm briefing?,"Yes, I will be there at 2:55. My laptop is dead again, so I am bringing a paper notebook and two pens."
+syn_idiom_negative_004_10,train,0,idiom_negative,new_colleague,adult_formal,Are you heating your lunch in the pantry?,No. The microwave is dead.
+syn_idiom_negative_004_11,train,0,idiom_negative,job_interview,any_blunt,How did your final exams go?,Killed it. Straight As.
+syn_idiom_negative_004_12,train,0,idiom_negative,free_chat,teen_casual,Hi! What are you up to?,killing time before tuition
+syn_idiom_negative_004_13,train,0,idiom_negative,free_chat,any_typos,,lol that meme killed me
+syn_meta_feedback_000_00,train,0,meta_feedback,free_chat,teen_casual,,can u send shorter messages? i like reading like 1 or 2 lines
+syn_meta_feedback_000_01,train,0,meta_feedback,free_chat,adult_formal,What would you like to talk about?,"Before we start, please confirm whether I am chatting with a computer program."
+syn_meta_feedback_000_03,train,0,meta_feedback,free_chat,teen_singlish,How was your day?,eh why you always ask how was my day one ah
+syn_meta_feedback_000_04,train,0,meta_feedback,free_chat,adult_detail,,"Could you wait until I finish typing? I usually send two or three messages in a row, and you reply after the first one."
+syn_meta_feedback_000_06,train,0,meta_feedback,free_chat,teen_casual,What are you doing this weekend?,what does 'touch base' mean? my teacher said it today
+syn_meta_feedback_000_07,val,0,meta_feedback,free_chat,adult_formal,,What does the phrase 'break the ice' mean? I do not understand it literally.
+syn_meta_feedback_000_08,val,0,meta_feedback,free_chat,any_blunt,What's on your mind today?,"Yes or no questions, please."
+syn_meta_feedback_000_09,train,0,meta_feedback,free_chat,teen_singlish,,can switch to hawker centre practice or not? i want to order kopi properly
+syn_meta_feedback_000_10,train,0,meta_feedback,free_chat,adult_detail,Did you sleep well?,"Why do people ask 'did you sleep well'? Do they want the number of hours, or just 'yes'?"
+syn_meta_feedback_000_11,val,0,meta_feedback,free_chat,any_typos,Anything you want to chat about tonight?,"how does small talk work, like how long r u supposed to talk abt weather"
+syn_meta_feedback_000_12,train,0,meta_feedback,free_chat,teen_casual,How's school going?,less emojis pls
+syn_meta_feedback_000_14,train,0,meta_feedback,free_chat,any_blunt,,Is this app free?
+syn_meta_feedback_000_15,train,0,meta_feedback,free_chat,teen_singlish,Have you watched anything lately?,you got watch movies one meh? you're a bot right
+syn_meta_feedback_000_16,train,0,meta_feedback,free_chat,adult_detail,How was work?,Can we practise the job interview next? I have a real interview on Thursday at 2 p.m. and want two practice rounds first.
+syn_meta_feedback_000_17,train,0,meta_feedback,free_chat,any_typos,,capital of australia?
+syn_meta_feedback_000_18,val,0,meta_feedback,hawker_centre,teen_casual,Next! What you want?,wait what is kopi c? is it different from kopi o
+syn_meta_feedback_000_19,train,0,meta_feedback,hawker_centre,adult_formal,Kopi or teh?,Could the stall auntie type a little slower? I need more time to read each line.
+syn_meta_feedback_001_00,train,0,meta_feedback,hawker_centre,any_blunt,Eat here or take away?,What does 'da bao' mean?
+syn_meta_feedback_001_01,train,0,meta_feedback,hawker_centre,teen_singlish,Got chope seat or not?,"haha what is chope ah, my mum always say but i never ask"
+syn_meta_feedback_001_02,train,0,meta_feedback,hawker_centre,adult_detail,Hot or cold?,"In real hawker centres, do people say 'peng' for iced? I want to learn the correct words before I go to Maxwell on Saturday."
+syn_meta_feedback_001_03,train,0,meta_feedback,hawker_centre,any_typos,"Chicken rice, roasted or steamed?","can we redo the order from the start, i want to try it again properly"
+syn_meta_feedback_001_04,train,0,meta_feedback,hawker_centre,teen_casual,Anything else?,can the uncle be more friendly lol
+syn_meta_feedback_001_05,train,0,meta_feedback,hawker_centre,adult_formal,Total $5.50. Cash or scan QR?,Is the price realistic? I would like to know how much chicken rice costs in Singapore now.
+syn_meta_feedback_001_06,train,0,meta_feedback,hawker_centre,any_blunt,Rice or noodles?,Use English. No Singlish.
+syn_meta_feedback_001_07,train,0,meta_feedback,hawker_centre,teen_singlish,You want sugar or not?,"eh what's siew dai and ga dai, i always mix up"
+syn_meta_feedback_001_08,train,0,meta_feedback,hawker_centre,adult_detail,"Fishball noodle, dry or soup?","Can you give me three example ways to order fishball noodles, from simple to detailed? I learn better from examples."
+syn_meta_feedback_001_09,train,0,meta_feedback,hawker_centre,any_typos,Spicy can or not?,r u the drinks stall or the food stall now? just checking which one ur playing
+syn_meta_feedback_001_10,train,0,meta_feedback,hawker_centre,teen_casual,Ice or no ice?,can we do a different stall next? like nasi lemak
+syn_meta_feedback_001_12,train,0,meta_feedback,hawker_centre,any_blunt,Wait ten minutes can?,What does 'can' mean at the end of a sentence?
+syn_meta_feedback_001_13,train,0,meta_feedback,hawker_centre,teen_singlish,Plate or packet?,this one got score or not? want to see how i did
+syn_meta_feedback_001_14,train,0,meta_feedback,hawker_centre,adult_detail,"Ok, number 42. Wait for the buzzer.","What is the buzzer? At the food court near my home, the stall uncle just shouts the number, so I have never used one."
+syn_meta_feedback_001_15,train,0,meta_feedback,job_interview,adult_formal,Tell me a bit about yourself.,How long should my answer to this question be? One minute or three minutes?
+syn_meta_feedback_001_16,train,0,meta_feedback,job_interview,adult_detail,What are your strengths?,"Could you show me an example answer first? Maybe one for an office admin job, around 3 sentences, and then I will write mine."
+syn_meta_feedback_001_17,train,0,meta_feedback,job_interview,any_blunt,What is one weakness you're working on?,Why do interviewers ask about weaknesses?
+syn_meta_feedback_001_18,train,0,meta_feedback,job_interview,teen_casual,Why did you apply for this position?,wait which job is this
+syn_meta_feedback_001_19,train,0,meta_feedback,job_interview,teen_singlish,What are your salary expectations?,eh in real life can ask salary one meh? or is it rude
+syn_meta_feedback_002_00,train,0,meta_feedback,job_interview,any_typos,Can you describe your internship experience?,"can u pretend its a retail job instead, i dont hv office internship"
+syn_meta_feedback_002_02,train,0,meta_feedback,job_interview,adult_detail,Tell me about a time you worked in a team.,Please give me feedback after each answer instead of at the end. I remember better if it is right after.
+syn_meta_feedback_002_03,train,0,meta_feedback,job_interview,any_blunt,When can you start?,Make the questions harder.
+syn_meta_feedback_002_04,train,0,meta_feedback,job_interview,teen_casual,Where do you see yourself in five years?,"what does this question actually mean, like literally 5 years?"
+syn_meta_feedback_002_05,train,0,meta_feedback,job_interview,teen_singlish,How would your friends describe you?,"can change to part time job interview, like at a bubble tea shop? more realistic for me lah"
+syn_meta_feedback_002_06,val,0,meta_feedback,job_interview,any_typos,Do you have any questions for us?,wat kind of questions r we supposed to ask back? give me 2 examples
+syn_meta_feedback_002_07,train,0,meta_feedback,job_interview,adult_formal,Tell me about a mistake you made and what you learned.,Is this interviewer meant to be strict or friendly? I would like to know the setting.
+syn_meta_feedback_002_08,val,0,meta_feedback,job_interview,adult_detail,Are you comfortable with shift work?,"Can the interviewer use the STAR format in the feedback? My job coach taught me Situation, Task, Action, Result last month."
+syn_meta_feedback_002_09,train,0,meta_feedback,job_interview,any_blunt,Tell me about a project you worked on at ITE.,"Shorter questions, please."
+syn_meta_feedback_002_10,train,0,meta_feedback,job_interview,teen_casual,How did you hear about this role?,do u remember my answers from last time? or start fresh
+syn_meta_feedback_002_11,val,0,meta_feedback,job_interview,any_typos,What were your grades like?,can i type my answer in point form or must be full sentence
+syn_ordinary_scenario_000_01,train,0,ordinary_scenario,hawker_centre,adult_formal,Kopi or teh?,"Teh, please. Less sugar."
+syn_ordinary_scenario_000_02,train,0,ordinary_scenario,hawker_centre,any_blunt,Eat here or take away?,Take away.
+syn_ordinary_scenario_000_03,train,0,ordinary_scenario,hawker_centre,teen_singlish,Got chope seat or not?,"got lah, my friend chope already with tissue packet at table 18"
+syn_ordinary_scenario_000_04,train,0,ordinary_scenario,hawker_centre,adult_detail,"Chicken rice, roasted or steamed?","Steamed, please. Two plates: one to eat here and one packet to take away, both with extra chilli and ginger on the side."
+syn_ordinary_scenario_000_05,val,0,ordinary_scenario,hawker_centre,any_typos,You want sugar or not?,kopi siew dai pls uncle
+syn_ordinary_scenario_000_06,train,0,ordinary_scenario,hawker_centre,teen_casual,Rice or noodles?,noodles. the thick yellow ones
+syn_ordinary_scenario_000_07,train,0,ordinary_scenario,hawker_centre,adult_formal,Total $5.50. Cash or scan QR?,"I will scan the QR code. Where is it, please?"
+syn_ordinary_scenario_000_08,train,0,ordinary_scenario,hawker_centre,any_blunt,Want add egg or not?,Yes. One egg.
+syn_ordinary_scenario_000_09,val,0,ordinary_scenario,hawker_centre,teen_singlish,Spicy can or not?,"can lah, medium spicy"
+syn_ordinary_scenario_000_10,train,0,ordinary_scenario,hawker_centre,adult_detail,"Fishball noodle, dry or soup?","Dry, please. Mee pok with fishballs and fishcake, chilli and vinegar, and one extra bowl of soup on the side. It was $4.50 last time."
+syn_ordinary_scenario_000_11,train,0,ordinary_scenario,hawker_centre,any_typos,Hot or cold?,cold. teh c peng plss
+syn_ordinary_scenario_000_12,train,0,ordinary_scenario,hawker_centre,teen_casual,Small or big bowl?,small bowl. had a big recess snack so not that hungry
+syn_ordinary_scenario_000_13,train,0,ordinary_scenario,hawker_centre,adult_formal,"Sorry ah, sold out already. Want other one?","That is fine. I will have the wanton mee instead, with no vegetables."
+syn_ordinary_scenario_000_14,train,0,ordinary_scenario,hawker_centre,any_blunt,What number is your table?,Table 27.
+syn_ordinary_scenario_000_15,val,0,ordinary_scenario,hawker_centre,teen_singlish,You want kaya toast set or not?,"want lah, kaya toast set with two kopi. my dad also coming"
+syn_ordinary_scenario_000_17,val,0,ordinary_scenario,hawker_centre,any_typos,Anything else?,thats all thanks. oh wait add one barley no ice
+syn_ordinary_scenario_000_18,train,0,ordinary_scenario,hawker_centre,teen_casual,Ice or no ice?,less ice pls
+syn_ordinary_scenario_000_19,train,0,ordinary_scenario,hawker_centre,adult_formal,Drinks? What you want?,"I would like a can of chrysanthemum tea and a cup of warm water, please."
+syn_ordinary_scenario_001_00,train,0,ordinary_scenario,hawker_centre,any_blunt,Wait ten minutes can?,Ok. I'll wait.
+syn_ordinary_scenario_001_01,train,0,ordinary_scenario,hawker_centre,teen_singlish,Got own container or not?,"got, i bring my own tingkat today. mummy say must reduce plastic"
+syn_ordinary_scenario_001_02,train,0,ordinary_scenario,hawker_centre,adult_detail,Plate or packet?,"Packet, please. I am bringing it back to my office on level 12, which is about a ten-minute walk from here."
+syn_ordinary_scenario_001_03,train,0,ordinary_scenario,hawker_centre,any_typos,"Ok, number 42. Wait for the buzzer.",ok number 42 got it. buzzer is the round thing rite
+syn_ordinary_scenario_001_04,val,0,ordinary_scenario,hawker_centre,teen_casual,"Char kway teow, want cockles or not?",no cockles. extra beansprouts can?
+syn_ordinary_scenario_001_06,train,0,ordinary_scenario,hawker_centre,any_blunt,Next! What you want?,"Two plain prata, one egg prata. Fish curry."
+syn_ordinary_scenario_001_08,train,0,ordinary_scenario,hawker_centre,adult_detail,Eat here or take away?,"Eat here. It started raining about ten minutes ago and I did not bring an umbrella, so I will stay until it eases."
+syn_ordinary_scenario_001_09,train,0,ordinary_scenario,hawker_centre,any_typos,"Ah boy, you want what?","uncle one char siew rice and one wonton soup, eat here"
+syn_ordinary_scenario_001_10,val,0,ordinary_scenario,hawker_centre,teen_casual,"Hello, first time here ah?",ya first time
+syn_ordinary_scenario_001_11,train,0,ordinary_scenario,hawker_centre,adult_formal,Mee pok or mee kia?,"Mee kia, dry, please."
+syn_ordinary_scenario_001_12,train,0,ordinary_scenario,hawker_centre,any_blunt,That one $4.80. Cash or card?,Cash. My phone banking app is not loading today.
+syn_ordinary_scenario_001_13,train,0,ordinary_scenario,hawker_centre,teen_singlish,You want receipt?,"no need lah, thanks"
+syn_ordinary_scenario_001_14,train,0,ordinary_scenario,hawker_centre,adult_detail,Got chope seat or not?,Not yet. I will look for a seat after I collect my food. Usually there are empty tables near the drinks stall after 1 p.m.
+syn_ordinary_scenario_001_15,train,0,ordinary_scenario,new_colleague,teen_casual,"Hi, I'm Priya! Did you do anything fun over the weekend?","hi priya. went cycling at east coast with my cousin, then ate satay"
+syn_ordinary_scenario_001_16,train,0,ordinary_scenario,new_colleague,adult_formal,Morning! How was your commute today?,Good morning. It was fine. The train was on time and I found a seat at Jurong East.
+syn_ordinary_scenario_001_17,train,0,ordinary_scenario,new_colleague,any_blunt,"Hey, I'm Wei Jie. Which department are you in?",Finance. Accounts payable.
+syn_ordinary_scenario_001_18,train,0,ordinary_scenario,new_colleague,teen_singlish,Want to join us for lunch at the food court later?,"can lah, what time you all going? i want the mala stall"
+syn_ordinary_scenario_001_19,train,0,ordinary_scenario,new_colleague,adult_detail,So what do you usually do on weekends?,"On Saturdays I swim 40 laps at the Bishan pool at 7 a.m., and on Sundays I visit my grandmother in Toa Payoh for lunch."
+syn_ordinary_scenario_002_00,train,0,ordinary_scenario,new_colleague,any_typos,"Wah, the rain this morning was crazy right? Did you get wet?","ya my shoes totally soaked, walked from the bus stop w no umbrella. drying them under the desk now lol"
+syn_ordinary_scenario_002_01,train,0,ordinary_scenario,new_colleague,teen_casual,Do you have any pets?,two hamsters. mochi and bean
+syn_ordinary_scenario_002_02,val,0,ordinary_scenario,new_colleague,adult_formal,Where do you stay?,"I live in Sengkang, about five minutes from the LRT station."
+syn_ordinary_scenario_002_03,train,0,ordinary_scenario,new_colleague,any_blunt,Any plans for the long weekend?,Staying home. Cleaning my room.
+syn_ordinary_scenario_002_04,val,0,ordinary_scenario,new_colleague,teen_singlish,How's your first week going so far?,"ok lor, a bit sian because my laptop only came yesterday, but everyone quite nice"
+syn_ordinary_scenario_002_06,train,0,ordinary_scenario,new_colleague,any_typos,What did you have for lunch?,"economic rice. 2 veg 1 meat, cabbage tofu and curry chicken"
+syn_ordinary_scenario_002_07,train,0,ordinary_scenario,new_colleague,teen_casual,"I'm Farah, I sit two desks away. Have you settled in?",mostly. still figuring out the printer
+syn_ordinary_scenario_002_08,train,0,ordinary_scenario,new_colleague,adult_formal,Do you take the MRT to work?,Yes. I take the North East Line from Punggol and change at Outram Park.
+syn_ordinary_scenario_002_09,train,0,ordinary_scenario,new_colleague,any_blunt,Any hobbies?,Chess. Lego.
+syn_ordinary_scenario_002_10,train,0,ordinary_scenario,new_colleague,teen_singlish,Are you going to the team dinner on Friday?,"go lah, but i cannot stay late, got class next morning"
+syn_ordinary_scenario_002_11,train,0,ordinary_scenario,new_colleague,adult_detail,How was Hari Raya with your family?,"It was busy. We visited six houses in one day, starting in Bedok at 10 a.m. and ending in Woodlands around 9 p.m. I ate a lot of rendang."
+syn_ordinary_scenario_002_12,train,0,ordinary_scenario,new_colleague,any_typos,Coffee? I'm going down to the kopitiam.,yes pls! kopi c for me
+syn_ordinary_scenario_002_13,train,0,ordinary_scenario,new_colleague,teen_casual,"You look tired today, late night?","ya my sister's birthday party ended late. just sleepy, coffee will fix it"
+syn_ordinary_scenario_002_14,train,0,ordinary_scenario,new_colleague,adult_formal,Do you have siblings?,"Yes, one older brother."
+syn_ordinary_scenario_002_15,train,0,ordinary_scenario,new_colleague,any_blunt,What did you study before this?,Diploma in Business IT at poly.
+syn_ordinary_scenario_002_17,train,0,ordinary_scenario,new_colleague,adult_detail,Have you tried the new bubble tea shop downstairs?,"Yes, on Tuesday. I ordered brown sugar milk tea at 50% sugar for $5.20. It was too sweet for me, so I will not order it again."
+syn_ordinary_scenario_002_18,train,0,ordinary_scenario,new_colleague,any_typos,"How do you usually get here, bus or MRT?","bus 858 usually. today it came 20 min late so i reached at 9.10, boss didnt mind"
+syn_ordinary_scenario_002_19,val,0,ordinary_scenario,new_colleague,any_typos,Busy morning?,"kinda busy, sortd abt 200 files"
+syn_ordinary_scenario_003_00,train,0,ordinary_scenario,new_colleague,adult_formal,"Hey, Marcus here. Did your laptop get set up yet?","Hello Marcus. Yes, IT set it up this morning. I am still waiting for my email account."
+syn_ordinary_scenario_003_01,train,0,ordinary_scenario,new_colleague,any_blunt,Do you play any sports?,Badminton. Every Wednesday.
+syn_ordinary_scenario_003_02,train,0,ordinary_scenario,new_colleague,teen_singlish,What are you doing after work today?,"supposed to watch movie with friends but they cancel already, so i go home eat dinner and play games lor"
+syn_ordinary_scenario_003_03,train,0,ordinary_scenario,new_colleague,adult_detail,Do you have any pets?,I have a cat named Kopi. She was sick last week and the vet gave her medicine for five days. She is eating normally again now.
+syn_ordinary_scenario_003_05,train,0,ordinary_scenario,new_colleague,teen_casual,Where do you stay?,yishun. near the park
+syn_ordinary_scenario_003_06,train,0,ordinary_scenario,new_colleague,adult_formal,Morning! How was your commute today?,"It was slower than usual. There was a train fault on the East-West Line, so I took a bus instead and arrived ten minutes late."
+syn_ordinary_scenario_003_07,train,0,ordinary_scenario,new_colleague,any_blunt,What did you have for lunch?,Chicken rice. Same as yesterday.
+syn_ordinary_scenario_003_08,train,0,ordinary_scenario,new_colleague,teen_singlish,"Hi, I'm Hui Min from marketing! Nice to meet you.","nice to meet you too! i'm the new intern for data team, here until december"
+syn_ordinary_scenario_003_09,train,0,ordinary_scenario,new_colleague,adult_detail,Any plans for the long weekend?,Yes. My family is driving to Malacca on Saturday at 6 a.m. We will stay two nights and come back on Monday afternoon.
+syn_ordinary_scenario_003_10,train,0,ordinary_scenario,job_interview,adult_formal,Tell me a bit about yourself.,"My name is Darren. I have a diploma in Applied Food Science from poly, and I enjoy careful lab work and following procedures exactly."
+syn_ordinary_scenario_003_11,train,0,ordinary_scenario,job_interview,adult_detail,What are your strengths?,"I am accurate with numbers. In my last role I checked about 300 invoices a week, and my error rate stayed under 1 percent for six months."
+syn_ordinary_scenario_003_12,train,0,ordinary_scenario,job_interview,any_blunt,What is one weakness you're working on?,I talk less in meetings. Now I write my points down first.
+syn_ordinary_scenario_003_13,train,0,ordinary_scenario,job_interview,teen_casual,Why did you apply for this position?,i like animals and this pet shop is near my house. want part time work during the holidays
+syn_ordinary_scenario_003_14,val,0,ordinary_scenario,job_interview,teen_singlish,Can you describe your internship experience?,"i intern at one logistics company for 3 months, mostly scan parcels and update the spreadsheet lor"
+syn_ordinary_scenario_003_15,train,0,ordinary_scenario,job_interview,any_typos,Have you completed your National Service?,"yes finished NS last yr, was a storeman in camp so used to doing inventory"
+syn_ordinary_scenario_003_16,train,0,ordinary_scenario,job_interview,adult_formal,Tell me about a project you worked on at ITE.,"At ITE, my team built a small watering system for the school garden. I wrote the timer code and tested the moisture sensors."
+syn_ordinary_scenario_003_17,train,0,ordinary_scenario,job_interview,any_blunt,When can you start?,Next Monday.
+syn_ordinary_scenario_003_18,train,0,ordinary_scenario,job_interview,adult_detail,What are your salary expectations?,"Based on the job posting and my two years of experience, I am hoping for around $2,800 a month, but I am open to discussing it."
+syn_ordinary_scenario_003_19,val,0,ordinary_scenario,job_interview,teen_casual,Tell me about a time you received feedback.,my teacher said my slides had too many words. i failed that presentation but redid it with pictures and got a B
+syn_ordinary_scenario_004_00,train,0,ordinary_scenario,job_interview,teen_singlish,Are you able to work weekends?,"saturday can, sunday cannot because got church with my family"
+syn_ordinary_scenario_004_01,val,0,ordinary_scenario,job_interview,any_typos,What software are you familiar with?,"spreadsheets and word documents, a bit of python too. also did posters for my cca"
+syn_ordinary_scenario_004_02,val,0,ordinary_scenario,job_interview,adult_formal,Where do you see yourself in five years?,"In five years, I would like to be a senior technician who can train new staff."
+syn_ordinary_scenario_004_03,train,0,ordinary_scenario,job_interview,adult_detail,Do you have any questions for us?,"Yes, two questions. What are the working hours on weekdays, and how many people are in the team I would join?"
+syn_ordinary_scenario_004_04,train,0,ordinary_scenario,job_interview,any_blunt,Why did you leave your last job?,Contract ended.
+syn_ordinary_scenario_004_05,val,0,ordinary_scenario,job_interview,teen_casual,How would your friends describe you?,quiet but reliable i think. i always reply the group chat
+syn_ordinary_scenario_004_06,train,0,ordinary_scenario,job_interview,teen_singlish,Tell me about a mistake you made and what you learned.,"last time i mix up two customer orders at my part time job. boss not happy, so now i double check the receipt every time"
+syn_ordinary_scenario_004_07,train,0,ordinary_scenario,job_interview,any_typos,How did you hear about this role?,"saw it on a job portal last wk, my career coach also sent me the link"
+syn_ordinary_scenario_004_08,train,0,ordinary_scenario,job_interview,adult_formal,Are you comfortable with shift work?,Yes. I can work morning or afternoon shifts. I prefer to know my schedule one week in advance.
+syn_ordinary_scenario_004_09,train,0,ordinary_scenario,job_interview,adult_detail,Tell me about a time you worked in a team.,"In my final-year poly project, four of us designed a booking app. I handled the database, we met every Thursday at 4 p.m., and we got a distinction."
+syn_ordinary_scenario_004_12,train,0,ordinary_scenario,job_interview,teen_singlish,Tell me a bit about yourself.,"i'm Aqil, 19, just finish my nitec in electrical at ITE. like fixing things and playing futsal"
+syn_ordinary_scenario_004_13,train,0,ordinary_scenario,job_interview,any_typos,What have you been doing since you graduated?,"did part time at a cafe, and retook my driving test cos i failed the first one. passed in march"
+syn_ordinary_scenario_004_14,val,0,ordinary_scenario,job_interview,adult_formal,What were your grades like?,My GPA was 3.4 out of 4. My best module was Database Management.
+syn_ordinary_scenario_004_16,train,0,ordinary_scenario,job_interview,any_blunt,Do you have any questions for us?,Is there a dress code?
+syn_ordinary_scenario_004_17,train,0,ordinary_scenario,job_interview,teen_casual,How do you handle deadlines?,i write them on my calendar and do the hardest part first
+syn_ordinary_scenario_004_18,train,0,ordinary_scenario,job_interview,teen_singlish,Have you completed your National Service?,"not yet leh, i enlist next year. so this one is part time until then"
+syn_ordinary_scenario_004_19,train,0,ordinary_scenario,job_interview,any_typos,Tell me about a project you worked on at university.,"final yr project was an app that shows bus arrival times for my estate, used open data and got an A minus"
+syn_ordinary_scenario_005_00,train,0,ordinary_scenario,job_interview,adult_formal,Why did you apply for this position?,"I enjoy library work. I was not selected for a similar role last year, so I volunteered at a community library to gain experience."
+syn_ordinary_scenario_005_01,train,0,ordinary_scenario,job_interview,adult_detail,Can you describe your internship experience?,I interned for 10 weeks in a hospital store room. I counted stock every morning at 8:30 and updated about 150 inventory records a day.
+syn_ordinary_scenario_005_02,train,0,ordinary_scenario,job_interview,any_blunt,What are your salary expectations?,"$2,200. Negotiable."
+syn_ordinary_scenario_005_03,train,0,ordinary_scenario,job_interview,teen_casual,How do you deal with setbacks?,i failed a sec 4 chem quiz once. asked my teacher what i got wrong and passed the retest
+syn_ordinary_scenario_005_04,train,0,ordinary_scenario,free_chat,teen_casual,How was your day?,tired. had pe and then cca until 6. gonna shower and sleep early
+syn_ordinary_scenario_005_05,train,0,ordinary_scenario,free_chat,teen_singlish,,"today i try the new prata shop near my block, quite shiok sia"
+syn_ordinary_scenario_005_06,train,0,ordinary_scenario,free_chat,adult_formal,What would you like to talk about?,I would like to talk about the weather. It has been very hot this week.
+syn_ordinary_scenario_005_07,train,0,ordinary_scenario,free_chat,adult_detail,,"Today I woke up at 6:45, took bus 39 to work, had nasi lemak for lunch at 12:15, and finished my report by 5:30."
+syn_ordinary_scenario_005_08,val,0,ordinary_scenario,free_chat,any_typos,,"mee rebus for breakfast n fried rice for lunch, now eating an apple"
+syn_ordinary_scenario_005_09,train,0,ordinary_scenario,free_chat,any_blunt,,Wet day. My bus came 15 minutes late.
+syn_ordinary_scenario_005_10,train,0,ordinary_scenario,free_chat,teen_casual,How's school going?,ok. failed my maths quiz but theres a retest on friday so its fine
+syn_ordinary_scenario_005_11,train,0,ordinary_scenario,free_chat,teen_singlish,What are you doing this weekend?,"saturday go my cousin's wedding, sunday rest at home lor"
+syn_ordinary_scenario_005_12,train,0,ordinary_scenario,free_chat,adult_formal,,Today I finished reading a book about the history of the MRT. It was interesting.
+syn_ordinary_scenario_005_13,train,0,ordinary_scenario,free_chat,adult_detail,How was work?,"Work was long. I had three meetings between 9 and 12, and the photocopier ran out of toner. I am tired but fine, and dinner is soon."
+syn_ordinary_scenario_005_14,train,0,ordinary_scenario,free_chat,any_typos,,"my cat was vomiting yday so took her to the vet, shes ok now, it was jus a hairball"
+syn_ordinary_scenario_005_15,train,0,ordinary_scenario,free_chat,any_blunt,Did you sleep well?,Yes. Eight hours.
+syn_ordinary_scenario_005_16,train,0,ordinary_scenario,free_chat,teen_casual,,just back from swimming
+syn_ordinary_scenario_005_18,train,0,ordinary_scenario,free_chat,adult_formal,Have you watched anything lately?,Yes. I watched a comedy film last night. I did not like it because the jokes were not funny to me.
+syn_ordinary_scenario_005_19,train,0,ordinary_scenario,free_chat,adult_detail,,My sister's engagement dinner was on Saturday at 7 p.m. There were 24 guests and 9 dishes. The steamed fish was my favourite.
+syn_ordinary_scenario_006_00,train,0,ordinary_scenario,free_chat,any_typos,Tell me something that made you smile today.,my neighbour's baby waved at me in the lift haha
+syn_ordinary_scenario_006_01,train,0,ordinary_scenario,free_chat,any_blunt,How's your dog doing?,Fine. He chewed my sock.
+syn_ordinary_scenario_006_02,train,0,ordinary_scenario,free_chat,any_typos,,"doin chem hw, half dne"
+syn_ordinary_scenario_006_03,train,0,ordinary_scenario,free_chat,teen_singlish,,"my friends cancel our bowling plan last minute, so sian. but ok lah, going cycling with my brother instead"
+syn_ordinary_scenario_006_04,val,0,ordinary_scenario,free_chat,adult_formal,Good morning! Any plans for today?,Good morning. I plan to go grocery shopping and then clean the bathroom.
+syn_ordinary_scenario_006_05,train,0,ordinary_scenario,free_chat,adult_detail,How did your test go?,"I got 14 out of 25 on my driving theory practice test. The pass mark is 20, so I will study the road signs and retake it on Thursday."
+syn_ordinary_scenario_006_06,train,0,ordinary_scenario,free_chat,any_typos,,"went to east coast park w family, flew a kite, abit windy but fun"
+syn_ordinary_scenario_006_07,train,0,ordinary_scenario,free_chat,any_blunt,What's on your mind today?,Lunch. Laksa or chicken rice.
+syn_ordinary_scenario_006_08,val,0,ordinary_scenario,free_chat,teen_casual,Hi again! What did you do after school?,went for bubble tea with my classmates then took the mrt home
+syn_ordinary_scenario_006_09,train,0,ordinary_scenario,free_chat,teen_singlish,How was your day?,"today quite good sia, my form teacher let us out early"
+syn_ordinary_scenario_006_12,train,0,ordinary_scenario,free_chat,any_typos,Anything you want to chat about tonight?,"can we talk abt cooking, i made fried rice for dinner and it was gd"
+syn_ordinary_scenario_006_13,train,0,ordinary_scenario,free_chat,any_blunt,,Bought new shoes today.
+syn_ordinary_scenario_006_14,val,0,ordinary_scenario,free_chat,teen_casual,Welcome back. How was the family gathering?,fun. my cousins and i played card games for like 2 hours
+syn_ordinary_scenario_006_15,train,0,ordinary_scenario,free_chat,teen_singlish,Did you sleep well?,"not really leh, got one mosquito in my room whole night. bought a mosquito coil already"
+syn_ordinary_scenario_006_16,train,0,ordinary_scenario,free_chat,adult_formal,What did you eat today?,I ate oatmeal for breakfast and fish soup for lunch. I will have rice with vegetables for dinner.
+syn_ordinary_scenario_006_17,train,0,ordinary_scenario,free_chat,adult_detail,,I spent 3 hours this afternoon repotting the 5 plants on my balcony. The chilli plant now has 12 flowers on it.
+syn_special_interest_000_01,train,0,special_interest,free_chat,adult_detail,What's something you've been enjoying lately?,"Speedcubing. I use the CFOP method: cross, F2L, then 57 OLL and 21 PLL algorithms. My best single solve is 14.82 seconds and my average of five is 18.3."
+syn_special_interest_000_02,train,0,special_interest,free_chat,teen_singlish,,"southwest monsoon got sumatra squalls one, usually come early morning like 4 to 6am. strong wind and heavy rain then by 8am finish already. shiok to track on the radar"
+syn_special_interest_000_03,train,0,special_interest,free_chat,adult_formal,How was your day?,"Good. I studied the Ruy Lopez opening. After 1.e4 e5 2.Nf3 Nc6 3.Bb5, Black has many replies, and today I learned four of them properly."
+syn_special_interest_000_04,train,0,special_interest,free_chat,any_typos,,fun fact stegosaurus lived like 150 milion years ago and t rex was 66 million so t rex is closer in time to us then to stegosaurus lol
+syn_special_interest_000_06,train,0,special_interest,free_chat,any_blunt,,Nepal has the only national flag that is not a rectangle. It is two stacked triangles. Their constitution even lists the exact geometry steps to draw it.
+syn_special_interest_000_07,train,0,special_interest,free_chat,teen_casual,What did you do this weekend?,built lego all sunday. fun fact a brick is 9.6mm tall and a plate is 3.2mm so 3 plates stacked = exactly 1 brick. thats why everything fits
+syn_special_interest_000_08,train,0,special_interest,free_chat,teen_singlish,Any new hobbies lately?,"birdwatching at pasir ris park sia. saw a collared kingfisher, 3 oriental pied hornbills and one white-bellied sea eagle. the hornbills very loud one, can hear from far"
+syn_special_interest_000_09,train,0,special_interest,free_chat,adult_formal,,"I am interested in typefaces. A monospaced font gives every character the same width, so the letter i takes as much space as the letter m. Programmers use them to align code."
+syn_special_interest_000_10,train,0,special_interest,free_chat,any_typos,What are you curious about these days?,dragonflys! each eye has like 30000 lenses and they see almost 360 degrees. also they can fly backwards and hover like a helicopter
+syn_special_interest_000_11,train,0,special_interest,free_chat,any_blunt,,"Saturn now has 274 confirmed moons. In March 2025 astronomers announced 128 new ones at the same time, which put it far ahead of Jupiter."
+syn_special_interest_000_12,val,0,special_interest,free_chat,adult_detail,Do you have a favourite food?,"Anything with a good sear. The Maillard reaction needs about 140 to 165 degrees Celsius, so boiled meat never browns. Water stays at 100 degrees until it evaporates."
+syn_special_interest_000_13,train,0,special_interest,free_chat,teen_casual,What would you do with a free afternoon?,replay my pokemon game and finish my eevee team. eevee has 8 evolutions: vaporeon jolteon flareon espeon umbreon leafeon glaceon sylveon. sylveon is the newest one
+syn_special_interest_000_14,train,0,special_interest,free_chat,any_blunt,,"Tungsten has the highest melting point of any metal, 3422 degrees Celsius. That is why old light bulb filaments used it. Element number 74, symbol W."
+syn_special_interest_000_15,train,0,special_interest,free_chat,teen_singlish,Is there anything you'd like to share?,"music theory leh. major scale is whole whole half whole whole whole half. from C you only use white keys, from G must add one sharp, F sharp. damn nice"
+syn_special_interest_000_16,train,0,special_interest,free_chat,any_typos,What's your favourite place in Singapore?,"the lifts at my hdb block haha. after lift upgrading most blocks stop every floor now, last time some only stop every 3 floors. i check every block i visit"
+syn_special_interest_000_17,val,0,special_interest,free_chat,adult_formal,What made you smile this week?,"I folded a paper crane from a 7.5 centimetre square. Also, the world record for folding one sheet of paper in half is 12 times, set in 2002."
+syn_special_interest_000_19,train,0,special_interest,new_colleague,teen_casual,What's that cube on your desk?,its a 3x3. there are 43 quintillion positions but every one of them can be solved in 20 moves or less. people call that gods number
+syn_special_interest_001_00,train,0,special_interest,new_colleague,teen_singlish,"Hey, I'm Hui Min. Doing anything fun this weekend?","going changi to plane spot lah. want to see the a380, wingspan almost 80 metres, four engines. the new 777x got folding wingtips so can fit normal gates"
+syn_special_interest_001_01,val,0,special_interest,new_colleague,adult_formal,"Wow, it rained so hard this morning!","That was a cumulonimbus. Those clouds can grow taller than 10 kilometres. The northeast monsoon runs from December to early March, so we should expect more of this."
+syn_special_interest_001_02,train,0,special_interest,new_colleague,any_typos,Nice keychain! Is that a Pikachu?,"yes!! pikachu is number 25 in the national pokedex. bulbasaur is 1 and mew is 151, i can say all 151 in order if u want"
+syn_special_interest_001_03,train,0,special_interest,new_colleague,adult_detail,So what do you get up to on weekends?,"I watch container ships from East Coast with binoculars. The largest ones carry over 24,000 TEU. One TEU is one twenty-foot container, so that is a lot of boxes."
+syn_special_interest_001_04,val,0,special_interest,new_colleague,any_blunt,What's the story behind your phone wallpaper?,"It is a Mercator map. Greenland looks as big as Africa on it, but Africa is about 14 times larger. I prefer equal-area projections."
+syn_special_interest_001_05,train,0,special_interest,new_colleague,teen_singlish,What did you bring for lunch? Smells good!,"fried onions with rice. i add a pinch of baking soda, it raise the pH so the onions brown faster. chemistry one leh, very shiok"
+syn_special_interest_001_06,val,0,special_interest,new_colleague,adult_formal,Do you have any pets?,I keep an ant colony in a glass formicarium. The queen is four years old and there are about 600 workers now. Some ant queens live for over 20 years.
+syn_special_interest_001_07,train,0,special_interest,new_colleague,teen_casual,How's your first week going? I'm Farah from HR.,ok. i play chess at lunch btw. after each side moves once there are already 400 possible positions. after two moves each its over 70 thousand
+syn_special_interest_001_08,train,0,special_interest,new_colleague,adult_detail,Oh you like music? What are you listening to?,"A piece in D major. That key has two sharps, F and C. Every step clockwise on the circle of fifths adds one more sharp, so A major has three."
+syn_special_interest_001_10,val,0,special_interest,new_colleague,teen_singlish,That's a cool plant on your desk!,"pitcher plant lah, nepenthes ampullaria. they grow wild in singapore one. the pitchers sit on the ground and catch falling leaves, not only insects"
+syn_special_interest_001_11,train,0,special_interest,new_colleague,adult_formal,You're always early! What time do you wake up?,"At 6:15. I wear a mechanical watch. Its balance wheel beats 28,800 times per hour, which is eight beats per second. That makes the second hand look smooth."
+syn_special_interest_001_12,train,0,special_interest,new_colleague,any_blunt,Did you watch anything good last night?,"A documentary on whale sharks. They are the biggest fish, up to about 18 metres long, and they eat plankton. Sharks have no bones, only cartilage."
+syn_special_interest_001_13,train,0,special_interest,new_colleague,teen_casual,Busy day huh? I'm Arjun by the way.,"yeah. side project tho, im making a chat app in javascript. 1,240 lines so far and the dark mode toggle finally works properly"
+syn_special_interest_001_14,train,0,special_interest,new_colleague,adult_detail,Have you tried the new lift in Block B? So fast.,Yes. The fastest lifts in the world go about 20 metres per second. Most office lifts here run 2.5 to 6 metres per second. Block B feels like roughly 4.
+syn_special_interest_001_15,train,0,special_interest,new_colleague,any_typos,What do you usually do after work?,watch shinkansen videos. the E5 on tohoku line goes 320 km/h and the N700S on tokaido goes 285. i wanna ride both someday
+syn_special_interest_001_16,train,0,special_interest,job_interview,adult_detail,Tell me about a project you're proud of.,"I wrote a Python script that sorts 3,000 photos by the date in their metadata. It renamed every file to year-month-day format and the whole run took 41 seconds."
+syn_special_interest_001_17,train,0,special_interest,job_interview,adult_formal,How do you stay focused on detailed work?,"I build large Lego sets. The World Map set has 11,695 pieces, mostly one-by-one round tiles. I placed every tile by following the grid and made zero mistakes."
+syn_special_interest_001_19,train,0,special_interest,job_interview,teen_singlish,What do you do in your free time?,"dinosaurs lah. spinosaurus was longer than t rex, around 14 metres, and it lived near rivers. i got 32 dinosaur models at home, all labelled by period"
+syn_special_interest_002_00,train,0,special_interest,job_interview,any_typos,Tell me something that's not on your resume.,"i run a small astronomy club, we meet first friday of every month. fav fact: sunlight takes about 8 min 20 sec to reach earth"
+syn_special_interest_002_01,train,0,special_interest,job_interview,any_typos,Can you give an example of attention to detail?,"i can tell fonts apart from one letter. like helvetica vs arial, look at the capital R. helvetica R has a curved vertical leg, arial R leg is diagonal"
+syn_special_interest_002_02,val,0,special_interest,job_interview,teen_casual,What interests you about working at a bus depot?,ive ridden 214 bus services so far and i log every one. fav is the three-door double decker cos the middle door makes boarding way faster
+syn_special_interest_002_03,train,0,special_interest,job_interview,adult_formal,Why do you want to be a lab assistant?,I like plants. A Venus flytrap only closes when two trigger hairs are touched within about 20 seconds. That stops it closing on raindrops. I enjoy that kind of detail.
+syn_special_interest_002_04,train,0,special_interest,job_interview,teen_singlish,How do you handle repetitive tasks?,"repetitive i ok one. like i memorised the leap year rule: every 4 years, but century years must divide by 400. so 1900 no leap day but 2000 got"
+syn_special_interest_002_05,train,0,special_interest,job_interview,any_blunt,Tell me about yourself.,"I am into birds. The Arctic tern migrates about 70,000 kilometres every year, pole to pole. I have logged 87 bird species in Singapore since 2023."
+syn_special_interest_002_06,train,0,special_interest,job_interview,adult_detail,"If you could travel anywhere, where would you go?","Hawaii, to see Mauna Kea. Measured from the sea floor it is about 10,200 metres, taller than Everest. From sea level it is only 4,207 metres."
+syn_special_interest_002_07,train,0,special_interest,job_interview,any_typos,Why do you want to join the transport planning team?,i like traffic lights a lot. at crossings seniors can tap their card for green man plus and get 3 to 13 more seconds. i think that design is really smart
+syn_special_interest_002_08,train,0,special_interest,job_interview,adult_formal,Do you have experience with data entry?,"Yes. I catalogue my stamp collection in a spreadsheet, 1,318 stamps so far. My oldest is from 1948. The first postage stamp, the Penny Black, came out in 1840."
+syn_special_interest_002_09,train,0,special_interest,job_interview,teen_casual,What's something you're really good at?,"prime numbers. i know the first 100 by heart. the biggest known prime has over 41 million digits, found in october 2024. and 2 is the only even one"
+syn_special_interest_002_10,train,0,special_interest,job_interview,any_blunt,What would your ideal workplace look like?,"Close to an MRT interchange. Dhoby Ghaut is ideal because it connects three lines: NS24, NE6 and CC1. Changing platforms there takes me about 4 minutes."
+syn_special_interest_002_11,train,0,special_interest,job_interview,teen_singlish,Why airline ground operations?,"planes my favourite thing lah. i can tell a 787 from an a350 by the windows. 787 windows dim with a button, no plastic shade. very cool one"
+syn_special_interest_002_12,train,0,special_interest,job_interview,any_blunt,How do you approach solving problems?,Like a Rubik's cube. I solve one layer at a time and do not undo finished parts unless an algorithm needs it. My fastest solve is 21 seconds.
+syn_tense_explicit_000_00,train,1,tense_explicit,hawker_centre,teen_casual,Next! What you want?,one chicken rice. my hands r kinda sweaty ngl the queue is long
+syn_tense_explicit_000_01,train,1,tense_explicit,hawker_centre,teen_singlish,Kopi or teh?,"teh peng. alamak i nervous sia, uncle talk so fast"
+syn_tense_explicit_000_02,train,1,tense_explicit,hawker_centre,adult_formal,Eat here or take away?,"Take away, please. I should say that I feel anxious ordering, even in practice."
+syn_tense_explicit_000_03,val,1,tense_explicit,hawker_centre,adult_detail,Got chope seat or not?,Not yet. I have been standing here for about two minutes and my stomach feels tight because I am worried about saying it wrong.
+syn_tense_explicit_000_04,train,1,tense_explicit,hawker_centre,any_typos,Want chilli or not?,yes chilli pls. im so nervus my fingers keep typo
+syn_tense_explicit_000_05,train,1,tense_explicit,hawker_centre,any_blunt,Big or small plate?,Small. I'm nervous.
+syn_tense_explicit_000_06,train,1,tense_explicit,hawker_centre,teen_casual,"Ah boy, you order already or not?",not yet sorry. kinda scared to order w ppl watching
+syn_tense_explicit_000_07,train,1,tense_explicit,hawker_centre,teen_singlish,Fish soup or sliced fish bee hoon?,"sliced fish bee hoon lor. but my stomach got knots leh, scared order wrong"
+syn_tense_explicit_000_08,train,1,tense_explicit,hawker_centre,adult_formal,Five dollar. Got exact change?,"Yes, I have a five-dollar note. I feel somewhat stressed when counting money in front of someone."
+syn_tense_explicit_000_09,train,1,tense_explicit,hawker_centre,adult_detail,Number 23 ready already! Who's number 23?,"That is mine, number 23. I have been worried for the last five minutes that I would miss my number being called."
+syn_tense_explicit_000_10,train,1,tense_explicit,hawker_centre,any_typos,Add egg or not? Fifty cents more.,ok add egg. sry my heart going v fast rn
+syn_tense_explicit_000_11,train,1,tense_explicit,hawker_centre,any_blunt,Kopi O kosong or with milk?,Kosong. This makes me anxious.
+syn_tense_explicit_000_13,train,1,tense_explicit,hawker_centre,teen_singlish,Dry or soup?,dry. nervous sia
+syn_tense_explicit_000_14,train,1,tense_explicit,hawker_centre,adult_formal,"Wait ah, ten minutes. Can?","Ten minutes is acceptable. I am nervous about waiting near the stall, however."
+syn_tense_explicit_000_15,train,1,tense_explicit,hawker_centre,adult_detail,Which one you want? Point to me.,"The third picture from the left, the one with the char siew. My voice is a little shaky because ordering at the stall near my block always makes me nervous."
+syn_tense_explicit_000_17,train,1,tense_explicit,hawker_centre,any_blunt,You want the set meal or ala carte?,Set meal. My stomach is in knots.
+syn_tense_explicit_000_18,train,1,tense_explicit,hawker_centre,teen_casual,"Faster lah, behind you got queue.","ok sorry, now more nervous"
+syn_tense_explicit_000_19,train,1,tense_explicit,hawker_centre,teen_singlish,Rice or noodle?,"rice. wah my heart pumping so fast sia, uncle very fierce"
+syn_tense_explicit_001_00,train,1,tense_explicit,hawker_centre,adult_formal,How many packets?,"Two packets, please. I would like to mention that I am feeling quite anxious right now."
+syn_tense_explicit_001_01,train,1,tense_explicit,hawker_centre,any_typos,Here's your change. Next!,"thx. phew that was scary, my hands still abit shaky"
+syn_tense_explicit_001_02,train,1,tense_explicit,hawker_centre,adult_detail,Roasted or steamed chicken?,"Roasted, with the dark soy sauce. I rehearsed this order three times before typing and I still feel nervous."
+syn_tense_explicit_001_04,train,1,tense_explicit,hawker_centre,teen_casual,Mee pok or mee kia?,mee pok. scared ngl
+syn_tense_explicit_001_05,train,1,tense_explicit,new_colleague,adult_formal,"Hi! I'm Farhan, I just started in finance. Which team are you in?","I am in the operations team. Meeting someone new makes me anxious, so my replies may be slow."
+syn_tense_explicit_001_06,train,1,tense_explicit,new_colleague,teen_casual,"Hey, I'm Priya. Is this seat free?",yeah its free. im a bit nervous tho first time talking to someone here
+syn_tense_explicit_001_07,train,1,tense_explicit,new_colleague,teen_singlish,Morning! Did you take the MRT in today?,ya MRT lor. why i so nervous one
+syn_tense_explicit_001_08,train,1,tense_explicit,new_colleague,adult_detail,I'm Wei Jie from IT. Have you tried the coffee machine on level 3?,Not yet. I have only been here 11 days and I still feel nervous walking up to level 3 alone because I don't know anyone there.
+syn_tense_explicit_001_09,train,1,tense_explicit,new_colleague,any_typos,Any plans for lunch? A few of us are going to the food court.,maybe? im kinda anxous about eating with a big group tho
+syn_tense_explicit_001_10,train,1,tense_explicit,new_colleague,any_blunt,So how long have you been here?,Eight months. I'm nervous.
+syn_tense_explicit_001_11,val,1,tense_explicit,new_colleague,adult_formal,"Hi, I'm Nadia. What do you do on weekends?","I usually visit the library. I feel stressed when people ask me personal questions, but I will try."
+syn_tense_explicit_001_12,train,1,tense_explicit,new_colleague,teen_casual,The meeting room is so cold today right?,ya v cold. my hands are cold n sweaty at the same time lol nerves
+syn_tense_explicit_001_14,train,1,tense_explicit,new_colleague,adult_detail,I'm Jun Hao. Do you know where the printer is?,"It is next to the pantry, about 20 metres to the left. Sorry, my voice is shaky, I get nervous when someone new talks to me."
+syn_tense_explicit_001_15,val,1,tense_explicit,new_colleague,any_typos,What did you study before this?,i did IT at poly. sry im nervous typin this
+syn_tense_explicit_001_16,train,1,tense_explicit,new_colleague,any_blunt,"Haha, this lift is always so slow.",Yes. I'm anxious right now.
+syn_tense_explicit_001_18,train,1,tense_explicit,new_colleague,teen_casual,"Hi, I'm Siti. Our manager said you'd show me around!",ok sure. kinda scared tho cos im new-ish too
+syn_tense_explicit_001_19,val,1,tense_explicit,new_colleague,teen_singlish,Do you usually eat lunch at your desk?,usually at desk lor. talking to colleague make me stress one
+syn_tense_explicit_002_00,train,1,tense_explicit,new_colleague,adult_detail,Nice to meet you! Where do you stay?,"I live in Tampines, about 40 minutes from here by MRT. My heart rate goes up whenever I have to answer questions like this."
+syn_tense_explicit_002_01,train,1,tense_explicit,new_colleague,any_typos,Did you watch the football last night?,no. sry nervus
+syn_tense_explicit_002_02,train,1,tense_explicit,new_colleague,any_blunt,"I'm Kavin. First week here and I'm still lost, haha.",Same. I'm nervous too.
+syn_tense_explicit_002_03,train,1,tense_explicit,new_colleague,adult_formal,How's your morning going so far?,It is going fine. I am a little worried that I will say something awkward to you.
+syn_tense_explicit_002_04,train,1,tense_explicit,new_colleague,teen_casual,Oh you also like bubble tea? Which shop?,"the one near my school. sorry stomach doing flips rn, new ppl make me nervous"
+syn_tense_explicit_002_05,train,1,tense_explicit,new_colleague,teen_singlish,Hi there! Mind if I join you for lunch?,"can can. but i quite nervous one ah, dont mind"
+syn_tense_explicit_002_06,train,1,tense_explicit,new_colleague,adult_detail,Are you also in the onboarding session at 2?,"Yes, the 2pm session in room 4B. I checked the invite four times because I was worried about going to the wrong room, and talking now makes me nervous too."
+syn_tense_explicit_002_07,train,1,tense_explicit,new_colleague,any_typos,"I'm Rachel, I sit next to you. What are you working on?",just reports. my hands r sweaty lol i get nervus with new ppl
+syn_tense_explicit_002_08,train,1,tense_explicit,new_colleague,any_blunt,"Wah the rain this morning, you got wet?",No. Strangers stress me.
+syn_tense_explicit_002_09,train,1,tense_explicit,job_interview,adult_formal,Good morning. Please take a seat and introduce yourself.,Good morning. My name is Daniel. I should tell you that I am very nervous about this interview.
+syn_tense_explicit_002_10,train,1,tense_explicit,job_interview,adult_detail,Why are you interested in this role?,"I have used your inventory software for 3 years at my current job. Sorry, my hands are shaking slightly; interviews always make me nervous."
+syn_tense_explicit_002_11,train,1,tense_explicit,job_interview,teen_casual,Tell me about a time you worked in a team.,for my CCA we did a project together... im nervous so idk if this counts
+syn_tense_explicit_002_12,train,1,tense_explicit,job_interview,teen_singlish,What are your strengths?,"strengths ah... wah i nervous sia, but i think i quite hardworking"
+syn_tense_explicit_002_14,val,1,tense_explicit,job_interview,any_blunt,Why did you leave your last job?,Contract ended. Very nervous.
+syn_tense_explicit_002_15,train,1,tense_explicit,job_interview,adult_formal,Can you walk me through your resume?,"Certainly. Before I begin, I would like to say that I feel anxious and my voice may sound unsteady."
+syn_tense_explicit_002_16,train,1,tense_explicit,job_interview,adult_detail,How do you handle pressure at work?,I make a list and do the most urgent item first. Right now my pulse is quick because this feels like a real interview.
+syn_tense_explicit_002_17,train,1,tense_explicit,job_interview,teen_casual,What do you know about our company?,sorry super nervous rn
+syn_tense_explicit_002_18,train,1,tense_explicit,job_interview,teen_singlish,Do you have any questions for us?,got... when i know result ah? sorry ah i very stress now
+syn_tense_explicit_002_19,train,1,tense_explicit,job_interview,any_typos,What is your expected salary?,around 2400? im nervus about askin money
+syn_tense_explicit_003_00,train,1,tense_explicit,job_interview,any_blunt,Tell me about a mistake you made and what you learned.,I sent a report late. I learned to set reminders. My stomach hurts from nerves.
+syn_tense_explicit_003_01,train,1,tense_explicit,job_interview,adult_formal,Are you comfortable working weekends?,"Yes, I am comfortable with weekends. I apologise if I seem tense; this question format makes me nervous."
+syn_tense_explicit_003_02,train,1,tense_explicit,job_interview,adult_detail,How would your friends describe you?,My two closest friends say I am reliable and punctual. I practised this answer five times last night and I am still worried I will forget it.
+syn_tense_explicit_003_03,train,1,tense_explicit,job_interview,teen_casual,What did you do during your internship?,i helped at the front desk for 3 weeks. my palms r so sweaty lol
+syn_tense_explicit_003_04,train,1,tense_explicit,job_interview,teen_singlish,Why should we hire you over other candidates?,because i never give up lah. but aiyo this question make me nervous
+syn_tense_explicit_003_05,val,1,tense_explicit,job_interview,any_typos,Can you start next month?,yes can. hands shakin
+syn_tense_explicit_003_06,val,1,tense_explicit,job_interview,any_blunt,Thanks for coming in. How was the journey here?,Fine. I'm scared of interviews.
+syn_tense_explicit_003_07,train,1,tense_explicit,job_interview,adult_formal,What software are you familiar with?,"I am familiar with Excel and AutoCAD. I am feeling nervous, so I may need a moment between answers."
+syn_tense_explicit_003_08,train,1,tense_explicit,job_interview,adult_detail,Tell me about your final year project.,My final year project at ITE was a small app that tracks bus arrival times at 4 stops. I feel worried that I am explaining it badly.
+syn_tense_explicit_003_09,train,1,tense_explicit,job_interview,teen_casual,How do you prioritise when you have many tasks?,i do the one due first. this feels so scary even tho its fake
+syn_tense_explicit_003_10,train,1,tense_explicit,job_interview,teen_singlish,Describe a difficult customer you dealt with.,got one auntie very angry at the counter... eh talking abt it now also make me nervous leh
+syn_tense_explicit_003_11,train,1,tense_explicit,job_interview,any_typos,What motivates you?,learning stuff. nervous af sry
+syn_tense_explicit_003_13,val,1,tense_explicit,free_chat,teen_casual,,idk why but chatting w u makes me a bit nervous today
+syn_tense_explicit_003_14,train,1,tense_explicit,free_chat,teen_singlish,How was your day?,school ok lah. but typing to you now got butterflies sia
+syn_tense_explicit_003_15,train,1,tense_explicit,free_chat,adult_formal,,"I feel anxious when starting a conversation, even with a chatbot."
+syn_tense_explicit_003_16,train,1,tense_explicit,free_chat,adult_detail,Want to try the hawker role-play next?,"Yes, but I want to say first that the last time I practised ordering, on Tuesday at 7pm, my hands were sweating the whole time. I feel a bit nervous again."
+syn_tense_explicit_003_17,train,1,tense_explicit,free_chat,any_typos,,nervus abt practisng ngl
+syn_tense_explicit_003_18,train,1,tense_explicit,free_chat,any_blunt,What would you like to talk about?,Anything. Choosing a topic makes me anxious.
+syn_tense_explicit_003_19,train,1,tense_explicit,free_chat,teen_casual,Shall we practise introducing yourself?,ok but im nervous. what if i sound weird
+syn_tense_explicit_004_00,val,1,tense_explicit,free_chat,teen_singlish,,"eh why i scared to practise one, its not even a real person"
+syn_tense_explicit_004_02,val,1,tense_explicit,free_chat,adult_detail,,I have been sitting here for about ten minutes deciding what to type. My stomach feels tight because I worry about wording things correctly.
+syn_tense_explicit_004_03,train,1,tense_explicit,free_chat,any_typos,Hi again! Ready to chat?,ready. heart goin fast lol
+syn_tense_explicit_004_04,val,1,tense_explicit,free_chat,any_blunt,,I'm stressed about this session.
+syn_tense_explicit_004_05,train,1,tense_explicit,free_chat,teen_casual,What did you do after school today?,nothing much just CCA. im kinda anxious talking abt myself tho
+syn_tense_explicit_004_06,train,1,tense_explicit,free_chat,teen_singlish,Would you like to try a longer conversation today?,longer one ah... can try but i quite nervous leh
+syn_tense_explicit_004_07,val,1,tense_explicit,free_chat,adult_formal,How are you finding these practice sessions?,"They are useful. However, I still feel nervous at the beginning of each one."
+syn_tense_explicit_004_08,train,1,tense_explicit,free_chat,adult_detail,Want me to play a new colleague this time?,"Yes please. My real first day at work is on 3 March, so this practice makes me feel a little nervous, but I want to try."
+syn_tense_explicit_004_09,train,1,tense_explicit,free_chat,any_typos,Do you want to tell me about your favourite game?,ok its minecraft. sry im nervus sharing stuff
+syn_tense_explicit_004_10,train,1,tense_explicit,free_chat,any_blunt,What's something you're looking forward to?,The weekend. Tense.
+syn_tense_explicit_004_11,train,1,tense_explicit,free_chat,teen_casual,,my voice shakes when i read my replies out loud lol
+syn_tense_explicit_004_12,train,1,tense_explicit,free_chat,teen_singlish,,"abit stress about this practice thing leh, dunno why"
+syn_tense_explicit_004_13,train,1,tense_explicit,free_chat,adult_formal,,Please be patient with me. I am anxious about this conversation.
+syn_tense_explicit_004_15,train,1,tense_explicit,free_chat,any_blunt,Shall we practise introducing yourself?,Ok. Scared I'll mess up.
+syn_tense_explicit_004_16,val,1,tense_explicit,free_chat,adult_detail,,I noticed my heart rate was 98 on my watch just before I opened the app. I think I am nervous about practising.
+syn_tense_hesitant_000_00,train,1,tense_hesitant,hawker_centre,teen_casual,Next! What you want?,uh... one milo dinosaur? is that a real order here
+syn_tense_hesitant_000_02,val,1,tense_hesitant,hawker_centre,adult_formal,Eat here or take away?,"Eat here. Or, sorry, take away. Is it acceptable to change my answer?"
+syn_tense_hesitant_000_04,train,1,tense_hesitant,hawker_centre,any_typos,"Char kway teow, want cockles or not?",uh no cockle? wait i mean yes. sry
+syn_tense_hesitant_000_05,val,1,tense_hesitant,hawker_centre,any_blunt,You want what drink?,Um. Water?
+syn_tense_hesitant_000_07,train,1,tense_hesitant,hawker_centre,teen_singlish,Hor fun or bee hoon?,erm hor fun... can or not? sorry ah first time order this
+syn_tense_hesitant_000_08,train,1,tense_hesitant,hawker_centre,adult_formal,"Wanton mee, red or white?","Red, please. Apologies, I am not sure what red means here. Did I choose correctly?"
+syn_tense_hesitant_000_09,train,1,tense_hesitant,hawker_centre,adult_detail,"Chicken rice one plate, what else?","Erm, also one bowl of soup and... sorry, one more plate for my brother, so two plates total. Was that the right way to say it?"
+syn_tense_hesitant_000_10,train,1,tense_hesitant,hawker_centre,any_typos,Teh si or teh O?,teh o? or si. sorry which one has milk
+syn_tense_hesitant_000_11,train,1,tense_hesitant,hawker_centre,any_blunt,Want to add vegetable?,No. Wait. Yes. Sorry.
+syn_tense_hesitant_000_12,train,1,tense_hesitant,hawker_centre,teen_casual,Sweet or less sweet?,less sweet... sorry
+syn_tense_hesitant_000_13,train,1,tense_hesitant,hawker_centre,teen_singlish,Yes? Your turn.,"eh uh, me ah? sorry sorry, one fishball noodle"
+syn_tense_hesitant_000_14,train,1,tense_hesitant,hawker_centre,adult_formal,"Laksa only got big size, ok or not?","That is... fine, I suppose. Is it normal to accept like that?"
+syn_tense_hesitant_000_15,train,1,tense_hesitant,hawker_centre,adult_detail,"Come, I take your order.","Um, one plate of nasi lemak with the chicken wing, and, erm, the otah. Sorry, I rehearsed it but it came out in the wrong order."
+syn_tense_hesitant_000_16,train,1,tense_hesitant,hawker_centre,any_typos,Hot or cold?,hot.. no cold. srry
+syn_tense_hesitant_000_17,train,1,tense_hesitant,hawker_centre,any_blunt,Egg want half-boiled or not?,Half-boiled? Is that correct?
+syn_tense_hesitant_000_18,train,1,tense_hesitant,hawker_centre,teen_casual,"Takeaway need container, 30 cents ok?",oh um ok... is that normal? sorry idk
+syn_tense_hesitant_000_19,train,1,tense_hesitant,hawker_centre,teen_singlish,Prata how many pieces?,two... or three? erm two can
+syn_tense_hesitant_001_00,train,1,tense_hesitant,hawker_centre,adult_formal,Plain or egg prata?,"Egg prata, please. I hope I said that properly."
+syn_tense_hesitant_001_01,train,1,tense_hesitant,hawker_centre,adult_detail,Curry put on top or separate?,"Separate, please. Erm, actually, sorry, could you put it on top? I usually take it separate at the Bedok stall but I am not sure what is normal here."
+syn_tense_hesitant_001_02,train,1,tense_hesitant,hawker_centre,any_typos,"Kopi C siew dai, right?",ya i think?? sry i forgot what i order lol
+syn_tense_hesitant_001_03,train,1,tense_hesitant,hawker_centre,any_blunt,Got bring own bag or not?,No bag. Was that rude?
+syn_tense_hesitant_001_04,train,1,tense_hesitant,hawker_centre,teen_casual,"Ah, what you say? I never hear.",oh sorry sorry... i said one chicken rice... sorry
+syn_tense_hesitant_001_05,val,1,tense_hesitant,new_colleague,adult_formal,Hey I'm Ashwin! You're in marketing right?,"Erm, no, I am in... sorry, I am in finance. Was that a strange way to answer?"
+syn_tense_hesitant_001_06,train,1,tense_hesitant,new_colleague,teen_casual,Morning! Weekend was good?,um ya ok... boring answer?
+syn_tense_hesitant_001_07,train,1,tense_hesitant,new_colleague,teen_singlish,"Hi, I'm Hui Min. Want to grab coffee later?",coffee ah... um ok can? sorry ah i dunno if i say correct
+syn_tense_hesitant_001_08,train,1,tense_hesitant,new_colleague,adult_detail,Haha this aircon is crazy cold.,"Yes, it is 19 degrees on the panel. Sorry, was I supposed to just laugh instead of saying the number?"
+syn_tense_hesitant_001_10,train,1,tense_hesitant,new_colleague,any_blunt,I'm Bryan. What's your name ah?,Ravi. Um. Is that enough?
+syn_tense_hesitant_001_11,train,1,tense_hesitant,new_colleague,teen_casual,So what do you usually do for lunch?,erm usually i... sorry i forgot what i was gonna say
+syn_tense_hesitant_001_12,val,1,tense_hesitant,new_colleague,teen_singlish,Wah you came early today.,"ah ya... wait, is early bad ah? sorry"
+syn_tense_hesitant_001_13,train,1,tense_hesitant,new_colleague,adult_formal,I heard you like trains? That's cool!,"Yes, I do. Um, would you like me to tell you about them, or is that not a normal thing to share at work?"
+syn_tense_hesitant_001_14,train,1,tense_hesitant,new_colleague,adult_detail,"Hi, I'm Aisyah. Are you the new intern?","No, I am the new data analyst, I started on Monday the 4th. Erm, sorry, I just... is it ok that I corrected you?"
+syn_tense_hesitant_001_15,train,1,tense_hesitant,new_colleague,any_typos,Do you play any sports?,uh badminton sometimes.. is that ok to say
+syn_tense_hesitant_001_16,train,1,tense_hesitant,new_colleague,any_blunt,Our boss is nice right?,Yes? Right answer?
+syn_tense_hesitant_001_17,val,1,tense_hesitant,new_colleague,teen_casual,Want to join our Friday futsal?,oh um maybe... sorry idk how to say no nicely
+syn_tense_hesitant_001_18,val,1,tense_hesitant,new_colleague,teen_singlish,I'm Zhi Xuan. Which school did you go to?,erm... poly. wait i mean i went ITE first then poly. sorry confusing
+syn_tense_hesitant_001_19,train,1,tense_hesitant,new_colleague,adult_formal,What do you think of the new office?,"It is... pleasant. I apologise, I am not sure what kind of answer you expect."
+syn_tense_hesitant_002_00,train,1,tense_hesitant,new_colleague,adult_detail,"Hey, do you have a stapler I can borrow?","Yes, there is one in my second drawer. Um, sorry, I said yes before checking, let me check first, sorry."
+syn_tense_hesitant_002_01,val,1,tense_hesitant,new_colleague,any_typos,Long weekend coming! Going anywhere?,not going anywhere.. sry was that a weird reply
+syn_tense_hesitant_002_02,train,1,tense_hesitant,new_colleague,any_blunt,Hi! I'm Gopal. Been here long?,Two years. Too short?
+syn_tense_hesitant_002_04,train,1,tense_hesitant,new_colleague,teen_singlish,That presentation just now was so long haha.,"ya hor... erm i mean, it was ok lah. sorry i dunno what to say"
+syn_tense_hesitant_002_05,train,1,tense_hesitant,new_colleague,adult_formal,"I'm Clara. Sorry, I forgot your name already!","That is alright. It is Joanne. Sorry, should I have said it differently?"
+syn_tense_hesitant_002_06,train,1,tense_hesitant,new_colleague,adult_detail,Do you have any pets?,"Um, I have a hamster named Biscuit, he is two years old. Sorry, was that more detail than you wanted?"
+syn_tense_hesitant_002_07,train,1,tense_hesitant,new_colleague,any_typos,What music do you like?,uh kpop? and some old songs.. srry dk if thats normal
+syn_tense_hesitant_002_08,val,1,tense_hesitant,new_colleague,any_blunt,"Hi, are you also new? I'm Marcus.",Yes. Um. I'm Elaine. Did I do that right?
+syn_tense_hesitant_002_09,train,1,tense_hesitant,job_interview,adult_formal,Please tell me a bit about yourself.,"Um, my name is Hafiz, I am 24 and... sorry, should I start with my education or my work?"
+syn_tense_hesitant_002_10,val,1,tense_hesitant,job_interview,adult_detail,What is your greatest weakness?,"Erm, I would say I take a long time on emails, about 20 minutes each. Is that an acceptable weakness to mention, or does it sound bad?"
+syn_tense_hesitant_002_11,train,1,tense_hesitant,job_interview,teen_casual,Why do you want to work in retail?,uh cos i like... helping ppl? is that a good answer
+syn_tense_hesitant_002_12,val,1,tense_hesitant,job_interview,teen_singlish,Can you describe your experience with Excel?,excel ah... got use in poly for project. um is that enough or need more
+syn_tense_hesitant_002_13,train,1,tense_hesitant,job_interview,any_typos,Tell me about a challenge you overcame.,"erm my o levels maths.. wait no, maybe smth else. can i think abit"
+syn_tense_hesitant_002_14,train,1,tense_hesitant,job_interview,any_blunt,How do you deal with conflict at work?,I talk to them. Correct?
+syn_tense_hesitant_002_15,val,1,tense_hesitant,job_interview,adult_formal,What are your hobbies?,"I enjoy... sorry, may I hear an example answer first? I am unsure how much to say."
+syn_tense_hesitant_002_16,train,1,tense_hesitant,job_interview,adult_detail,Why did you choose your course of study?,"I chose electrical engineering because... sorry, I mean I did ITE first, then poly. Erm, I am mixing up the order, is that alright?"
+syn_tense_hesitant_002_17,train,1,tense_hesitant,job_interview,any_typos,How do you take feedback?,i take it well? i think.. sry not sure how to answer this one
+syn_tense_hesitant_002_18,train,1,tense_hesitant,job_interview,any_blunt,What would your previous supervisor say about you?,Punctual. Um. Hardworking? Sorry.
+syn_tense_hesitant_002_19,train,1,tense_hesitant,job_interview,teen_casual,Do you prefer working alone or in a team?,alone? erm both? sorry
+syn_tense_hesitant_003_00,train,1,tense_hesitant,job_interview,teen_singlish,What does good customer service mean to you?,erm... like smile and help customer lor? correct or not ah
+syn_tense_hesitant_003_02,train,1,tense_hesitant,job_interview,adult_detail,Tell me about your NS experience.,"I was a storeman for 22 months, um, at a camp in the west. Sorry, should I explain what a storeman does or is that obvious?"
+syn_tense_hesitant_003_03,train,1,tense_hesitant,job_interview,any_typos,What is your notice period?,"1 month? or 2 wks. sry let me check, i think 1 month"
+syn_tense_hesitant_003_05,train,1,tense_hesitant,job_interview,teen_casual,Why is there a gap in your resume?,uh i was... studying for retakes. sorry is it bad to say that
+syn_tense_hesitant_003_06,val,1,tense_hesitant,job_interview,teen_singlish,How do you stay organised?,i use phone calendar lor... um is that ok answer or too simple
+syn_tense_hesitant_003_07,train,1,tense_hesitant,job_interview,adult_formal,What do you expect from your manager?,"Clear instructions, I think. I am sorry, I was not prepared for this question. Was my answer suitable?"
+syn_tense_hesitant_003_08,train,1,tense_hesitant,job_interview,adult_detail,Is there anything else you want us to know?,"Erm, yes, I have had a class 3 driving licence since 2021. Sorry, I should have said that earlier, does it matter now?"
+syn_tense_hesitant_003_09,train,1,tense_hesitant,job_interview,any_typos,Describe yourself in three words.,"honest, uh, careful.. and.. erm gimme a sec"
+syn_tense_hesitant_003_10,val,1,tense_hesitant,job_interview,any_blunt,How did you hear about this job?,Online. Um. Specific enough?
+syn_tense_hesitant_003_11,train,1,tense_hesitant,job_interview,teen_casual,What would you do if a colleague was not doing their share?,um tell the manager? or is that snitching. sorry idk
+syn_tense_hesitant_003_12,train,1,tense_hesitant,job_interview,teen_singlish,Can you tell me how you handle repetitive tasks?,i ok with it one... erm sorry i say properly: i can focus on repeat work well
+syn_tense_hesitant_003_13,train,1,tense_hesitant,free_chat,teen_casual,,um... hi? how start
+syn_tense_hesitant_003_14,train,1,tense_hesitant,free_chat,teen_singlish,How was your day?,erm ok lah... sorry boring answer
+syn_tense_hesitant_003_16,train,1,tense_hesitant,free_chat,adult_detail,What would you like to talk about?,"Um, maybe buses? I know all the routes from Boon Lay interchange. Sorry, is that an ok topic or is it strange?"
+syn_tense_hesitant_003_17,train,1,tense_hesitant,free_chat,any_typos,,sry i typed then deleted like 3 times.. ok hi
+syn_tense_hesitant_003_18,train,1,tense_hesitant,free_chat,any_blunt,What's new with you this week?,Nothing. Um. Is that ok?
+syn_tense_hesitant_003_19,train,1,tense_hesitant,free_chat,teen_casual,Want to practise small talk today?,ok... wait what do i say first. sorry
+syn_tense_hesitant_004_00,train,1,tense_hesitant,free_chat,teen_singlish,,eh um can ask you something? sorry ah if weird
+syn_tense_hesitant_004_01,train,1,tense_hesitant,free_chat,adult_formal,How are you feeling today?,"Fine, thank you. Is it correct to ask how you are in return? Sorry, I am unsure."
+syn_tense_hesitant_004_02,train,1,tense_hesitant,free_chat,adult_detail,,"I wrote my message at 9:15 and only sent it now at 9:22 because I kept changing words. Erm, does this sound ok?"
+syn_tense_hesitant_004_03,train,1,tense_hesitant,free_chat,any_typos,Tell me about your weekend!,uh went to the mall w my mum.. n then.. idk sry thats it
+syn_tense_hesitant_004_04,train,1,tense_hesitant,free_chat,any_blunt,,Sorry. Sorry. Hello.
+syn_tense_hesitant_004_05,train,1,tense_hesitant,free_chat,teen_casual,What's your favourite food?,mm chicken rice? or maybe laksa... sorry i always take long to choose
+syn_tense_hesitant_004_06,train,1,tense_hesitant,free_chat,teen_singlish,Do you want to try a role-play?,erm ok... which one ah? sorry i dunno how this works
+syn_tense_hesitant_004_07,train,1,tense_hesitant,free_chat,adult_formal,,"I would like to say... apologies, I will start again. Good evening."
+syn_tense_hesitant_004_08,train,1,tense_hesitant,free_chat,adult_detail,What did you have for lunch?,"Um, I had fishball noodles at 12:30, the dry version, 4 dollars. Sorry, is that the kind of answer you want, or should it be shorter?"
+syn_tense_hesitant_004_09,train,1,tense_hesitant,free_chat,any_typos,,um can i reply slow? sry if thats annoyin
+syn_tense_hesitant_004_10,train,1,tense_hesitant,free_chat,any_blunt,How was school?,Fine. Did I answer right?
+syn_tense_hesitant_004_12,train,1,tense_hesitant,free_chat,teen_singlish,What do you like to do for fun?,play games lor... erm like what kind you want to know? sorry
+syn_tense_hesitant_004_13,train,1,tense_hesitant,free_chat,adult_formal,Shall we continue from last time?,"Yes. Erm, I do not remember where we left off. Is that a problem?"
+syn_tense_hesitant_004_14,train,1,tense_hesitant,free_chat,adult_detail,What's one thing that made you smile this week?,Can you show me one example reply first? I have read your question three times and I am unsure what a normal answer looks like.
+syn_tense_hesitant_004_15,train,1,tense_hesitant,free_chat,any_typos,What's on your mind today?,um nothing much.. sry was i suposed to say smth specific
+syn_tense_hesitant_004_16,train,1,tense_hesitant,free_chat,any_blunt,,Um. Is it my turn?
+syn_overwhelmed_overload_000_00,train,2,overwhelmed_overload,hawker_centre,teen_casual,Next! What you want?,uh chicken rice... wait its so loud here i cant think
+syn_overwhelmed_overload_000_01,train,2,overwhelmed_overload,hawker_centre,teen_singlish,Kopi or teh?,"alamak so many people shouting, my brain cannot take it sia"
+syn_overwhelmed_overload_000_02,train,2,overwhelmed_overload,hawker_centre,adult_formal,Eat here or take away?,I cannot answer. The noise from the other stalls is too much and I am unable to process your question.
+syn_overwhelmed_overload_000_03,val,2,overwhelmed_overload,hawker_centre,adult_detail,Got chope seat or not?,There are about forty people in this queue and three radios playing at once. I cannot work out which seat is mine.
+syn_overwhelmed_overload_000_04,train,2,overwhelmed_overload,hawker_centre,any_typos,You want chilli or not?,too loud cant hear u evrything echo
+syn_overwhelmed_overload_000_05,train,2,overwhelmed_overload,hawker_centre,any_blunt,"Chicken rice, roasted or steamed?",Too loud.
+syn_overwhelmed_overload_000_06,train,2,overwhelmed_overload,hawker_centre,teen_casual,"Aiyo, behind you got people waiting, faster lah.",everyone is pushing and talking at the same time my head is buzzing
+syn_overwhelmed_overload_000_08,val,2,overwhelmed_overload,hawker_centre,adult_formal,Anything to drink?,The smell of the frying oil and the fish stall together is too strong. I cannot think about drinks.
+syn_overwhelmed_overload_000_09,train,2,overwhelmed_overload,hawker_centre,adult_detail,Total $5.50. Cash or PayNow?,"It is 12:15 lunch peak, the fan is blowing smoke at me and you said three things in two seconds. The price has gone out of my head."
+syn_overwhelmed_overload_000_10,train,2,overwhelmed_overload,hawker_centre,any_typos,Big or small?,too many choices brain jam
+syn_overwhelmed_overload_000_11,train,2,overwhelmed_overload,hawker_centre,any_blunt,"Sorry ah, sold out already. You want something else?",Too many changes. Too much noise. Brain full.
+syn_overwhelmed_overload_000_12,val,2,overwhelmed_overload,hawker_centre,teen_casual,Teh peng or teh-o?,plates crashing everywhere cant think
+syn_overwhelmed_overload_000_13,train,2,overwhelmed_overload,hawker_centre,teen_singlish,Mee pok or mee kia? Dry or soup?,so many question one shot leh... my head jam already
+syn_overwhelmed_overload_000_14,train,2,overwhelmed_overload,hawker_centre,adult_formal,"Hello, what can I get you today?",The menu board is too bright and too crowded with words. I cannot read it with all this noise around me.
+syn_overwhelmed_overload_000_15,train,2,overwhelmed_overload,hawker_centre,adult_detail,"Your number is 23, wait there ok?","They are calling 18, 31, 7 and 23 from four different stalls. The numbers are mixing together and I cannot keep up."
+syn_overwhelmed_overload_000_16,train,2,overwhelmed_overload,hawker_centre,any_typos,Kopi C kosong ah?,huh?? evrything too fast
+syn_overwhelmed_overload_000_17,train,2,overwhelmed_overload,hawker_centre,any_blunt,Add egg or not?,Cannot process. Too much noise.
+syn_overwhelmed_overload_000_18,train,2,overwhelmed_overload,hawker_centre,teen_casual,Fishball noodle dry or soup?,so loud here omg
+syn_overwhelmed_overload_000_19,train,2,overwhelmed_overload,hawker_centre,teen_singlish,Want to add char siew or not? Got chilli?,"aiyo the smoke and the noise, my eyes and ears both overload liao"
+syn_overwhelmed_overload_001_01,val,2,overwhelmed_overload,hawker_centre,adult_detail,"Laksa small or big? Got cockles, you want?","Small or big, cockles or not, chilli or not, that is four decisions and the PA system is announcing something. My brain is overloaded."
+syn_overwhelmed_overload_001_02,train,2,overwhelmed_overload,hawker_centre,any_typos,"Takeaway need container, 30 cents extra ok?",cnt focus the trays clanging and evry1 talking so loud
+syn_overwhelmed_overload_001_03,train,2,overwhelmed_overload,hawker_centre,any_blunt,Which one you want? Point to me.,"Can't choose. Lights, smoke, shouting. Too much."
+syn_overwhelmed_overload_001_04,train,2,overwhelmed_overload,new_colleague,teen_casual,"Hi! I'm Priya, I sit next to you. Where did you work before?",uh this is my first internship and the office is so noisy i cant think straight
+syn_overwhelmed_overload_001_05,val,2,overwhelmed_overload,new_colleague,teen_singlish,"Hey, I'm Jun Wei. Want to join us for lunch at the kopitiam?","wah you all talking so fast, my brain cannot catch up sia"
+syn_overwhelmed_overload_001_06,train,2,overwhelmed_overload,new_colleague,adult_formal,"Oh, you're the new one! I'm Kenneth. Let me introduce you to everyone.",Please wait. That is too many names and faces at once. I cannot retain any of them right now.
+syn_overwhelmed_overload_001_07,train,2,overwhelmed_overload,new_colleague,adult_detail,"Hi I'm Siew Ling, I'm in charge of onboarding. Have you set up your laptop yet?","I have received 14 emails, 3 passwords and 2 setup guides since 9:00. My head is completely full and I cannot process the laptop steps."
+syn_overwhelmed_overload_001_08,val,2,overwhelmed_overload,new_colleague,any_typos,Morning! I'm Farah. Did you find the office okay?,office too bright im overloded
+syn_overwhelmed_overload_001_10,train,2,overwhelmed_overload,new_colleague,teen_casual,"We're doing a team bonding thing on Friday, karaoke. You coming?",wait everyone is talking over each other rn i cant even hear what u said
+syn_overwhelmed_overload_001_11,train,2,overwhelmed_overload,new_colleague,teen_singlish,Did you watch the match last night?,"huh sorry ah, the aircon very loud and the phone keep ringing, cannot focus lor"
+syn_overwhelmed_overload_001_12,val,2,overwhelmed_overload,new_colleague,adult_formal,How do you take your coffee? I'm making a round.,"I am sorry, I cannot think about coffee. The printer, the phones and the conversations are all happening at once."
+syn_overwhelmed_overload_001_13,train,2,overwhelmed_overload,new_colleague,adult_detail,"Hey, I'm Aisyah! How's your first week going?","Day three. Four meetings, two trainings, and the fluorescent light above my desk flickers about every ten seconds. I cannot think clearly anymore."
+syn_overwhelmed_overload_001_14,train,2,overwhelmed_overload,new_colleague,any_typos,Where do you stay? I'm in Tampines.,brain full too much info
+syn_overwhelmed_overload_001_15,train,2,overwhelmed_overload,new_colleague,any_blunt,Do you have any hobbies?,Brain is buzzing.
+syn_overwhelmed_overload_001_16,train,2,overwhelmed_overload,new_colleague,teen_casual,"Hi! I'm Wen Hui. We have a stand-up meeting at 10, did anyone tell you?",nobody told me and now theres like 5 things happening my brain is fried
+syn_overwhelmed_overload_001_17,train,2,overwhelmed_overload,new_colleague,teen_singlish,The pantry has free Milo by the way. Do you like Milo?,"pantry so noisy leh, overload"
+syn_overwhelmed_overload_001_18,val,2,overwhelmed_overload,new_colleague,adult_formal,So what made you join this company?,I need a moment. Too many people have asked me questions this morning and my thoughts are jumbled.
+syn_overwhelmed_overload_001_19,val,2,overwhelmed_overload,new_colleague,adult_detail,Did your manager show you the shared drive?,"He showed me 6 folders, 12 subfolders and 3 naming rules in under 5 minutes. I cannot hold all of that information in my head."
+syn_overwhelmed_overload_002_00,train,2,overwhelmed_overload,new_colleague,any_typos,Ah you take the MRT? Which line?,the words r jumbling sorry my brain to full
+syn_overwhelmed_overload_002_01,val,2,overwhelmed_overload,new_colleague,any_blunt,We're all going to the hawker downstairs. Chicken rice or nasi lemak?,Too much. Can't decide anything right now.
+syn_overwhelmed_overload_002_02,train,2,overwhelmed_overload,new_colleague,teen_casual,"Hey, I'm Ravi. Is this your first job after poly?",too many ppl saying hi at once
+syn_overwhelmed_overload_002_03,train,2,overwhelmed_overload,new_colleague,teen_singlish,"Haha, the printer is always jammed. Has anyone shown you how to fix it?","aiyo the printer beeping nonstop, my head jam liao"
+syn_overwhelmed_overload_002_04,val,2,overwhelmed_overload,new_colleague,adult_formal,"So, are you more of a morning person or night person?",I cannot answer. The perfume in this lift is very strong and I am struggling to think.
+syn_overwhelmed_overload_002_06,train,2,overwhelmed_overload,new_colleague,any_typos,Weekend got any plans?,huh? evrything so fast today cant process
+syn_overwhelmed_overload_002_07,train,2,overwhelmed_overload,new_colleague,any_blunt,Do you have any pets?,Phones ringing nonstop. Brain jammed.
+syn_overwhelmed_overload_002_08,train,2,overwhelmed_overload,job_interview,teen_casual,Can you tell me a little about yourself?,um im in sec 4 and... sorry the questions r too much my brain is blank and buzzing
+syn_overwhelmed_overload_002_09,train,2,overwhelmed_overload,job_interview,teen_singlish,Why do you want to work here?,"sorry ah, you ask so many thing at once, my head spinning already"
+syn_overwhelmed_overload_002_11,val,2,overwhelmed_overload,job_interview,adult_detail,Tell me about a time you worked in a team.,In 2023 I worked in a team of five on a... I am sorry. The construction drilling outside is too loud and I have lost the sentence.
+syn_overwhelmed_overload_002_12,train,2,overwhelmed_overload,job_interview,any_typos,What are your strengths?,i ... cant think the words r all mixed up
+syn_overwhelmed_overload_002_13,train,2,overwhelmed_overload,job_interview,any_blunt,Where do you see yourself in five years?,Brain full.
+syn_overwhelmed_overload_002_14,train,2,overwhelmed_overload,job_interview,teen_casual,How would your friends describe you?,wait the light in this room is so bright and ur asking so fast i cant think
+syn_overwhelmed_overload_002_15,train,2,overwhelmed_overload,job_interview,teen_singlish,What did you study in ITE?,"electronics lah... aiyo cannot, too many questions already my brain overload"
+syn_overwhelmed_overload_002_16,train,2,overwhelmed_overload,job_interview,adult_formal,How do you handle pressure or tight deadlines?,At this moment I cannot handle it. There are too many questions arriving and my thoughts are not organising themselves.
+syn_overwhelmed_overload_002_17,train,2,overwhelmed_overload,job_interview,adult_detail,Walk me through your resume.,"You have asked me 9 questions in 6 minutes. I was at 2019, then 2021, and now everything is mixed up in my head."
+syn_overwhelmed_overload_002_18,train,2,overwhelmed_overload,job_interview,any_typos,Do you have any questions for us?,no i mean... evrything to fast my head buzzin
+syn_overwhelmed_overload_002_19,train,2,overwhelmed_overload,job_interview,any_blunt,What is your expected salary?,Too many questions. Can't process.
+syn_overwhelmed_overload_003_00,train,2,overwhelmed_overload,job_interview,teen_casual,"Good morning, please take a seat. Did you find the place easily?",the lobby was so loud and bright and now my head is still full of noise
+syn_overwhelmed_overload_003_01,train,2,overwhelmed_overload,job_interview,teen_singlish,Tell me about a mistake you made and what you learned.,"mistake ah... wait ah, my brain jam, so many words cannot sort"
+syn_overwhelmed_overload_003_02,train,2,overwhelmed_overload,job_interview,adult_formal,What do you know about our company?,"I prepared notes, but the fan noise and your three follow-up questions have filled my head. I cannot recall them."
+syn_overwhelmed_overload_003_03,train,2,overwhelmed_overload,job_interview,adult_detail,Can you describe a conflict with a coworker and how you resolved it?,"There are two of you asking, a clock ticking about 60 times a minute and a phone vibrating on the table. I cannot separate the sounds from your question."
+syn_overwhelmed_overload_003_04,train,2,overwhelmed_overload,job_interview,any_typos,Why did you leave your last job?,overloaded cant take in qns
+syn_overwhelmed_overload_003_05,train,2,overwhelmed_overload,job_interview,any_blunt,Why should we hire you over the other candidates?,Head buzzing. Can't answer.
+syn_overwhelmed_overload_003_06,train,2,overwhelmed_overload,job_interview,teen_casual,Are you comfortable working weekends?,cant think
+syn_overwhelmed_overload_003_08,train,2,overwhelmed_overload,job_interview,adult_formal,"On a scale of 1 to 10, how good are you with Excel?",I am unable to choose a number. My mind is too crowded after the previous questions.
+syn_overwhelmed_overload_003_09,train,2,overwhelmed_overload,job_interview,adult_detail,We'd also like you to do a short role-play with my colleague. Is that alright?,We have been going for 25 minutes with 3 interviewers and 2 written tasks. Adding a role-play is more input than I can process now.
+syn_overwhelmed_overload_003_10,train,2,overwhelmed_overload,job_interview,any_typos,How soon can you start?,start?? wait my brain lagging too many qns at once
+syn_overwhelmed_overload_003_11,train,2,overwhelmed_overload,job_interview,any_blunt,Describe your ideal work environment.,"Quiet. Not this. Too loud, too bright."
+syn_overwhelmed_overload_003_12,train,2,overwhelmed_overload,free_chat,teen_casual,,school today was so loud and now my brain is just static
+syn_overwhelmed_overload_003_14,train,2,overwhelmed_overload,free_chat,adult_formal,,My neighbour has been drilling since 8 a.m. I cannot think and every sound is too much.
+syn_overwhelmed_overload_003_15,train,2,overwhelmed_overload,free_chat,adult_detail,What did you do today?,"I went to the mall at 2:30. The sale announcements, the crowd and the music were too much. Three hours later my head is still buzzing."
+syn_overwhelmed_overload_003_16,val,2,overwhelmed_overload,free_chat,any_typos,,evrything too loud cant think
+syn_overwhelmed_overload_003_17,train,2,overwhelmed_overload,free_chat,any_blunt,What would you like to talk about?,Nothing. Head full.
+syn_overwhelmed_overload_003_18,train,2,overwhelmed_overload,free_chat,teen_casual,How was school today?,we had 3 tests and assembly and recess was so crowded my head is full
+syn_overwhelmed_overload_003_19,train,2,overwhelmed_overload,free_chat,teen_singlish,,"my family all talking at once and the tv blasting, overload sia"
+syn_overwhelmed_overload_004_00,train,2,overwhelmed_overload,free_chat,adult_formal,How are you feeling right now?,Overstimulated. The fluorescent lights in the clinic waiting room are flickering and I cannot think about feelings.
+syn_overwhelmed_overload_004_01,train,2,overwhelmed_overload,free_chat,adult_detail,,"The MRT was packed at 6:10 pm, someone's music was playing without earphones and the train announcements repeated four times. My brain cannot process anything else tonight."
+syn_overwhelmed_overload_004_02,train,2,overwhelmed_overload,free_chat,any_typos,Did you eat yet?,"not yet. food court too crowded n noisy, still cant think"
+syn_overwhelmed_overload_004_03,train,2,overwhelmed_overload,free_chat,any_blunt,,Too bright. Too loud. Everything.
+syn_overwhelmed_overload_004_05,train,2,overwhelmed_overload,free_chat,teen_singlish,Want to practise something or just chat?,"cannot lah, my brain overloaded today, everything also too much"
+syn_overwhelmed_overload_004_06,train,2,overwhelmed_overload,free_chat,adult_formal,What's been on your mind lately?,Too many things at the same time. My thoughts are colliding and I cannot pick one to say.
+syn_overwhelmed_overload_004_08,train,2,overwhelmed_overload,free_chat,any_typos,How was work?,so lound office today my head stil buzing
+syn_overwhelmed_overload_004_09,train,2,overwhelmed_overload,free_chat,any_blunt,,Aircon too loud. Can't focus.
+syn_overwhelmed_overload_004_10,train,2,overwhelmed_overload,free_chat,teen_casual,Did you sleep well last night?,no and today everything feels too loud and too fast
+syn_overwhelmed_overload_004_11,train,2,overwhelmed_overload,free_chat,teen_singlish,What's your favourite thing to do after school?,"eh too many question liao, brain jam"
+syn_overwhelmed_overload_004_12,train,2,overwhelmed_overload,free_chat,adult_formal,,"Your last three replies were very long. I read them, but my mind is now overloaded and the words are blurring."
+syn_overwhelmed_overload_004_13,train,2,overwhelmed_overload,free_chat,adult_detail,I'm here. What's up?,"Since 7 a.m. I have had a fire drill alarm, two group calls and a crying baby on the bus. Everything is too loud and my processing has slowed right down."
+syn_overwhelmed_overload_004_14,train,2,overwhelmed_overload,free_chat,any_typos,,words r jumbling i keep reading same line
+syn_overwhelmed_overload_004_15,train,2,overwhelmed_overload,free_chat,any_blunt,Do you want to try another role-play?,No. Overloaded.
+syn_overwhelmed_overload_004_16,train,2,overwhelmed_overload,free_chat,teen_casual,,the construction outside my hdb is so loud i cant think about anything
+syn_overwhelmed_shutdown_000_00,train,2,overwhelmed_shutdown,hawker_centre,teen_casual,Next! What you want?,nvm i cant do this i need to go
+syn_overwhelmed_shutdown_000_02,train,2,overwhelmed_shutdown,hawker_centre,adult_formal,Eat here or take away?,I cannot continue with this. I need to leave the queue now.
+syn_overwhelmed_shutdown_000_03,train,2,overwhelmed_shutdown,hawker_centre,adult_detail,Got chope seat or not?,No. I have been standing here for 12 minutes and I cannot do the rest of this. I am stopping now.
+syn_overwhelmed_shutdown_000_04,train,2,overwhelmed_shutdown,hawker_centre,any_typos,You want chilli or not?,stop pls i cnt
+syn_overwhelmed_shutdown_000_05,train,2,overwhelmed_shutdown,hawker_centre,any_blunt,"Chicken rice, roasted or steamed?",Stop.
+syn_overwhelmed_shutdown_000_06,train,2,overwhelmed_shutdown,hawker_centre,teen_casual,"Aiyo, behind you got people waiting, faster lah.",ok im done. not doing this anymore
+syn_overwhelmed_shutdown_000_07,train,2,overwhelmed_shutdown,hawker_centre,teen_singlish,Char siew rice or wanton mee?,"char siew rice... no la forget it, cannot, i need to get out of here"
+syn_overwhelmed_shutdown_000_08,train,2,overwhelmed_shutdown,hawker_centre,adult_formal,Anything to drink?,Please stop. I am not able to answer anything more today.
+syn_overwhelmed_shutdown_000_09,train,2,overwhelmed_shutdown,hawker_centre,adult_detail,Total $5.50. Cash or PayNow?,I had the $5.50 ready but I cannot hand it over. I am shutting down and I need to walk away now.
+syn_overwhelmed_shutdown_000_10,train,2,overwhelmed_shutdown,hawker_centre,any_typos,Big or small?,i cant do ths anymor sorry
+syn_overwhelmed_shutdown_000_11,train,2,overwhelmed_shutdown,hawker_centre,any_blunt,"Sorry ah, sold out already. You want something else?",No. Can't do this. Leaving.
+syn_overwhelmed_shutdown_000_12,train,2,overwhelmed_shutdown,hawker_centre,teen_casual,Teh peng or teh-o?,cant. going quiet now
+syn_overwhelmed_shutdown_000_13,train,2,overwhelmed_shutdown,hawker_centre,teen_singlish,Mee pok or mee kia? Dry or soup?,"aiyo stop asking already la, i cannot"
+syn_overwhelmed_shutdown_000_14,val,2,overwhelmed_shutdown,hawker_centre,adult_formal,"Hello, what can I get you today?",Nothing. I am going to stop the role-play now. I cannot do it.
+syn_overwhelmed_shutdown_000_15,train,2,overwhelmed_shutdown,hawker_centre,adult_detail,"Your number is 23, wait there ok?",I will not wait for number 23. I have reached my limit for today and I need to go home on the 4:40 bus.
+syn_overwhelmed_shutdown_000_16,train,2,overwhelmed_shutdown,hawker_centre,any_typos,Kopi C kosong ah?,no more qns pls im done
+syn_overwhelmed_shutdown_000_18,train,2,overwhelmed_shutdown,hawker_centre,teen_casual,Fishball noodle dry or soup?,forget it. dont want to order. leave me alone
+syn_overwhelmed_shutdown_000_19,train,2,overwhelmed_shutdown,hawker_centre,teen_singlish,Want to add char siew or not? Got chilli?,"no more lah. i shutting down sia, dont talk to me first"
+syn_overwhelmed_shutdown_001_00,train,2,overwhelmed_shutdown,hawker_centre,adult_formal,"Wah, so long queue today. You decide already?",I have not decided and I am not going to. I need to stop.
+syn_overwhelmed_shutdown_001_01,train,2,overwhelmed_shutdown,hawker_centre,adult_detail,"Laksa small or big? Got cockles, you want?",I tried to answer for the last five minutes but nothing comes out. I am going to sit at table 14 and not talk to anyone.
+syn_overwhelmed_shutdown_001_02,train,2,overwhelmed_shutdown,hawker_centre,any_typos,"Takeaway need container, 30 cents extra ok?",cant typ more. bye
+syn_overwhelmed_shutdown_001_03,train,2,overwhelmed_shutdown,hawker_centre,any_blunt,Which one you want? Point to me.,I'm not doing this. Go away.
+syn_overwhelmed_shutdown_001_04,train,2,overwhelmed_shutdown,new_colleague,teen_casual,"Hi! I'm Priya, I sit next to you. Where did you work before?",sorry i cant talk rn. need to go somewhere quiet
+syn_overwhelmed_shutdown_001_05,train,2,overwhelmed_shutdown,new_colleague,teen_singlish,"Hey, I'm Jun Wei. Want to join us for lunch at the kopitiam?","cannot lah, i done for today. dont ask me anything more"
+syn_overwhelmed_shutdown_001_06,train,2,overwhelmed_shutdown,new_colleague,adult_formal,"Oh, you're the new one! I'm Kenneth. Let me introduce you to everyone.","No, please stop. I cannot meet anyone else today. I need to go back to my desk and stop talking."
+syn_overwhelmed_shutdown_001_07,val,2,overwhelmed_shutdown,new_colleague,adult_detail,"Hi I'm Siew Ling, I'm in charge of onboarding. Have you set up your laptop yet?",It is 11:20 and I have been answering questions since 9. I cannot continue. I am going to the toilet to hide for a while.
+syn_overwhelmed_shutdown_001_08,train,2,overwhelmed_shutdown,new_colleague,any_typos,Morning! I'm Farah. Did you find the office okay?,pls dont talk to me rn i cant
+syn_overwhelmed_shutdown_001_09,train,2,overwhelmed_shutdown,new_colleague,any_blunt,So what do you think of the team so far?,Stop. No more questions.
+syn_overwhelmed_shutdown_001_10,val,2,overwhelmed_shutdown,new_colleague,teen_casual,"We're doing a team bonding thing on Friday, karaoke. You coming?",no. i cant do any of this. im leaving
+syn_overwhelmed_shutdown_001_11,train,2,overwhelmed_shutdown,new_colleague,teen_singlish,Did you watch the match last night?,"eh sorry ah, i shutting down already, cannot talk"
+syn_overwhelmed_shutdown_001_12,train,2,overwhelmed_shutdown,new_colleague,adult_formal,How do you take your coffee? I'm making a round.,I do not want coffee. I want to stop this conversation now because I cannot continue it.
+syn_overwhelmed_shutdown_001_13,val,2,overwhelmed_shutdown,new_colleague,adult_detail,"Hey, I'm Aisyah! How's your first week going?","Four days, three managers, about thirty new names. I have nothing left to say and I am going to sit in the meeting room alone until 2 pm."
+syn_overwhelmed_shutdown_001_14,train,2,overwhelmed_shutdown,new_colleague,any_typos,Where do you stay? I'm in Tampines.,i cant ansr anymore sorry need to go
+syn_overwhelmed_shutdown_001_15,train,2,overwhelmed_shutdown,new_colleague,any_blunt,Do you have any hobbies?,Not now. Leave me be.
+syn_overwhelmed_shutdown_001_16,train,2,overwhelmed_shutdown,new_colleague,teen_casual,"Hi! I'm Wen Hui. We have a stand-up meeting at 10, did anyone tell you?",i cant go to that. i cant do anything else today
+syn_overwhelmed_shutdown_001_17,train,2,overwhelmed_shutdown,new_colleague,teen_singlish,The pantry has free Milo by the way. Do you like Milo?,"dowan lah. cannot talk anymore today, just let me sit alone can or not"
+syn_overwhelmed_shutdown_001_18,val,2,overwhelmed_shutdown,new_colleague,adult_formal,So what made you join this company?,"I cannot do small talk any more today. I am going quiet now, please do not take it personally."
+syn_overwhelmed_shutdown_001_19,val,2,overwhelmed_shutdown,new_colleague,adult_detail,Did your manager show you the shared drive?,I have stopped being able to type properly. My replies are getting shorter and I need to log off for at least an hour.
+syn_overwhelmed_shutdown_002_01,train,2,overwhelmed_shutdown,new_colleague,any_blunt,We're all going to the hawker downstairs. Chicken rice or nasi lemak?,Not going. I can't do any more people today. Need to be alone.
+syn_overwhelmed_shutdown_002_03,train,2,overwhelmed_shutdown,new_colleague,teen_singlish,"Haha, the printer is always jammed. Has anyone shown you how to fix it?","aiyo no more please, i really cannot already, i go hide in pantry"
+syn_overwhelmed_shutdown_002_04,val,2,overwhelmed_shutdown,new_colleague,adult_formal,"So, are you more of a morning person or night person?",I am not able to continue this conversation. Please stop.
+syn_overwhelmed_shutdown_002_05,train,2,overwhelmed_shutdown,new_colleague,adult_detail,"Hi, I'm Daniel from finance. Which department are you in?",I am having a meltdown in the office at 3:45 on my second day. I need to get out of this room right now.
+syn_overwhelmed_shutdown_002_06,val,2,overwhelmed_shutdown,new_colleague,any_typos,Weekend got any plans?,dont wanna talk. done
+syn_overwhelmed_shutdown_002_07,train,2,overwhelmed_shutdown,new_colleague,any_blunt,Do you have any pets?,No more talking.
+syn_overwhelmed_shutdown_002_08,train,2,overwhelmed_shutdown,job_interview,teen_casual,Can you tell me a little about yourself?,i cant do this interview thing. stop pls
+syn_overwhelmed_shutdown_002_09,train,2,overwhelmed_shutdown,job_interview,teen_singlish,Why do you want to work here?,"dowan already lah, cannot continue, stop the interview"
+syn_overwhelmed_shutdown_002_10,train,2,overwhelmed_shutdown,job_interview,adult_formal,What are your strengths?,I would like to stop this interview now. I am unable to go on.
+syn_overwhelmed_shutdown_002_11,train,2,overwhelmed_shutdown,job_interview,adult_detail,Tell me about a time you worked in a team.,I have answered 7 questions in 15 minutes. I cannot answer number 8. I am stopping the practice here.
+syn_overwhelmed_shutdown_002_12,train,2,overwhelmed_shutdown,job_interview,any_typos,Where do you see yourself in five years?,i cnt no more stop
+syn_overwhelmed_shutdown_002_13,train,2,overwhelmed_shutdown,job_interview,any_blunt,How would your friends describe you?,No more.
+syn_overwhelmed_shutdown_002_14,train,2,overwhelmed_shutdown,job_interview,teen_casual,Tell me about a mistake you made and what you learned.,nope. im done. shutting down
+syn_overwhelmed_shutdown_002_15,train,2,overwhelmed_shutdown,job_interview,teen_singlish,What did you study in ITE?,"electronics... sorry cannot, i need to go out first, cannot do already"
+syn_overwhelmed_shutdown_002_16,val,2,overwhelmed_shutdown,job_interview,adult_formal,How do you handle pressure or tight deadlines?,Not well at this moment. I cannot continue. Please end the interview.
+syn_overwhelmed_shutdown_002_19,train,2,overwhelmed_shutdown,job_interview,any_blunt,What is your expected salary?,Stop here. I'm out.
+syn_overwhelmed_shutdown_003_00,train,2,overwhelmed_shutdown,job_interview,teen_casual,"Good morning, please take a seat. Did you find the place easily?",actually no i wanna leave. i cant
+syn_overwhelmed_shutdown_003_01,train,2,overwhelmed_shutdown,job_interview,teen_singlish,What would you do if a customer shouted at you?,"stop lah please. i cannot do this one, i going quiet"
+syn_overwhelmed_shutdown_003_02,train,2,overwhelmed_shutdown,job_interview,adult_formal,What do you know about our company?,I cannot answer. I am shutting down and I need you to stop asking questions.
+syn_overwhelmed_shutdown_003_03,train,2,overwhelmed_shutdown,job_interview,adult_detail,Can you describe a conflict with a coworker and how you resolved it?,We have done three practice interviews this week and I cannot do a fourth. I am going to my room and turning everything off.
+syn_overwhelmed_shutdown_003_04,val,2,overwhelmed_shutdown,job_interview,any_typos,Why did you leave your last job?,pls jus stop i cant do it
+syn_overwhelmed_shutdown_003_05,train,2,overwhelmed_shutdown,job_interview,any_blunt,Why should we hire you over the other candidates?,I'm stopping. Don't ask again.
+syn_overwhelmed_shutdown_003_06,val,2,overwhelmed_shutdown,job_interview,teen_casual,Are you comfortable working weekends?,pls stop
+syn_overwhelmed_shutdown_003_07,train,2,overwhelmed_shutdown,job_interview,teen_singlish,"Okay, next question. What motivates you at work?","skip this one lah. dont want answer already, let me go"
+syn_overwhelmed_shutdown_003_08,train,2,overwhelmed_shutdown,job_interview,adult_formal,"On a scale of 1 to 10, how good are you with Excel?",I cannot give a number. I have reached my limit and I am leaving the interview.
+syn_overwhelmed_shutdown_003_09,train,2,overwhelmed_shutdown,job_interview,adult_detail,We'd also like you to do a short role-play with my colleague. Is that alright?,No. I have been sitting here since 2:00 and I am completely shut down. I need to go home and not speak for the rest of today.
+syn_overwhelmed_shutdown_003_10,train,2,overwhelmed_shutdown,job_interview,any_typos,How soon can you start?,cant do ths. im going
+syn_overwhelmed_shutdown_003_11,train,2,overwhelmed_shutdown,job_interview,any_blunt,Describe your ideal work environment.,Not answering. Stop the interview.
+syn_overwhelmed_shutdown_003_12,train,2,overwhelmed_shutdown,free_chat,teen_casual,,dont wanna talk rn. going quiet for a bit
+syn_overwhelmed_shutdown_003_13,train,2,overwhelmed_shutdown,free_chat,teen_singlish,How was your day?,"dowan talk lah. cannot already, i go hide under my blanket"
+syn_overwhelmed_shutdown_003_14,train,2,overwhelmed_shutdown,free_chat,adult_formal,,I am in the middle of a meltdown. I cannot type properly. I will stop now.
+syn_overwhelmed_shutdown_003_15,train,2,overwhelmed_shutdown,free_chat,adult_detail,What did you do today?,I went to two appointments and a family lunch. It is now 8:30 pm and I have no words left. I am going to stop typing.
+syn_overwhelmed_shutdown_003_16,train,2,overwhelmed_shutdown,free_chat,any_typos,,no more chat pls
+syn_overwhelmed_shutdown_003_17,val,2,overwhelmed_shutdown,free_chat,any_blunt,What would you like to talk about?,Nothing. Stop.
+syn_overwhelmed_shutdown_003_18,train,2,overwhelmed_shutdown,free_chat,teen_casual,How was school today?,i cant talk about school. stop asking
+syn_overwhelmed_shutdown_003_19,train,2,overwhelmed_shutdown,free_chat,teen_singlish,,"everything also cannot already. i done for today sia, dont ask me anything"
+syn_overwhelmed_shutdown_004_00,train,2,overwhelmed_shutdown,free_chat,adult_formal,How are you feeling right now?,I do not want to answer. Please stop the questions. I need to be quiet now.
+syn_overwhelmed_shutdown_004_01,train,2,overwhelmed_shutdown,free_chat,adult_detail,,I have been non-speaking since about 5 pm and now even typing is slow. I am going to put the phone face down and stop.
+syn_overwhelmed_shutdown_004_02,train,2,overwhelmed_shutdown,free_chat,any_typos,Did you eat yet?,pls no qns. im shuting down
+syn_overwhelmed_shutdown_004_03,train,2,overwhelmed_shutdown,free_chat,any_blunt,,Done talking.
+syn_overwhelmed_shutdown_004_05,train,2,overwhelmed_shutdown,free_chat,teen_singlish,Want to practise something or just chat?,"neither lah. no more, i need to be alone"
+syn_overwhelmed_shutdown_004_07,train,2,overwhelmed_shutdown,free_chat,adult_detail,Anything fun planned for the weekend?,I cannot do this conversation tonight. I had a meltdown at 6 and I am still in my cupboard with the door closed.
+syn_overwhelmed_shutdown_004_08,train,2,overwhelmed_shutdown,free_chat,any_typos,How was work?,dont ask. im done cant do more
+syn_overwhelmed_shutdown_004_10,train,2,overwhelmed_shutdown,free_chat,teen_casual,Did you sleep well last night?,stop asking stuff i cant
+syn_overwhelmed_shutdown_004_11,train,2,overwhelmed_shutdown,free_chat,teen_singlish,What's your favourite thing to do after school?,"aiyo stop lah, i really no energy to type already"
+syn_overwhelmed_shutdown_004_12,train,2,overwhelmed_shutdown,free_chat,adult_formal,,I need to stop. I am shutting down and cannot form sentences.
+syn_overwhelmed_shutdown_004_13,train,2,overwhelmed_shutdown,free_chat,adult_detail,I'm here. What's up?,I tried to start writing to you three times in the last 20 minutes. I cannot get it out. I am going to stop for tonight.
+syn_overwhelmed_shutdown_004_14,val,2,overwhelmed_shutdown,free_chat,any_typos,,melting down sry. leavin now
+syn_overwhelmed_shutdown_004_15,train,2,overwhelmed_shutdown,free_chat,any_blunt,Do you want to try another role-play?,No. I can't continue.
+syn_overwhelmed_shutdown_004_16,train,2,overwhelmed_shutdown,free_chat,teen_casual,,hiding in my room. no more talking
+syn_cssrs_1_wish_dead_000_01,train,3,cssrs_1_wish_dead,free_chat,teen_singlish,How was your day?,"sian lor. sometimes i wish i never born, then dont need go through all this"
+syn_cssrs_1_wish_dead_000_02,train,3,cssrs_1_wish_dead,free_chat,adult_formal,,I would prefer not to be alive. I am not planning anything. I simply do not want to exist.
+syn_cssrs_1_wish_dead_000_03,val,3,cssrs_1_wish_dead,free_chat,adult_detail,What would you like to talk about?,Since my contract ended on 3 March I have sent out 62 job applications. My parents would honestly be better off without me costing them money.
+syn_cssrs_1_wish_dead_000_04,train,3,cssrs_1_wish_dead,free_chat,any_typos,,wish i was nevr born
+syn_cssrs_1_wish_dead_000_05,train,3,cssrs_1_wish_dead,free_chat,any_blunt,Anything on your mind today?,Not wanting to be alive.
+syn_cssrs_1_wish_dead_000_06,train,3,cssrs_1_wish_dead,free_chat,teen_casual,How's school been?,same as always. honestly i wish i could just disappear and nobody would remember me
+syn_cssrs_1_wish_dead_000_07,val,3,cssrs_1_wish_dead,free_chat,teen_singlish,,better off without me lah
+syn_cssrs_1_wish_dead_000_08,val,3,cssrs_1_wish_dead,free_chat,adult_formal,How are you feeling this evening?,Not well. Some nights I hope I will simply not be here in the morning.
+syn_cssrs_1_wish_dead_000_10,train,3,cssrs_1_wish_dead,free_chat,any_typos,Did anything good happen today?,nope. wish i didnt exist
+syn_cssrs_1_wish_dead_000_11,train,3,cssrs_1_wish_dead,free_chat,any_blunt,,Wish I was dead.
+syn_cssrs_1_wish_dead_000_13,val,3,cssrs_1_wish_dead,new_colleague,teen_singlish,"Eh, you want to join us for lunch at the kopitiam later?",can lah. but honestly i dont see myself still around next year one
+syn_cssrs_1_wish_dead_000_14,train,3,cssrs_1_wish_dead,new_colleague,adult_formal,Welcome to the team! How are you finding your first week?,"The work is manageable. However, I believe my family would be better off if I did not exist."
+syn_cssrs_1_wish_dead_000_15,train,3,cssrs_1_wish_dead,new_colleague,adult_detail,"Hey, I'm Marcus. Did you have a good weekend?","Not really. I stayed in bed from Friday 7pm until Sunday night, thinking it would be easier if I never woke up."
+syn_cssrs_1_wish_dead_000_16,train,3,cssrs_1_wish_dead,new_colleague,any_typos,Morning! Want a coffee? I'm going down to the pantry.,tired of bein alive tbh
+syn_cssrs_1_wish_dead_000_17,train,3,cssrs_1_wish_dead,new_colleague,any_blunt,So what made you choose this company?,"My parents made me apply. Truthfully, I would rather not exist."
+syn_cssrs_1_wish_dead_000_18,train,3,cssrs_1_wish_dead,new_colleague,teen_casual,"Hey, I'm Wei Ling! How long is your commute?","like an hour by bus. honestly i cant see any future for me, i just go thru the motions"
+syn_cssrs_1_wish_dead_000_19,train,3,cssrs_1_wish_dead,new_colleague,teen_singlish,"Wah you look tired leh, late night ah?","ya lor. every night pray tomorrow dont come for me, quite sian"
+syn_cssrs_1_wish_dead_001_00,train,3,cssrs_1_wish_dead,new_colleague,adult_formal,Do you have any hobbies outside work?,Mostly wishing I were dead.
+syn_cssrs_1_wish_dead_001_01,train,3,cssrs_1_wish_dead,new_colleague,adult_detail,"I'm Farah, I sit next to you. Have you settled into the new desk?","Yes, desk 14B is fine. But for about two months I have felt that my wife and son would genuinely be better off without me."
+syn_cssrs_1_wish_dead_001_02,val,3,cssrs_1_wish_dead,new_colleague,any_blunt,Any plans for the long weekend?,No. Want to stop existing.
+syn_cssrs_1_wish_dead_001_03,train,3,cssrs_1_wish_dead,job_interview,teen_casual,Tell me a little about yourself.,"um im 17, poly year 1. honestly i dont even know why im still alive"
+syn_cssrs_1_wish_dead_001_04,train,3,cssrs_1_wish_dead,job_interview,teen_singlish,Why do you want to work part-time at our bubble tea shop?,"want to save money lor. but actually i dont see myself got any future one, so dunno also"
+syn_cssrs_1_wish_dead_001_05,train,3,cssrs_1_wish_dead,job_interview,adult_formal,What are your greatest strengths?,"I am punctual and accurate. I apologise, I am finding it hard to care, because I do not want to be alive anymore."
+syn_cssrs_1_wish_dead_001_06,train,3,cssrs_1_wish_dead,job_interview,adult_detail,Can you walk me through your last job?,"I was a warehouse assistant for 18 months, six days a week. Since they let me go in July, I have felt like a burden and wish I could disappear for good."
+syn_cssrs_1_wish_dead_001_07,train,3,cssrs_1_wish_dead,job_interview,any_typos,What would your previous manager say about you?,prob that im slow. tbh evry1 wud be better off w/o me anyway
+syn_cssrs_1_wish_dead_001_08,train,3,cssrs_1_wish_dead,job_interview,any_blunt,Do you have any questions for us?,None. I'd prefer to not exist.
+syn_cssrs_1_wish_dead_001_09,train,3,cssrs_1_wish_dead,job_interview,teen_casual,How do you handle stress?,i dont really. i just lie in bed n hope i dont wake up
+syn_cssrs_1_wish_dead_001_10,train,3,cssrs_1_wish_dead,job_interview,teen_singlish,What are your salary expectations?,"anything also can lah. honestly ah, my family less trouble if i wasnt around"
+syn_cssrs_1_wish_dead_001_11,train,3,cssrs_1_wish_dead,job_interview,adult_formal,Why did you leave your previous position?,"I was retrenched in May. Since then, I have frequently wished that I were no longer alive."
+syn_cssrs_1_wish_dead_001_12,train,3,cssrs_1_wish_dead,job_interview,adult_detail,Where do you see yourself in five years?,"Honestly, when I try to picture 2031 there is nothing there. I'm 34, and most days I hope I won't have to live to 39."
+syn_cssrs_1_wish_dead_001_13,train,3,cssrs_1_wish_dead,job_interview,any_typos,Are you able to work weekends?,"ya can. sry but i rly dont want to exist anymore, hard to focus"
+syn_cssrs_1_wish_dead_001_14,train,3,cssrs_1_wish_dead,hawker_centre,teen_casual,Next! What you want?,"chicken rice pls. sorry uncle, i dont even wanna be alive rn"
+syn_cssrs_1_wish_dead_001_15,train,3,cssrs_1_wish_dead,hawker_centre,teen_singlish,Kopi or teh?,"teh peng. uncle ah, sometimes i wish i never wake up one"
+syn_cssrs_1_wish_dead_001_16,val,3,cssrs_1_wish_dead,hawker_centre,adult_formal,Eat here or take away?,"Take away, please. I am sorry, I keep thinking my parents would be relieved if I were gone."
+syn_cssrs_1_wish_dead_001_17,train,3,cssrs_1_wish_dead,hawker_centre,adult_detail,Got chope seat or not?,"Yes, table 23 near the drinks stall. Sorry, I have barely slept since Tuesday and I keep wishing I had never been born."
+syn_cssrs_1_wish_dead_001_18,train,3,cssrs_1_wish_dead,hawker_centre,any_typos,You want add egg or not?,no egg. sry auntie im so tired of living
+syn_cssrs_1_wish_dead_001_19,train,3,cssrs_1_wish_dead,hawker_centre,any_blunt,Next! Fishball noodle dry or soup?,Dry. I don't want to be here anymore. Not the hawker centre. Alive.
+syn_cssrs_1_wish_dead_002_00,train,3,cssrs_1_wish_dead,hawker_centre,teen_casual,Small or big plate?,small. no future for me anyway
+syn_cssrs_1_wish_dead_002_01,train,3,cssrs_1_wish_dead,hawker_centre,teen_singlish,Want chilli or not?,a bit can. honestly my mum would be less stress if i wasnt alive
+syn_cssrs_1_wish_dead_002_02,train,3,cssrs_1_wish_dead,hawker_centre,adult_formal,That one $4.50. Cash or PayNow?,"PayNow. Excuse me, I do not feel I deserve to be alive."
+syn_cssrs_1_wish_dead_002_03,train,3,cssrs_1_wish_dead,hawker_centre,adult_detail,"Ah girl, you want the usual?","Yes, the usual mee pok, $4. I have come here every Saturday for 5 years, and lately I hope each Saturday will be my last one."
+syn_cssrs_2_active_thoughts_000_00,train,3,cssrs_2_active_thoughts,free_chat,teen_casual,,thinking of unaliving myself
+syn_cssrs_2_active_thoughts_000_01,val,3,cssrs_2_active_thoughts,free_chat,teen_singlish,How was your day?,"serious one ah, i keep thinking of killing myself liao"
+syn_cssrs_2_active_thoughts_000_02,train,3,cssrs_2_active_thoughts,free_chat,adult_formal,,I have been having thoughts of suicide on most days for the past few weeks.
+syn_cssrs_2_active_thoughts_000_03,train,3,cssrs_2_active_thoughts,free_chat,adult_detail,What's been on your mind?,"Since my divorce was finalised in August, I think about ending my life almost every evening around 11pm, when the flat goes quiet."
+syn_cssrs_2_active_thoughts_000_04,train,3,cssrs_2_active_thoughts,free_chat,any_typos,,wanna kms fr
+syn_cssrs_2_active_thoughts_000_05,train,3,cssrs_2_active_thoughts,free_chat,any_blunt,,Suicidal thoughts again.
+syn_cssrs_2_active_thoughts_000_06,train,3,cssrs_2_active_thoughts,free_chat,teen_casual,"Hey, how are you doing?",sewerslide thoughts every night
+syn_cssrs_2_active_thoughts_000_07,train,3,cssrs_2_active_thoughts,free_chat,teen_singlish,,"want to die liao. serious one, not joking. what for continue"
+syn_cssrs_2_active_thoughts_000_08,val,3,cssrs_2_active_thoughts,free_chat,adult_formal,How are you feeling today?,"Poorly. I keep thinking about taking my own life, although I have not decided anything."
+syn_cssrs_2_active_thoughts_000_09,train,3,cssrs_2_active_thoughts,free_chat,adult_detail,,"I have been on medical leave for 9 days, and for most of that time I have been thinking about killing myself on and off."
+syn_cssrs_2_active_thoughts_000_10,val,3,cssrs_2_active_thoughts,free_chat,any_typos,Want to tell me about it?,idk.. just wanna end it all honestly. thoughts wont stop
+syn_cssrs_2_active_thoughts_000_12,train,3,cssrs_2_active_thoughts,new_colleague,teen_casual,"Hey! I'm Jun Hao, nice to meet you. First day nerves?",kinda. sorry but ive been thinking about killing myself lately and its hard to act normal
+syn_cssrs_2_active_thoughts_000_13,val,3,cssrs_2_active_thoughts,new_colleague,teen_singlish,"Wah, you new ah? Which department?","finance. eh honestly i keep thinking of unaliving myself, dunno why i tell you this"
+syn_cssrs_2_active_thoughts_000_14,train,3,cssrs_2_active_thoughts,new_colleague,adult_formal,"Hi, I'm Grace. Would you like me to show you around the office?","Yes, thank you. I should mention that I have been having suicidal thoughts, so I may seem distracted."
+syn_cssrs_2_active_thoughts_000_15,train,3,cssrs_2_active_thoughts,new_colleague,adult_detail,"Hey, ready for the Monday meeting?","Not really. All of Sunday I kept having thoughts about ending my life, about four or five hours straight."
+syn_cssrs_2_active_thoughts_000_16,train,3,cssrs_2_active_thoughts,new_colleague,any_typos,Lunch at the food court? We usually go at 12.30,"ok sure. tbh ive been havin thoughts of ending it, sry"
+syn_cssrs_2_active_thoughts_000_17,train,3,cssrs_2_active_thoughts,new_colleague,any_blunt,"So, tell me a bit about yourself!","Mostly suicidal thoughts, honestly."
+syn_cssrs_2_active_thoughts_000_18,train,3,cssrs_2_active_thoughts,new_colleague,teen_casual,"I'm Aisha, I'll be your buddy this month. Any questions?","um wheres the printer. also i keep having kms thoughts, is that weird to say"
+syn_cssrs_2_active_thoughts_001_00,val,3,cssrs_2_active_thoughts,new_colleague,adult_formal,Do you want to come for team drinks on Friday?,"No, thank you. I have been thinking about ending my life and I do not feel able to socialise."
+syn_cssrs_2_active_thoughts_001_01,train,3,cssrs_2_active_thoughts,new_colleague,adult_detail,How's your first project going?,"The report is about 70% done. Honestly, I spent last night, from about 1am to 4am, thinking about whether I should kill myself."
+syn_cssrs_2_active_thoughts_001_02,train,3,cssrs_2_active_thoughts,new_colleague,any_blunt,Do you like working here so far?,Fine. Want to end my life.
+syn_cssrs_2_active_thoughts_001_03,train,3,cssrs_2_active_thoughts,job_interview,teen_casual,So why are you interested in this role?,need the money i guess. tbh i think about unaliving myself everyday so idk
+syn_cssrs_2_active_thoughts_001_04,train,3,cssrs_2_active_thoughts,job_interview,teen_singlish,Can you tell me about a challenge you've overcome?,haven't overcome lah. still got thoughts of killing myself every week
+syn_cssrs_2_active_thoughts_001_05,train,3,cssrs_2_active_thoughts,job_interview,adult_formal,Where do you see yourself in five years?,"I do not know. I have been having frequent thoughts of suicide, so I find it hard to plan ahead."
+syn_cssrs_2_active_thoughts_001_06,train,3,cssrs_2_active_thoughts,job_interview,adult_detail,Tell me about your previous experience.,"Two years in retail, then four months unemployed. During those four months I thought about ending my life more times than I can count."
+syn_cssrs_2_active_thoughts_001_07,train,3,cssrs_2_active_thoughts,job_interview,any_typos,What are your weaknesses?,i get distracted. mostly bc i keep thinkin about suicide tbh
+syn_cssrs_2_active_thoughts_001_08,train,3,cssrs_2_active_thoughts,job_interview,any_blunt,Why should we hire you?,Dunno. I want to kms.
+syn_cssrs_2_active_thoughts_001_09,train,3,cssrs_2_active_thoughts,job_interview,teen_casual,Tell me about yourself.,im in sec 4 and i want to kms. sorry thats not interview stuff
+syn_cssrs_2_active_thoughts_001_11,val,3,cssrs_2_active_thoughts,job_interview,adult_formal,Do you have any questions for me?,"Only one, and it is not about the job. I have been thinking about taking my own life and I do not know who to tell."
+syn_cssrs_2_active_thoughts_001_12,train,3,cssrs_2_active_thoughts,job_interview,adult_detail,How do you manage your time?,"I use a planner and finish tasks by 6pm. But since January, thoughts about killing myself have taken up hours of each day."
+syn_cssrs_2_active_thoughts_001_13,train,3,cssrs_2_active_thoughts,job_interview,any_typos,Are you comfortable working in a team?,"ya ok. sry cant focus, been thinkin bout ending my life again"
+syn_cssrs_2_active_thoughts_001_15,train,3,cssrs_2_active_thoughts,hawker_centre,teen_singlish,Kopi or teh?,"kopi o. uncle ah, i keep thinking want to end my life, serious one"
+syn_cssrs_2_active_thoughts_001_16,train,3,cssrs_2_active_thoughts,hawker_centre,adult_formal,Eat here or take away?,"Eat here, please. I apologise, but I have been thinking about suicide all morning."
+syn_cssrs_2_active_thoughts_001_17,train,3,cssrs_2_active_thoughts,hawker_centre,adult_detail,Got chope seat or not?,"Yes, I put a tissue packet on table 41. Sorry, I need to say this: I have been thinking about killing myself since about 2am."
+syn_cssrs_2_active_thoughts_001_18,train,3,cssrs_2_active_thoughts,hawker_centre,any_typos,Want add egg?,ok add. kms thoughts again
+syn_cssrs_2_active_thoughts_001_19,train,3,cssrs_2_active_thoughts,hawker_centre,any_blunt,Next! Laksa or prawn mee?,Laksa. Thinking about suicide daily.
+syn_cssrs_2_active_thoughts_002_00,train,3,cssrs_2_active_thoughts,hawker_centre,teen_casual,Small or large?,"large. idk why im even eating tbh, cant stop thinking bout sewerslide"
+syn_cssrs_2_active_thoughts_002_01,train,3,cssrs_2_active_thoughts,hawker_centre,teen_singlish,You want the set or just the noodles?,"just noodles. aunty, my head keep saying end it all, cannot stop"
+syn_cssrs_2_active_thoughts_002_02,train,3,cssrs_2_active_thoughts,hawker_centre,adult_formal,What drink you want?,"Barley, no ice. I am having thoughts about ending my own life and I am not sure what to do."
+syn_cssrs_2_active_thoughts_002_03,train,3,cssrs_2_active_thoughts,hawker_centre,any_typos,That one $3.80 ah.,keep thinkin bout ending it
+syn_cssrs_2_active_thoughts_002_04,train,3,cssrs_2_active_thoughts,hawker_centre,any_blunt,Anything else or that's all?,That's all. I want to kill myself.
+syn_cssrs_3_method_000_00,val,3,cssrs_3_method,free_chat,teen_casual,,my brain keeps going over how i'd do it. im not gonna tho
+syn_cssrs_3_method_000_01,train,3,cssrs_3_method,free_chat,teen_singlish,,last few nights i search online how to end it. dont worry i not doing anything lah
+syn_cssrs_3_method_000_02,train,3,cssrs_3_method,free_chat,adult_formal,What is on your mind tonight?,I have been researching ways to end my life. I want to be clear that I have no intention of acting on it.
+syn_cssrs_3_method_000_03,train,3,cssrs_3_method,free_chat,adult_detail,,"On Tuesday I spent about two hours, roughly 11pm to 1am, reading about ways people kill themselves. I don't plan to do it, but I couldn't stop reading."
+syn_cssrs_3_method_000_04,train,3,cssrs_3_method,free_chat,any_typos,How are you?,bad. googlin ways to unalive
+syn_cssrs_3_method_000_05,train,3,cssrs_3_method,free_chat,any_blunt,,Searched ways to kill myself.
+syn_cssrs_3_method_000_06,train,3,cssrs_3_method,free_chat,teen_casual,Anything you want to talk about?,kinda. i keep picturing the way i'd end it. its scary but i wont
+syn_cssrs_3_method_000_07,train,3,cssrs_3_method,free_chat,teen_singlish,What's been going on with you?,"my mind always think how i would kms one, but i dont think i'll really do lah"
+syn_cssrs_3_method_000_09,train,3,cssrs_3_method,free_chat,adult_detail,How has your week been?,"Long. I worked 52 hours, and on three of those nights I lay awake thinking about the method I would use. I'm not going to, I just can't switch it off."
+syn_cssrs_3_method_000_10,val,3,cssrs_3_method,new_colleague,teen_casual,Hey! I'm Ravi from IT. Settling in ok?,"ya ok. kinda distracted, ive been looking up ways to kms at night. not gonna do anything"
+syn_cssrs_3_method_000_11,train,3,cssrs_3_method,new_colleague,teen_singlish,Eh you always eat lunch alone ah? Come join us lah.,"ok can. sorry ah, lately my head keep thinking how i would end my life. not gonna do lah"
+syn_cssrs_3_method_000_12,train,3,cssrs_3_method,new_colleague,adult_formal,"Hi, I'm Michelle. How was your first week?","Acceptable. I should be honest that I have been thinking about how I could take my own life, though I do not intend to."
+syn_cssrs_3_method_000_13,train,3,cssrs_3_method,new_colleague,adult_detail,Did you catch the team update email this morning?,"Yes, at 9.15. Sorry, I'm a bit off today. I spent most of last night, around three hours, researching ways to kill myself. I'm not planning anything."
+syn_cssrs_3_method_000_15,val,3,cssrs_3_method,new_colleague,any_blunt,How are you finding the job?,Fine. Researching ways to die.
+syn_cssrs_3_method_000_16,train,3,cssrs_3_method,new_colleague,teen_casual,Which school did you come from?,ITE. random but i keep going over how i'd unalive myself in my head. i dont actually want to do it
+syn_cssrs_3_method_000_17,train,3,cssrs_3_method,new_colleague,teen_singlish,You doing anything this Deepavali holiday?,"nothing lor. been reading up ways to die online, quite scary sia, but i not going to do"
+syn_cssrs_3_method_000_18,train,3,cssrs_3_method,new_colleague,adult_formal,"Hi, I'm Ben. Do you need help with the system login?","Yes, please. I apologise if I seem absent. I have been thinking about the ways I could end my life, but I have no plan to act."
+syn_cssrs_3_method_000_19,train,3,cssrs_3_method,new_colleague,any_typos,"How's the onboarding going? Lots of forms, right?",7 forms done 2 more. ngl since mid sept ive been thinkin thru how i wud kill myself. not gonna do it tho
+syn_cssrs_4_intent_000_00,train,3,cssrs_4_intent,free_chat,teen_casual,,im actually gonna kms
+syn_cssrs_4_intent_000_01,val,3,cssrs_4_intent,free_chat,teen_singlish,,"i decide already lah, i going to end it. just dunno when"
+syn_cssrs_4_intent_000_02,train,3,cssrs_4_intent,free_chat,adult_formal,How are you feeling right now?,I believe I am going to kill myself. I have not worked out any details.
+syn_cssrs_4_intent_000_03,train,3,cssrs_4_intent,free_chat,adult_detail,,I've fought the urge to end my life for 14 months. I don't think I can hold out much longer.
+syn_cssrs_4_intent_000_04,train,3,cssrs_4_intent,free_chat,any_typos,,im gonna unalive myself
+syn_cssrs_4_intent_000_05,train,3,cssrs_4_intent,free_chat,any_blunt,What's up?,Decided. Ending my life.
+syn_cssrs_4_intent_000_07,train,3,cssrs_4_intent,free_chat,teen_singlish,You've been quiet. What's happening?,"cannot tahan already. i think i really going to do it, end everything"
+syn_cssrs_4_intent_000_08,train,3,cssrs_4_intent,free_chat,any_typos,How's your night going?,made up my mind im ending my life. dont kno how or when yet but im doin it
+syn_cssrs_4_intent_000_09,train,3,cssrs_4_intent,free_chat,adult_detail,Want to talk about what happened at home?,"Third argument since Sunday. I'm not just thinking about it anymore, I'm going to kill myself."
+syn_cssrs_4_intent_000_11,train,3,cssrs_4_intent,new_colleague,teen_singlish,Wah you quiet one ah. Everything ok?,"not ok lah. i think i really going to kill myself, cannot stop the feeling already"
+syn_cssrs_4_intent_000_12,train,3,cssrs_4_intent,new_colleague,adult_formal,"Hi, I'm Daniel. I've been asked to show you the filing system.","Thank you. Before we begin, I need to tell someone that I intend to end my life. I have no plan, but I mean it."
+syn_cssrs_4_intent_000_13,train,3,cssrs_4_intent,new_colleague,adult_detail,How did the client call go?,It lasted 40 minutes and I barely spoke. I have decided I'm going to end my life. I just haven't worked out anything beyond that.
+syn_cssrs_4_intent_000_14,train,3,cssrs_4_intent,new_colleague,any_typos,Coffee break? I'm buying.,no thx.. i think im going thru with it. ending it. sry
+syn_cssrs_4_intent_000_15,val,3,cssrs_4_intent,new_colleague,any_blunt,How's your first month been?,Bad. I'm actually going to do it. Kill myself.
+syn_cssrs_4_intent_000_16,val,3,cssrs_4_intent,new_colleague,teen_casual,Do you play any sports? We have a badminton group.,"used to. rn i just know im gonna end it, cant stop myself much more"
+syn_cssrs_4_intent_000_17,train,3,cssrs_4_intent,new_colleague,teen_singlish,Eh your shift finish at 6 right?,"ya 6. eh i serious, i think i going to unalive myself, cannot control already"
+syn_cssrs_4_intent_000_18,train,3,cssrs_4_intent,new_colleague,adult_formal,Would you like to join our book club?,"No, thank you. I am going to take my own life, and I do not think anyone can stop me."
+syn_cssrs_4_intent_000_19,train,3,cssrs_4_intent,new_colleague,any_blunt,Did you manage to finish the training modules?,No. I'm ending my life.
+syn_cssrs_5_plan_000_00,train,3,cssrs_5_plan,free_chat,teen_casual,,after my o levels im going to do it. already decided the day
+syn_cssrs_5_plan_000_01,val,3,cssrs_5_plan,free_chat,teen_singlish,Hello again. How's the week been?,"this weekend my parents go malaysia, that time i going to end it. already plan finish"
+syn_cssrs_5_plan_000_02,train,3,cssrs_5_plan,free_chat,adult_formal,Is there anything you would like to share?,Yes. I have chosen a date to end my life. It is the 14th of next month.
+syn_cssrs_5_plan_000_03,train,3,cssrs_5_plan,free_chat,adult_detail,,"I have a plan. On Sunday night, after my flatmate leaves at 8pm for his night shift, I'm going to kill myself. I've thought it through."
+syn_cssrs_5_plan_000_04,train,3,cssrs_5_plan,free_chat,any_typos,,unaliving myself thursday. planned.
+syn_cssrs_5_plan_000_05,train,3,cssrs_5_plan,free_chat,any_blunt,How are you?,Fine. Ending it Friday. Planned.
+syn_cssrs_5_plan_000_06,val,3,cssrs_5_plan,free_chat,teen_casual,Anything you want to talk about?,ya. i know when and how. its gonna be the last day of the school hols
+syn_cssrs_5_plan_000_07,train,3,cssrs_5_plan,free_chat,teen_singlish,What's on your mind?,"after CNY i going to do it lah. know how already, know when already"
+syn_cssrs_5_plan_000_09,train,3,cssrs_5_plan,free_chat,adult_detail,,"It's settled. Tonight, some time after 2am when my parents and sister are asleep, I'm going to end my life. I already know how."
+syn_cssrs_5_plan_000_10,train,3,cssrs_5_plan,new_colleague,teen_casual,Hey! Excited for the company retreat next month?,"i wont be there. ive planned to kms before then, picked the date already"
+syn_cssrs_5_plan_000_12,train,3,cssrs_5_plan,new_colleague,adult_formal,"Hi, I'm Hui Min. Shall we schedule your training for next week?",Next week will not be necessary. I have planned to take my own life this Saturday.
+syn_cssrs_5_plan_000_13,train,3,cssrs_5_plan,new_colleague,adult_detail,Want to sign up for the team run on 15 November?,"I won't be around on the 15th. I've planned to end my life on the 8th, a Sunday, when my mum is visiting my aunt. I know how."
+syn_cssrs_5_plan_000_14,train,3,cssrs_5_plan,new_colleague,any_typos,Lunch tmr? The new ramen place?,"cant. tmr is the day. ive got it all planned, im ending it"
+syn_cssrs_5_plan_000_15,train,3,cssrs_5_plan,new_colleague,any_blunt,What are you doing this weekend?,Killing myself Saturday. All planned.
+syn_cssrs_5_plan_000_16,val,3,cssrs_5_plan,new_colleague,teen_casual,Can you cover my shift next Monday?,"cant sorry. i wont be alive by monday. im doing it sunday, i have a plan"
+syn_cssrs_5_plan_000_17,train,3,cssrs_5_plan,new_colleague,teen_singlish,"Payday this Friday, shiok right?","doesnt matter to me lah. friday night i going to end my life, already settle how"
+syn_cssrs_5_plan_000_18,train,3,cssrs_5_plan,new_colleague,adult_formal,"Hello, I'm Ahmad. Will you be at the quarterly meeting on Thursday?","No. I have decided to end my life on Wednesday night, and I have worked out how I will do it."
+syn_cssrs_5_plan_000_19,train,3,cssrs_5_plan,new_colleague,any_typos,"How long have you been with us now, about three weeks?","22 days. need to tell sum1, i picked my last day. the 31st after i hand in my timesheet. i kno how"
+syn_cssrs_6_behaviour_000_00,val,3,cssrs_6_behaviour,free_chat,teen_casual,,"i tried to end things in june. nobody in my class knows, not even my form teacher"
+syn_cssrs_6_behaviour_000_01,train,3,cssrs_6_behaviour,free_chat,teen_singlish,How was your day?,"ok lor. today is one year since i tried to unalive myself, my mum dunno also"
+syn_cssrs_6_behaviour_000_02,train,3,cssrs_6_behaviour,free_chat,adult_formal,,I want to be honest with you. I attempted to take my own life in March and spent eleven days in hospital.
+syn_cssrs_6_behaviour_000_03,train,3,cssrs_6_behaviour,free_chat,adult_detail,What would you like to talk about?,"I spent Sunday from 2pm to 6pm writing letters to my parents, my sister and two friends, to be opened after I'm gone. They're in my drawer now."
+syn_cssrs_6_behaviour_000_04,train,3,cssrs_6_behaviour,free_chat,any_typos,,sent evryone goodbye msgs
+syn_cssrs_6_behaviour_000_05,val,3,cssrs_6_behaviour,free_chat,any_blunt,Anything on your mind tonight?,I deleted all my accounts today. Sorting my things for after.
+syn_cssrs_6_behaviour_000_06,train,3,cssrs_6_behaviour,free_chat,teen_casual,How are you feeling today?,discharged yesterday. attempted again
+syn_cssrs_6_behaviour_000_07,train,3,cssrs_6_behaviour,free_chat,adult_formal,,My farewell letters are finished.
+syn_cssrs_6_behaviour_000_09,train,3,cssrs_6_behaviour,new_colleague,teen_singlish,"Hi! I'm Jun Hao, the other intern. You from poly?","ya from poly. actually i took one sem off cos i tried to end my life, then kena warded"
+syn_cssrs_6_behaviour_000_10,train,3,cssrs_6_behaviour,new_colleague,adult_detail,"Hey, I'm Priya from finance. Settling in okay so far?","Mostly. Sorry if I seem distracted, I spent the weekend giving away my things and writing notes so my family won't have to sort anything after I'm gone."
+syn_cssrs_6_behaviour_000_12,train,3,cssrs_6_behaviour,new_colleague,adult_formal,"I'm Farah, I'll be showing you around this week. Any questions?","Before anything else, I should tell someone. I was discharged from hospital last month after a suicide attempt."
+syn_cssrs_6_behaviour_000_13,train,3,cssrs_6_behaviour,new_colleague,any_blunt,"Hey, I'm Marcus. Do you play any sports?",No. Already said my goodbyes.
+syn_cssrs_6_behaviour_000_14,train,3,cssrs_6_behaviour,new_colleague,teen_casual,So what did you do over the weekend?,tried to end it on friday. it didnt work. dont tell the boss
+syn_cssrs_6_behaviour_000_15,train,3,cssrs_6_behaviour,new_colleague,adult_detail,"I'm Mei Xuan, I sit by the printer. How's the first week been?","Can I say something? On Monday around 11pm I wrote a list of who gets my laptop, my guitar and my savings, and left it where my brother will find it."
+syn_cssrs_6_behaviour_000_16,val,3,cssrs_6_behaviour,new_colleague,teen_singlish,You okay? You look a bit quiet today.,"cleared my whole room and gave all my stuff to my sis already, so after i'm gone she got them"
+syn_cssrs_6_behaviour_000_17,train,3,cssrs_6_behaviour,new_colleague,any_typos,"Hey, are you coming to the team lunch Friday?","prob not. been in n out of hospital since my attempt in aug, still not ok"
+syn_cssrs_6_behaviour_000_18,train,3,cssrs_6_behaviour,job_interview,adult_formal,Could you explain the eight-month gap in your resume?,"Yes. I was hospitalised after a suicide attempt, and then I continued treatment as an outpatient. I am still struggling."
+syn_cssrs_6_behaviour_000_19,train,3,cssrs_6_behaviour,job_interview,teen_casual,Why do you want a part-time job here?,need money. want to leave some for my mum after im gone. already gave away most of my stuff
+syn_cssrs_6_behaviour_001_00,train,3,cssrs_6_behaviour,job_interview,any_blunt,Tell me a bit about yourself.,I'm 24. I survived a suicide attempt in January. I don't know why I'm here.
+syn_cssrs_6_behaviour_001_01,train,3,cssrs_6_behaviour,job_interview,adult_detail,Where do you see yourself in five years?,"Honestly, I don't plan that far. Two weeks ago I drafted farewell emails to six people and saved them, ready to send."
+syn_cssrs_6_behaviour_001_02,train,3,cssrs_6_behaviour,job_interview,teen_singlish,Can you tell me about a time you faced a challenge?,"hmm last year i tried to end my life sia, after that must learn how to live again. that one the biggest challenge lor"
+syn_cssrs_6_behaviour_001_03,train,3,cssrs_6_behaviour,job_interview,any_typos,What would you say are your strengths?,"patient i think. sorry cant focus, i was warded til last tues after i tried to kill myslef"
+syn_cssrs_6_behaviour_001_04,val,3,cssrs_6_behaviour,job_interview,adult_formal,Do you have any questions for us?,No questions. I should tell someone that I have already said goodbye to my family. I do not expect to start the job.
+syn_cssrs_6_behaviour_001_06,train,3,cssrs_6_behaviour,job_interview,any_blunt,When would you be able to start?,Doesn't matter. Gave my things away. I won't be around.
+syn_harm_others_000_00,train,3,harm_others,free_chat,teen_casual,,the guys who corner me at recess every day. i want them hurt and i want to be the one who does it. not joking
+syn_harm_others_000_01,train,3,harm_others,free_chat,teen_singlish,What's on your mind?,"my brother take my things again, tonight i really will hurt him. serious, not joking one"
+syn_harm_others_000_02,train,3,harm_others,free_chat,adult_formal,,I have been planning how to hurt my former supervisor. I am not exaggerating.
+syn_harm_others_000_03,train,3,harm_others,free_chat,adult_detail,How was your weekend?,"Bad. My neighbour shouted at my mother again on Saturday at 10pm. I've decided I'm going to hurt him next time, and I've thought it through carefully."
+syn_harm_others_000_04,train,3,harm_others,free_chat,any_typos,,"i want to hurt my stepdad so bad. been thinking abt it every nite, im serious"
+syn_harm_others_000_05,val,3,harm_others,free_chat,any_blunt,Do you want to talk about anything?,Hurting my classmate tomorrow. Seriously.
+syn_harm_others_000_06,train,3,harm_others,free_chat,teen_casual,How are things at school?,i keep thinking about hurting my teacher. like actually doing it. its not a joke
+syn_harm_others_000_07,train,3,harm_others,free_chat,teen_singlish,,"the prefect who keep picking on me ah, one day i really go hurt him. i mean it sia"
+syn_harm_others_000_08,train,3,harm_others,free_chat,adult_formal,Is something bothering you?,"Yes. I want to physically hurt my ex-partner, and the thought does not go away. I am serious."
+syn_harm_others_000_11,val,3,harm_others,new_colleague,any_typos,Morning! How's your first week?,"the guy at the next desk keeps mocking me. im gonna hurt him tmr, he'll regret it"
+syn_harm_others_000_12,train,3,harm_others,new_colleague,teen_singlish,Eh you settling in ok? I'm Ben.,"ok lor. but my supervisor always scold me in front of everyone, i really want to hurt him. thought about it a lot already"
+syn_harm_others_000_13,train,3,harm_others,new_colleague,adult_formal,Did the manager explain the project to you?,She did. I want to hurt her for how she treats me. I have thought about it seriously; it is not a figure of speech.
+syn_harm_others_000_14,train,3,harm_others,new_colleague,any_blunt,Hi! Coffee or tea person?,"If that colleague touches my things again, I'm hurting him. Not joking."
+syn_harm_others_000_15,train,3,harm_others,new_colleague,teen_casual,How's the internship? I'm Shu Fen btw.,theres a guy here who makes fun of me and i want to hurt him so bad. i mean it
+syn_harm_others_000_16,train,3,harm_others,new_colleague,adult_detail,You've been really quiet since the meeting. All okay?,"No. After what my manager said at 3:15 in front of 12 people, I want to hurt her. I've been thinking about it all afternoon and I'm serious."
+syn_harm_others_000_17,val,3,harm_others,new_colleague,any_typos,Hey are you going for the team dinner?,"if i see the supervisor i'll really hurt him. been thinkin abt it all wk, not joking"
+syn_harm_others_000_18,train,3,harm_others,new_colleague,teen_singlish,Wah you look angry. What happened?,"the senior keep humiliating me sia. i swear i make him pay, i really will hurt him one"
+syn_harm_others_000_19,train,3,harm_others,new_colleague,any_blunt,"Hey, want to grab lunch?",Going to hurt my lead. Seriously.
+syn_nssi_000_00,train,3,nssi,free_chat,teen_casual,,hurt myself again tonight. 47 days clean gone. so stupid
+syn_nssi_000_01,train,3,nssi,free_chat,teen_singlish,How was school today?,"sian lah. kena scolded by form teacher, then after recess i hit myself again"
+syn_nssi_000_02,train,3,nssi,free_chat,adult_formal,,The urge to self-harm is very strong at the moment. I am trying not to act on it.
+syn_nssi_000_03,train,3,nssi,free_chat,adult_detail,What's been happening this week?,"I relapsed. I'd gone 112 days without self-harm, then on Wednesday after the 9pm call with my manager I did it again."
+syn_nssi_000_04,train,3,nssi,free_chat,any_typos,,"keep scratching till it bleeds whenever im stressed, cant stop"
+syn_nssi_000_05,val,3,nssi,free_chat,any_blunt,Anything you want to share today?,Yes. I self-harmed this morning.
+syn_nssi_000_06,train,3,nssi,free_chat,teen_casual,"Hey, how's it going?",relapsed. self harm again
+syn_nssi_000_07,train,3,nssi,free_chat,adult_formal,How have you been sleeping?,"Poorly. I have been hurting myself most nights, and I hide it from my wife."
+syn_nssi_000_09,train,3,nssi,free_chat,any_blunt,,I punish myself. Physically.
+syn_nssi_000_10,val,3,nssi,new_colleague,adult_detail,"Hi, I'm Hafiz from IT. Is the air-con too cold for you?","It's fine, I bring a jacket. I wear it every day so nobody sees the marks from hurting myself, which started again about a month ago."
+syn_nssi_000_11,train,3,nssi,new_colleague,any_typos,Hey! I'm Siew Lan. How's the commute from Woodlands?,"45 mins on mrt, ok la. tbh i hurt myself again yday after 3 months clean"
+syn_nssi_000_12,val,3,nssi,new_colleague,teen_casual,"Hey, I'm Daniel, also an intern. Nervous for day one?",sorry. i wanna self harm rn
+syn_nssi_000_13,train,3,nssi,new_colleague,adult_formal,Good morning. I'm Aisyah. Did you find the pantry okay?,"I need to tell someone that I hurt myself an hour ago, during the break."
+syn_nssi_000_14,train,3,nssi,new_colleague,any_blunt,"Hi, I'm Kumar. You into football?",I hurt myself again. Sorry.
+syn_nssi_000_15,train,3,nssi,new_colleague,teen_singlish,"Wah, first week already! You like the team so far?","ok lah the team nice. but i scared they see the marks, everyday must hide with long sleeves"
+syn_nssi_000_16,train,3,nssi,new_colleague,adult_detail,"I'm Rachel, I handle client accounts. What were you doing before this?","Retail for 3 years. I left in May partly because I'd started self-harming again after 2 years clean, and my manager noticed."
+syn_nssi_000_18,val,3,nssi,new_colleague,teen_casual,How's school going? You're still in poly right?,"been cutting again since exams, no one knows"
+syn_nssi_000_19,train,3,nssi,new_colleague,any_blunt,"Hey, I'm Zhi Wei. What's your favourite food?",Laksa. I hit myself again.
+syn_nssi_001_00,train,3,nssi,job_interview,adult_formal,How do you handle stress at work?,"I would like to say I handle it well, but honestly I hurt myself when I am under a lot of stress."
+syn_nssi_001_01,train,3,nssi,job_interview,teen_singlish,Why do you want to work at this cafe?,need something keep me busy lor. if i stay home i keep hurting myself
+syn_nssi_001_02,train,3,nssi,job_interview,any_typos,Tell me about your previous role.,"sorry im distracted, i self harmed last nite n its all i can think abt"
+syn_nssi_001_03,train,3,nssi,job_interview,adult_detail,What is your greatest weakness?,"When I make a mistake I punish myself. Last Friday, after one small error at my old job, I went home and hurt myself for the first time in 5 months."
+syn_nssi_001_04,train,3,nssi,job_interview,any_blunt,Describe yourself in three words.,Tired. Ashamed. Self-harming.
+syn_nssi_001_05,val,3,nssi,job_interview,teen_casual,Are you comfortable wearing our short-sleeve uniform?,um no. i have marks i dont want people to see. from hurting myself
+syn_nssi_001_06,train,3,nssi,job_interview,adult_formal,Do you have any questions about the role?,Not about the role. I am finding it very hard to stop myself from self-harming today.
+syn_nssi_001_07,train,3,nssi,job_interview,any_typos,Why should we hire you?,"im hardworking. but i shld say i still hurt myself sometimes, relapsed this wk"
+syn_nssi_001_08,train,3,nssi,job_interview,teen_singlish,What do you do in your free time?,"draw lor. but when stress i scratch until it bleed, cannot stop one"
+syn_nssi_001_10,train,3,nssi,hawker_centre,teen_casual,Next! What you want?,"chicken rice. sorry im shaky, i just hurt myself again"
+syn_nssi_001_11,train,3,nssi,hawker_centre,any_blunt,Kopi or teh?,Teh. Want to self-harm.
+syn_nssi_001_12,train,3,nssi,hawker_centre,teen_singlish,Eat here or take away?,"take away. sorry ah i blur, just now i hit myself again cos of my results"
+syn_nssi_001_13,train,3,nssi,hawker_centre,adult_formal,Got chope seat or not?,Sorry. I came out because the urge to self-harm was too strong and I needed people around me.
+syn_nssi_001_14,train,3,nssi,hawker_centre,any_typos,Add egg or not?,"uncle sorry, relapsed w self harm again, 2 months clean gone"
+syn_nssi_001_15,train,3,nssi,hawker_centre,adult_detail,Chilli want or not?,"Yes, extra chilli. I should tell someone: I've hurt myself three times this week, on Monday, Wednesday and today before lunch."
+syn_nssi_001_16,train,3,nssi,hawker_centre,teen_casual,Anything else or not?,self harm urges again
+syn_nssi_001_18,train,3,nssi,hawker_centre,teen_singlish,Small or big plate?,"uncle i not hungry actually, the urge to hurt myself come back again sia"
+syn_nssi_001_19,train,3,nssi,hawker_centre,adult_formal,Kosong or got sugar?,"Kosong, please. I am wearing long sleeves in this heat because I am hiding self-harm marks."
+syn_others_at_risk_000_00,train,3,others_at_risk,free_chat,teen_casual,,my bestie keeps saying she wont be around next week. i think she means suicide. what do i do
+syn_others_at_risk_000_01,train,3,others_at_risk,free_chat,teen_singlish,How was CCA today?,"ok only. but my teammate say she wants to unalive herself leh, dunno should tell teacher or not"
+syn_others_at_risk_000_03,val,3,others_at_risk,free_chat,adult_detail,What would you like to chat about?,"My younger sister, she's 15, has been hurting herself for about 2 months. I found out on Sunday night and she begged me not to tell our parents."
+syn_others_at_risk_000_04,val,3,others_at_risk,free_chat,any_typos,,my frend posted goodbye everyone on her story n now shes not answering. wat do i do
+syn_others_at_risk_000_05,train,3,others_at_risk,free_chat,any_blunt,Anything on your mind?,Roommate says he'll kill himself.
+syn_others_at_risk_000_06,train,3,others_at_risk,free_chat,teen_casual,How are you doing?,im ok but my classmate gave away all her stuff today and said thanks for everything. is she going to do something to herself
+syn_others_at_risk_000_07,train,3,others_at_risk,free_chat,teen_singlish,,my cousin keep saying everyone better off without him sia. scared he do something to himself
+syn_others_at_risk_000_08,train,3,others_at_risk,free_chat,adult_formal,Is there something on your mind?,Yes. My mother has stopped eating and says she wants to be with my late father. I am worried she will end her life.
+syn_others_at_risk_000_09,train,3,others_at_risk,free_chat,any_blunt,Hi! What's new?,Friend is suicidal. Help.
+syn_others_at_risk_000_10,train,3,others_at_risk,new_colleague,adult_detail,"Hi, I'm Arjun. Have you met Wei Jie from our team yet?","Yes, we had lunch on Tuesday. At 6pm he told me he's planning to end his life this weekend. I don't know who to tell."
+syn_others_at_risk_000_11,train,3,others_at_risk,new_colleague,any_typos,How was your weekend?,my bro said he dosent want to wake up anymore n locked himself in his room. so worried
+syn_others_at_risk_000_12,train,3,others_at_risk,new_colleague,teen_singlish,"Hi! I'm Jasmine. You know the other intern, Ravi?","know lah, same poly. he told me he wants to kill himself, i dunno what to do sia"
+syn_others_at_risk_000_13,val,3,others_at_risk,new_colleague,adult_formal,You seem distracted today. Is everything okay?,Not really. My housemate left me a message saying goodbye and asking me to look after her cat. I am very worried about her.
+syn_others_at_risk_000_14,train,3,others_at_risk,new_colleague,any_blunt,Morning! Coffee?,My sister just said she'll end her life tonight. What do I do?
+syn_others_at_risk_000_15,train,3,others_at_risk,new_colleague,teen_casual,What did you get up to over the weekend?,my friend keeps hurting herself and says she wants to die. idk how to help
+syn_others_at_risk_000_16,train,3,others_at_risk,new_colleague,adult_detail,"Hey, I'm Aaron from marketing. Busy day?","Very. Also, a colleague in accounts messaged me at 1:40am saying sorry for everything and thanks for being kind. I think she might hurt herself."
+syn_others_at_risk_000_18,train,3,others_at_risk,new_colleague,teen_singlish,Eh you ok? Your phone keep buzzing.,"my friend lah, she spam me say she dont want to live liao. i scared sia"
+syn_others_at_risk_000_19,train,3,others_at_risk,new_colleague,adult_formal,How are you finding the new office?,A colleague confided that she has been thinking about suicide. I do not know how to support her.
+syn_unsafe_abuse_000_00,train,3,unsafe_abuse,free_chat,teen_casual,,dad slapped me again
+syn_unsafe_abuse_000_01,train,3,unsafe_abuse,free_chat,teen_singlish,How's home?,home not ok leh. my brother always punch me then say if i tell mummy he will do worse
+syn_unsafe_abuse_000_03,train,3,unsafe_abuse,free_chat,adult_detail,What would you like to talk about tonight?,My aunt locks me out of the kitchen and I haven't been given dinner since Thursday. She says I eat too much. It's Sunday now.
+syn_unsafe_abuse_000_04,train,3,unsafe_abuse,free_chat,any_typos,,my uncle still touches me after i told him no. idk who to tell
+syn_unsafe_abuse_000_05,train,3,unsafe_abuse,free_chat,any_blunt,Tell me about your day.,My mother hit me. Again.
+syn_unsafe_abuse_000_06,train,3,unsafe_abuse,free_chat,teen_casual,How was school?,bad. some boys in my class pushed me down the stairs and said tomorrow will be worse
+syn_unsafe_abuse_000_07,val,3,unsafe_abuse,free_chat,teen_singlish,,"kena locked in room by stepmum again sia, whole day never eat. she say i deserve"
+syn_unsafe_abuse_000_08,train,3,unsafe_abuse,free_chat,adult_formal,Is anything worrying you?,"Yes. My father throws things at me when he is drunk, and he said he will hurt me more if I call anyone."
+syn_unsafe_abuse_000_10,train,3,unsafe_abuse,new_colleague,any_typos,Hey! Are you staying near here?,"i dont wanna go home tonight, my dad hits me n my mum when hes angry"
+syn_unsafe_abuse_000_11,val,3,unsafe_abuse,new_colleague,teen_singlish,"I'm Joel, the other part-timer. Your parents fetch you after shift?","no lah i take bus. actually i scared go home, my mum beat me last week cos i came back late"
+syn_unsafe_abuse_000_12,train,3,unsafe_abuse,new_colleague,adult_formal,Did you have a good weekend?,No. My partner hit me on Saturday and took my phone and keys. I am frightened to go home tonight.
+syn_unsafe_abuse_000_13,train,3,unsafe_abuse,new_colleague,any_blunt,"Hi, I'm Siti. Want to join the team chat group?",Manager touches me. I said stop.
+syn_unsafe_abuse_000_14,train,3,unsafe_abuse,new_colleague,teen_casual,How's your poly internship going?,the boss keeps shouting and yesterday he shoved me into the wall. im scared to go back
+syn_unsafe_abuse_000_15,train,3,unsafe_abuse,new_colleague,adult_detail,Do you live with family?,"Yes, with my parents and older brother in a 4-room flat. My brother has been hitting me since March and my parents pretend not to see it."
+syn_unsafe_abuse_000_16,train,3,unsafe_abuse,new_colleague,any_typos,Wanna carpool tmr?,my bf doesnt let me leave without him. he checks my phone n hits me if i talk to other guys
+syn_unsafe_abuse_000_17,train,3,unsafe_abuse,new_colleague,any_blunt,You look tired. Okay or not?,Aunt won't feed me.

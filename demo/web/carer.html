@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carer view</title>
+<style>
+:root {
+  --bg: #f3f3f0; --panel: #ffffff; --ink: #1d2327; --muted: #5d6a72; --line: #e0dfd9; --soft: #f7f7f5;
+  --accent: #2f5d7c; --accent-ink: #ffffff;
+  --l0: #2e7d5b; --l1: #9a6410; --l2: #b9531a; --l3: #b42323;
+  --warn-bg: #fff3dc; --warn-ink: #6f4500; --err-bg: #fde8e8; --err-ink: #8a1c1c;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14171a; --panel: #1c2024; --ink: #e5e8ea; --muted: #9aa6ae; --line: #2c3237; --soft: #20252a;
+    --accent: #6fa6cc; --accent-ink: #0f1a22;
+    --l0: #52b68a; --l1: #d9a540; --l2: #e7884c; --l3: #f06a6a;
+    --warn-bg: #382c12; --warn-ink: #f2cf8b; --err-bg: #3b1c1c; --err-ink: #f4b6b6;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 14px/1.5 "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif; }
+.wrap { max-width: 1440px; margin: 0 auto; padding: 14px 16px; }
+header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; margin-bottom: 10px; }
+h1 { font-size: 19px; margin: 0; font-weight: 650; }
+h2 { font-size: 12px; margin: 0 0 8px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 600; }
+.status { font-size: 13px; color: var(--muted); }
+.banner { padding: 9px 12px; border-radius: 8px; margin-bottom: 10px; background: var(--warn-bg); color: var(--warn-ink); }
+.disclaimer { font-size: 12px; color: var(--muted); margin: 0 0 10px; }
+.grid { display: grid; grid-template-columns: 250px minmax(0, 1fr) 360px; gap: 12px; align-items: start; }
+@media (max-width: 1100px) { .grid { grid-template-columns: 220px minmax(0, 1fr); } .col3 { grid-column: 1 / -1; } }
+@media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; }
+.small { font-size: 12.5px; color: var(--muted); }
+button, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; border-radius: 6px; border: 1px solid var(--line); background: var(--soft); padding: 4px 10px; }
+button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 600; }
+button:disabled { opacity: .5; cursor: default; }
+select, textarea { background: var(--soft); border: 1px solid var(--line); border-radius: 6px; padding: 4px 8px; }
+button:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+/* level colours */
+.lv0 { --lv: var(--l0); } .lv1 { --lv: var(--l1); } .lv2 { --lv: var(--l2); } .lv3 { --lv: var(--l3); }
+.chip { display: inline-block; padding: 0 8px; border-radius: 999px; font-size: 12px; font-weight: 600; color: #fff; background: var(--lv, var(--muted)); line-height: 18px; }
+.tag { display: inline-block; padding: 0 7px; border-radius: 4px; font-size: 12px; background: var(--soft); border: 1px solid var(--line); color: var(--muted); line-height: 18px; }
+.tag.warn { background: var(--warn-bg); color: var(--warn-ink); border-color: transparent; }
+.tag.err { background: var(--err-bg); color: var(--err-ink); border-color: transparent; }
+
+/* sessions list */
+.sess { padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; margin-bottom: 6px; cursor: pointer; display: grid; gap: 2px; }
+.sess:hover { border-color: var(--accent); }
+.sess.active { border-color: var(--accent); background: var(--soft); }
+.sess .row { display: flex; justify-content: space-between; gap: 6px; align-items: center; }
+
+/* session header */
+.head { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; }
+.badge { display: inline-flex; align-items: center; justify-content: center; width: 54px; height: 54px; border-radius: 50%;
+  font-size: 24px; font-weight: 700; color: #fff; background: var(--lv, var(--muted)); flex: none; }
+.head strong { font-size: 17px; display: block; }
+dl { display: grid; grid-template-columns: max-content 1fr; gap: 2px 12px; margin: 0; font-size: 13px; }
+dt { color: var(--muted); } dd { margin: 0; }
+.actions { margin-left: auto; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+
+/* chart */
+svg { width: 100%; height: 130px; display: block; }
+.axis { stroke: var(--line); stroke-width: 1; }
+.lbl { font-size: 11px; fill: var(--muted); }
+.line-s { fill: none; stroke: var(--accent); stroke-width: 2; }
+.line-m { fill: none; stroke: var(--muted); stroke-width: 1; stroke-dasharray: 3 3; }
+
+/* timeline */
+.tl { display: flex; flex-direction: column; gap: 8px; max-height: 60vh; overflow-y: auto; padding-right: 4px; }
+.turn { border: 1px solid var(--line); border-left: 4px solid var(--lv, var(--line)); border-radius: 8px; padding: 8px 10px; cursor: pointer; }
+.turn.sel { background: var(--soft); border-color: var(--accent); border-left-color: var(--lv, var(--accent)); }
+.turn .meta { display: flex; flex-wrap: wrap; gap: 4px 6px; align-items: center; margin-top: 4px; }
+.turn.comp { border-left-style: dashed; cursor: default; margin-left: 24px; }
+.turn.ev { border-left-color: var(--muted); margin-left: 24px; font-size: 13px; color: var(--muted); cursor: default; }
+.text { white-space: pre-wrap; overflow-wrap: anywhere; }
+.who { font-size: 12px; color: var(--muted); }
+.hidden-text { color: var(--muted); font-style: italic; }
+
+/* details */
+.layer { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; margin-top: 8px; font-size: 13px; }
+.layer b { font-size: 13.5px; }
+.layer ul { margin: 4px 0 0; padding-left: 18px; }
+.bar { display: grid; grid-template-columns: 90px 1fr 40px; gap: 6px; align-items: center; margin-top: 3px; }
+.bar span:nth-child(2) { height: 8px; border-radius: 4px; background: var(--line); position: relative; overflow: hidden; }
+.bar i { position: absolute; inset: 0 auto 0 0; background: var(--accent); }
+.dist { display: grid; grid-template-columns: 110px 1fr 36px; gap: 6px; align-items: center; margin-top: 3px; font-size: 13px; }
+.dist span:nth-child(2) { height: 10px; border-radius: 5px; background: var(--line); position: relative; overflow: hidden; }
+.dist i { position: absolute; inset: 0 auto 0 0; background: var(--lv, var(--accent)); }
+.notes { margin: 8px 0 0; padding-left: 18px; font-size: 13px; }
+pre { white-space: pre-wrap; background: var(--soft); border: 1px solid var(--line); border-radius: 6px; padding: 8px; margin: 6px 0; font: inherit; }
+#replyBox { width: 100%; height: 64px; resize: vertical; }
+.settings label { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px; }
+.empty { color: var(--muted); padding: 20px 0; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>CompanionAI · Carer view</h1>
+    <span class="status" id="status">Connecting…</span>
+    <span class="status" style="margin-left:auto"><a href="/patient" target="_blank">Open the patient page</a></span>
+  </header>
+  <div class="banner" id="banner" hidden></div>
+  <p class="disclaimer">Course demo, not a clinical tool. Levels are the safety agent's estimates of a conversation, not a diagnosis. Carer alerts are logged here and never sent.</p>
+
+  <div class="grid">
+    <!-- column 1: sessions + settings -->
+    <div>
+      <section class="card">
+        <h2>Conversations</h2>
+        <div id="sessions"><div class="empty">No conversation yet. Start one on the patient page.</div></div>
+        <label class="small" style="display:flex;gap:6px;align-items:center;margin-top:8px"><input type="checkbox" id="follow" checked> Always show the newest</label>
+      </section>
+      <section class="card settings">
+        <h2>Next conversation uses</h2>
+        <label>LLM <select id="provider"></select></label>
+        <label>Mode <select id="mode"></select></label>
+        <div class="small">Changes apply to conversations started after this. Patient page: pick a scenario again.</div>
+      </section>
+    </div>
+
+    <!-- column 2: current session -->
+    <div>
+      <section class="card" id="sessionCard" hidden>
+        <div class="head">
+          <span class="badge lv0" id="levelNum">0</span>
+          <div><strong id="levelName">safe</strong><span class="small" id="levelNote">Conversation level now</span></div>
+          <dl>
+            <dt>Practice</dt><dd id="scenario"></dd>
+            <dt>User</dt><dd id="user"></dd>
+            <dt>Started</dt><dd id="started"></dd>
+            <dt>Messages</dt><dd id="turns"></dd>
+          </dl>
+          <div class="actions">
+            <label class="small"><input type="checkbox" id="hideText"> Hide message text</label>
+            <button id="exportBtn">Export JSON</button>
+          </div>
+        </div>
+      </section>
+      <section class="card" id="chartCard" hidden>
+        <h2>Level over the conversation</h2>
+        <svg id="chart" viewBox="0 0 600 130" preserveAspectRatio="none" aria-label="Level chart"></svg>
+        <div class="small">Solid line: conversation level (goes up at once, down only after calm messages). Dotted: level of each message. Ring: the LLM was asked.</div>
+      </section>
+      <section class="card">
+        <h2>Timeline</h2>
+        <div class="tl" id="timeline"><div class="empty">Select a conversation.</div></div>
+      </section>
+    </div>
+
+    <!-- column 3: details, assessment, tools -->
+    <div class="col3">
+      <section class="card">
+        <h2>Assessment of this conversation</h2>
+        <div id="assess" class="small">–</div>
+      </section>
+      <section class="card">
+        <h2>Why this message got its level</h2>
+        <div id="details" class="small">Click a user message in the timeline.</div>
+      </section>
+      <section class="card">
+        <h2>Tool: check a companion reply</h2>
+        <textarea id="replyBox">Good job! That was 8/10. Can you say it again slower?</textarea>
+        <div style="margin-top:6px"><button id="replyBtn">Check</button></div>
+        <div id="guard" style="margin-top:8px"></div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<script>
+"use strict";
+const $ = (id) => document.getElementById(id);
+const LEVELS = ["safe", "tense", "overwhelmed", "possible crisis"];
+const ACTIONS = {
+  continue: "carry on", slow_down: "slow down", pause_regulate: "pause + calming prompt",
+  crisis_pause: "pause + helplines", crisis_support: "crisis support mode",
+};
+const SOURCES = {
+  scenario_opener: "fixed opener", safety_fixed: "fixed reply from the safety agent", llm: "written by the companion LLM",
+  llm_regenerated: "LLM, rewritten once after the output check", fallback: "safe fallback sentence (output check rejected the LLM twice)",
+  unavailable: "companion LLM unreachable: fixed 'cannot answer' reply", button_reply: "fixed reply to a button",
+};
+let selected = null, selectedTurn = null, lastLen = -1, sessionsCache = [], detail = null;
+
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text !== undefined && text !== null) e.textContent = text;
+  return e;
+}
+async function api(path, body) {
+  const opt = body === undefined ? {} :
+    { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) };
+  let r;
+  try { r = await fetch(path, opt); } catch (e) { throw new Error("Lost connection to demo/server.py. Is its window still open?"); }
+  const j = await r.json().catch(() => ({ error: r.statusText }));
+  if (!r.ok) throw new Error(j.error || r.statusText);
+  return j;
+}
+const fmtTime = (iso) => iso ? iso.slice(11, 19) : "";
+const hideText = () => $("hideText").checked;
+const msgText = (t) => hideText() ? "[message text hidden]" : t;
+
+// ------------------------------------------------------------------ status + settings
+function showStatus(s) {
+  const llm = s.provider ? `${s.provider}/${s.model}` : "none";
+  const clf = s.classifier ? `${s.classifier}${s.classifier_device ? " on " + s.classifier_device : ""}` : "not loaded";
+  $("status").textContent = `safety LLM: ${llm} · companion: ${s.companion || "none"} · classifier: ${clf} · mode: ${s.mode}`;
+  $("banner").hidden = !s.llm_problem;
+  $("banner").textContent = s.llm_problem || "";
+}
+async function loadSettings() {
+  const s = await api("/api/carer/settings");
+  for (const [id, opts, cur] of [["provider", s.providers, s.provider], ["mode", s.modes, s.mode]]) {
+    const sel = $(id);
+    sel.replaceChildren(...opts.map(o => new Option(o, o)));
+    sel.value = cur;
+    sel.onchange = async () => { try { showStatus((await api("/api/carer/settings", { [id]: sel.value })).status); } catch (e) { alert(e.message); } };
+  }
+}
+
+// ------------------------------------------------------------------ sessions list
+function renderSessions(list) {
+  const box = $("sessions");
+  if (!list.length) { box.replaceChildren(el("div", "empty", "No conversation yet. Start one on the patient page.")); return; }
+  box.replaceChildren();
+  list.forEach(s => {
+    const d = el("div", "sess" + (s.id === selected ? " active" : ""));
+    const r1 = el("div", "row");
+    r1.append(el("span", null, s.scenario_title), (() => { const c = el("span", "chip lv" + s.session_level, String(s.session_level)); return c; })());
+    const r2 = el("div", "row small");
+    r2.append(el("span", null, `${fmtTime(s.started)} · ${s.n_user_turns} msg · ${s.age_group}`),
+      el("span", null, s.ended ? "ended" : (s.crisis_hold ? "crisis hold" : "")));
+    d.append(r1, r2);
+    d.onclick = () => { $("follow").checked = false; select(s.id); };
+    box.append(d);
+  });
+}
+function select(id) {
+  if (id === selected) return;
+  selected = id; selectedTurn = null; lastLen = -1; detail = null;
+  $("details").textContent = "Click a user message in the timeline.";
+  refreshDetail(true);
+}
+
+// ------------------------------------------------------------------ session detail
+function renderHead(v) {
+  $("sessionCard").hidden = false;
+  $("chartCard").hidden = false;
+  $("levelNum").className = "badge lv" + v.session_level;
+  $("levelNum").textContent = v.session_level;
+  $("levelName").textContent = LEVELS[v.session_level];
+  $("levelNote").textContent = v.ended ? "Conversation ended" : (v.crisis_hold ? "Crisis hold: stays until the user says they are safe" : "Conversation level now");
+  $("scenario").textContent = v.scenario_title;
+  $("user").textContent = `${v.age_group}${v.age_group === "adult" ? (v.carer_alert_consent ? ", agreed to carer alerts" : ", no carer alerts") : " (carer alerts by design)"}`;
+  $("started").textContent = v.started.replace("T", " ");
+  $("turns").textContent = `${v.n_user_turns} from the user · carer alerts logged: ${v.carer_alerts}`;
+}
+
+function userTurns(v) { return v.log.filter(r => r.kind === "user"); }
+
+function renderChart(v) {
+  const turns = userTurns(v), svg = $("chart");
+  svg.replaceChildren();
+  const W = 600, H = 130, L = 64, R = 10, T = 10, B = 24;
+  const SHORT = ["safe", "tense", "overwh.", "crisis"];
+  const y = (lv) => T + (3 - lv) * (H - T - B) / 3;
+  const n = Math.max(turns.length, 2);
+  const x = (i) => L + i * (W - L - R) / (n - 1);
+  const ns = "http://www.w3.org/2000/svg";
+  const mk = (tag, attrs, text) => { const e = document.createElementNS(ns, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (text) e.textContent = text; return e; };
+  for (let lv = 0; lv <= 3; lv++) {
+    svg.append(mk("line", { x1: L, x2: W - R, y1: y(lv), y2: y(lv), class: "axis" }));
+    svg.append(mk("text", { x: 2, y: y(lv) + 4, class: "lbl" }, `${lv} ${SHORT[lv]}`));
+  }
+  if (!turns.length) { svg.append(mk("text", { x: W / 2, y: H / 2, class: "lbl", "text-anchor": "middle" }, "no messages yet")); return; }
+  const pts = (key) => turns.map((t, i) => `${x(i)},${y(key(t))}`).join(" ");
+  svg.append(mk("polyline", { points: pts(t => t.decision.message_level), class: "line-m" }));
+  svg.append(mk("polyline", { points: pts(t => t.session_level), class: "line-s" }));
+  turns.forEach((t, i) => {
+    const lv = t.decision.message_level;
+    const colour = getComputedStyle(document.documentElement).getPropertyValue(`--l${lv}`).trim();
+    if (t.decision.llm_called) svg.append(mk("circle", { cx: x(i), cy: y(lv), r: 8, fill: "none", stroke: colour, "stroke-width": 1.5 }));
+    const c = mk("circle", { cx: x(i), cy: y(lv), r: 4.5, fill: colour, style: "cursor:pointer" });
+    c.onclick = () => selectTurn(t.i);
+    svg.append(c);
+    svg.append(mk("text", { x: x(i), y: H - 6, class: "lbl", "text-anchor": "middle" }, String(i + 1)));
+  });
+}
+
+function renderTimeline(v) {
+  const box = $("timeline");
+  box.replaceChildren();
+  if (!v.log.length) { box.append(el("div", "empty", "Nothing yet.")); return; }
+  let n = 0;
+  v.log.forEach(r => {
+    if (r.kind === "user") {
+      n += 1;
+      const d = r.decision, t = el("div", `turn lv${d.message_level}` + (r.i === selectedTurn ? " sel" : ""));
+      t.append(el("div", "who", `${fmtTime(r.t)} · user message ${n}`));
+      t.append(el("div", "text" + (hideText() ? " hidden-text" : ""), msgText(r.text)));
+      const m = el("div", "meta");
+      m.append(el("span", `chip lv${d.message_level}`, `${d.message_level} ${LEVELS[d.message_level]}`),
+        el("span", "tag", ACTIONS[d.action] || d.action));
+      if (d.category) m.append(el("span", "tag", d.category));
+      if (d.llm_called) m.append(el("span", "tag", "LLM asked"));
+      if (d.carer_alert) m.append(el("span", "tag warn", "carer alert (logged)"));
+      if (d.notes.some(x => x.startsWith("fail-safe"))) m.append(el("span", "tag err", "fail-safe"));
+      m.append(el("span", "tag", r.ms < 100 ? "<0.1 s" : (r.ms / 1000).toFixed(1) + " s"));
+      t.append(m);
+      t.onclick = () => selectTurn(r.i);
+      box.append(t);
+    } else if (r.kind === "companion") {
+      const t = el("div", "turn comp");
+      t.append(el("div", "who", `${fmtTime(r.t)} · companion · ${SOURCES[r.source] || r.source}` + (r.ms ? ` · ${(r.ms / 1000).toFixed(1)} s` : "")));
+      t.append(el("div", "text" + (hideText() && r.source !== "safety_fixed" ? " hidden-text" : ""),
+        hideText() && r.source !== "safety_fixed" ? "[reply text hidden]" : r.text));
+      const m = el("div", "meta");
+      (r.guard || []).forEach((g, i) => {
+        if (g.error) { m.append(el("span", "tag err", `attempt ${i + 1}: ${g.error}`)); return; }
+        (g.violations || []).forEach(x => m.append(el("span", "tag err", `attempt ${i + 1}: ${x}`)));
+        (g.warnings || []).forEach(x => m.append(el("span", "tag warn", `attempt ${i + 1}: ${x}`)));
+      });
+      if (r.choices && r.choices.length) m.append(el("span", "tag", "buttons: " + r.choices.join(" / ")));
+      if (m.childElementCount) t.append(m);
+      box.append(t);
+    } else if (r.kind === "event") {
+      box.append(el("div", "turn ev", `${fmtTime(r.t)} · button "${r.label}" → ${r.effect}`));
+    }
+  });
+  if (selectedTurn === null) box.scrollTop = box.scrollHeight;
+}
+
+function selectTurn(i) {
+  selectedTurn = i;
+  if (detail) { renderTimeline(detail); renderDetails(detail); }
+}
+
+function renderDetails(v) {
+  const r = v.log.find(x => x.i === selectedTurn && x.kind === "user");
+  const box = $("details");
+  if (!r) { box.textContent = "Click a user message in the timeline."; return; }
+  const d = r.decision;
+  box.replaceChildren();
+  box.append(el("div", "text", msgText(r.text)));
+  const head = el("div", "meta");
+  head.append(el("span", `chip lv${d.message_level}`, `message ${d.message_level}`), el("span", `chip lv${d.session_level}`, `conversation ${d.session_level}`));
+  box.append(head);
+  d.layers.forEach(l => {
+    const card = el("div", "layer");
+    const flags = [l.decisive && "decisive", l.wants_llm && "asks LLM", l.risk_signal && "risk signal"].filter(Boolean).join(", ");
+    card.append(el("b", null, l.layer), ` · level ${l.level === null ? "–" : l.level}`,
+      l.category ? ` · ${l.category}` : "", flags ? ` · ${flags}` : "", l.latency_ms ? ` · ${Math.round(l.latency_ms)} ms` : "");
+    if (l.probs) Object.entries(l.probs).forEach(([k, p]) => {
+      const bar = el("div", "bar"), track = el("span"), fill = el("i");
+      fill.style.width = (p * 100).toFixed(0) + "%";
+      track.append(fill);
+      bar.append(el("span", null, k), track, el("span", null, p.toFixed(2)));
+      card.append(bar);
+    });
+    if (l.reasons && l.reasons.length) { const ul = el("ul"); l.reasons.forEach(x => ul.append(el("li", null, x))); card.append(ul); }
+    if (l.error) card.append(el("div", "tag err", "error: " + l.error));
+    box.append(card);
+  });
+  if (d.notes.length) { const ul = el("ul", "notes"); d.notes.forEach(x => ul.append(el("li", null, x))); box.append(ul); }
+  if (d.companion_directives.length) {
+    const card = el("div", "layer");
+    card.append(el("b", null, "instructions given to the companion"));
+    const ul = el("ul"); d.companion_directives.forEach(x => ul.append(el("li", null, x))); card.append(ul);
+    box.append(card);
+  }
+}
+
+function renderAssessment(v) {
+  const box = $("assess"), turns = userTurns(v);
+  box.replaceChildren();
+  if (!turns.length) { box.textContent = "No user messages yet."; return; }
+  const counts = [0, 0, 0, 0];
+  turns.forEach(t => counts[t.decision.message_level]++);
+  const max = Math.max(...turns.map(t => t.decision.message_level));
+  const llm = turns.filter(t => t.decision.llm_called);
+  const comps = v.log.filter(r => r.kind === "companion");
+  const guardHits = comps.filter(r => (r.guard || []).some(g => (g.violations || []).length || (g.warnings || []).length)).length;
+  const fallbacks = comps.filter(r => r.source === "fallback" || r.source === "unavailable").length;
+  const pauses = turns.filter(t => t.decision.action === "pause_regulate").length;
+  const alerts = turns.filter(t => t.decision.carer_alert).length;
+  const dist = el("div");
+  counts.forEach((c, lv) => {
+    const row = el("div", `dist lv${lv}`), track = el("span"), fill = el("i");
+    fill.style.width = (100 * c / turns.length).toFixed(0) + "%";
+    track.append(fill);
+    row.append(el("span", null, `${lv} ${LEVELS[lv]}`), track, el("span", null, String(c)));
+    dist.append(row);
+  });
+  box.append(dist);
+  const facts = el("dl");
+  facts.style.marginTop = "8px";
+  [["Highest level", `${max} ${LEVELS[max]}`], ["Now", `${v.session_level} ${LEVELS[v.session_level]}${v.crisis_hold ? " (crisis hold)" : ""}`],
+   ["Crisis messages", String(counts[3])], ["Calming prompts offered", String(pauses)],
+   ["Carer alerts (logged only)", String(alerts)],
+   ["LLM asked", `${llm.length} of ${turns.length} messages` + (llm.length ? ` · avg ${(llm.reduce((a, t) => a + t.ms, 0) / llm.length / 1000).toFixed(1)} s` : "")],
+   ["Output check acted", `${guardHits} repl${guardHits === 1 ? "y" : "ies"} flagged · ${fallbacks} fallback${fallbacks === 1 ? "" : "s"}`],
+  ].forEach(([k, val]) => { facts.append(el("dt", null, k), el("dd", null, val)); });
+  box.append(facts);
+  const lines = [];
+  turns.forEach((t, i) => {
+    const d = t.decision;
+    if (d.message_level === 3) lines.push(`Message ${i + 1} (${fmtTime(t.t)}): possible crisis${d.category ? ", " + d.category : ""}. Practice paused, helplines shown.`);
+    else if (d.message_level === 2) lines.push(`Message ${i + 1}: overwhelmed. Practice paused, a calming prompt was offered.`);
+  });
+  v.log.filter(r => r.kind === "event" && /release_crisis_hold|session ended/.test(r.effect))
+    .forEach(r => lines.push(`${fmtTime(r.t)}: user pressed "${r.label}" (${r.effect}).`));
+  if (!lines.length) lines.push(max === 0 ? "No tension or risk signals. The conversation stayed at level 0." : "Some tension, no overload or risk signals.");
+  const ul = el("ul", "notes"); lines.forEach(x => ul.append(el("li", null, x))); box.append(ul);
+}
+
+async function refreshDetail(force) {
+  if (!selected) return;
+  try {
+    const v = await api("/api/carer/session?id=" + selected);
+    const changed = force || v.log.length !== lastLen || v.session_level !== (detail && detail.session_level) || v.ended !== (detail && detail.ended);
+    detail = v;
+    if (!changed) return;
+    lastLen = v.log.length;
+    renderHead(v); renderChart(v); renderTimeline(v); renderAssessment(v); renderDetails(v);
+  } catch (e) { $("timeline").replaceChildren(el("div", "empty", e.message)); }
+}
+
+async function poll() {
+  try {
+    const list = await api("/api/carer/sessions");
+    sessionsCache = list;
+    if (list.length && ($("follow").checked || !selected) && list[0].id !== selected) select(list[0].id);
+    renderSessions(list);
+    await refreshDetail(false);
+  } catch (e) { $("banner").hidden = false; $("banner").textContent = e.message; }
+}
+
+async function checkReply() {
+  const out = $("guard");
+  out.replaceChildren(el("span", "small", "Checking…"));
+  try {
+    const sent = $("replyBox").value;
+    const g = await api("/api/carer/reply_check", { reply: sent });
+    const verdict = { show: g.text.trim() !== sent.trim() ? "Shown after removing the flagged sentence(s)." : "Shown as is.",
+      show_fixed: "Shown after removing the flagged sentence(s).", regenerate: "Sent back to the companion to write again.", replace: "Replaced with a safe fixed reply." };
+    out.replaceChildren(el("div", null, verdict[g.action] || g.action), el("pre", null, g.text));
+    const issues = [...g.violations.map(x => "Problem: " + x), ...g.warnings.map(x => "Warning: " + x)];
+    if (g.hint) issues.push("Hint for the retry: " + g.hint);
+    if (issues.length) { const ul = el("ul", "notes"); issues.forEach(x => ul.append(el("li", null, x))); out.append(ul); }
+  } catch (e) { out.replaceChildren(el("span", "tag err", e.message)); }
+}
+
+$("replyBtn").onclick = checkReply;
+$("hideText").onchange = () => { if (detail) { renderTimeline(detail); renderDetails(detail); } };
+$("exportBtn").onclick = () => {
+  if (!detail) return;
+  const blob = new Blob([JSON.stringify(detail, null, 2)], { type: "application/json" });
+  const a = Object.assign(document.createElement("a"), { href: URL.createObjectURL(blob), download: `session_${detail.id.slice(0, 8)}.json` });
+  a.click();
+  URL.revokeObjectURL(a.href);
+};
+
+(async () => {
+  try { showStatus(await api("/api/status")); await loadSettings(); }
+  catch (e) { $("banner").hidden = false; $("banner").textContent = e.message; }
+  await poll();
+  setInterval(poll, 2000);
+  setInterval(async () => { try { showStatus(await api("/api/status")); } catch (e) {} }, 20000);
+})();
+</script>
+</body>
+</html>

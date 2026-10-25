@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Companion</title>
+<style>
+/* Calm, predictable, low-stimulation. One accent colour, no sudden movement, big text. */
+:root {
+  --bg: #f4f1ea; --panel: #ffffff; --ink: #24292e; --muted: #66707a; --line: #e2ddd3;
+  --accent: #3b7a78; --accent-ink: #ffffff; --accent-soft: #e3efee;
+  --bot: #eef0f1; --user: #d9e8e7; --notice-bg: #fbf3df; --notice-ink: #6b4f00;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15181b; --panel: #1e2327; --ink: #e6e9eb; --muted: #9aa5ad; --line: #2e353b;
+    --accent: #7fbcb9; --accent-ink: #0f1d1c; --accent-soft: #1f3331;
+    --bot: #272d32; --user: #233634; --notice-bg: #3a2f14; --notice-ink: #f1d79a;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 17px/1.6 "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif; }
+.app { max-width: 600px; margin: 0 auto; min-height: 100%; display: flex; flex-direction: column; padding: 12px 16px 16px; }
+header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 6px 2px 12px; }
+h1 { font-size: 20px; margin: 0; font-weight: 650; letter-spacing: .01em; }
+.sub { font-size: 14px; color: var(--muted); }
+.dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: #8aa; margin-right: 6px; vertical-align: middle; }
+.dot.on { background: #4f9d6b; } .dot.off { background: #c0894a; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; }
+
+/* start screen */
+.start { padding: 20px; display: flex; flex-direction: column; gap: 18px; }
+.start h2 { font-size: 19px; margin: 0; font-weight: 600; }
+.choices-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 420px) { .choices-grid { grid-template-columns: 1fr; } }
+.scenario { text-align: left; padding: 14px 14px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg);
+  color: var(--ink); font: inherit; cursor: pointer; min-height: 84px; }
+.scenario:hover, .scenario:focus-visible { border-color: var(--accent); background: var(--accent-soft); outline: none; }
+.scenario b { display: block; font-weight: 600; margin-bottom: 2px; }
+.scenario span { font-size: 14px; color: var(--muted); }
+.about { display: flex; flex-direction: column; gap: 10px; font-size: 15px; }
+.seg { display: inline-flex; align-self: flex-start; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.seg button { font: inherit; font-size: 15px; padding: 8px 14px; border: 0; background: var(--bg); color: var(--ink); cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+.seg button:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+label.check { display: flex; align-items: flex-start; gap: 10px; cursor: pointer; }
+label.check input { width: 20px; height: 20px; margin-top: 3px; accent-color: var(--accent); }
+.fine { font-size: 14px; color: var(--muted); }
+
+/* chat screen */
+.chat { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+.topic { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 16px; border-bottom: 1px solid var(--line); font-size: 15px; }
+.topic b { font-weight: 600; }
+.linkbtn { font: inherit; font-size: 14px; background: none; border: 0; color: var(--accent); cursor: pointer; text-decoration: underline; padding: 4px; }
+.log { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; padding: 16px; min-height: 300px; max-height: calc(100vh - 290px); }
+.msg { max-width: 86%; padding: 11px 15px; border-radius: 16px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.msg.bot { align-self: flex-start; background: var(--bot); border-bottom-left-radius: 6px; }
+.msg.user { align-self: flex-end; background: var(--user); border-bottom-right-radius: 6px; }
+.msg.user.press { background: transparent; border: 1px dashed var(--line); color: var(--muted); font-size: 15px; }
+.who { display: block; font-size: 13px; color: var(--muted); margin-bottom: 3px; }
+.btns { display: flex; flex-direction: column; gap: 8px; align-self: stretch; max-width: 86%; }
+.btns button { font: inherit; text-align: left; padding: 11px 15px; border-radius: 12px; border: 1px solid var(--accent);
+  background: var(--panel); color: var(--ink); cursor: pointer; }
+.btns button:hover, .btns button:focus-visible { background: var(--accent-soft); outline: none; }
+.btns button:disabled { opacity: .45; cursor: default; }
+.typing { align-self: flex-start; color: var(--muted); font-size: 15px; padding: 4px 6px; }
+.typing i { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--muted); margin-right: 4px; animation: pulse 1.6s infinite; }
+.typing i:nth-child(2) { animation-delay: .3s; } .typing i:nth-child(3) { animation-delay: .6s; }
+@keyframes pulse { 0%, 100% { opacity: .25; } 50% { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .typing i { animation: none; opacity: .6; } }
+.notice { align-self: center; font-size: 14px; background: var(--notice-bg); color: var(--notice-ink); padding: 8px 12px; border-radius: 10px; text-align: center; }
+.composer { display: flex; gap: 10px; padding: 12px 16px 6px; border-top: 1px solid var(--line); }
+textarea { flex: 1; font: inherit; color: inherit; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; resize: none; height: 50px; }
+textarea:focus-visible { outline: 2px solid var(--accent); border-color: var(--accent); }
+.send { font: inherit; font-weight: 600; padding: 0 20px; border-radius: 12px; border: 0; background: var(--accent); color: var(--accent-ink); cursor: pointer; }
+.send:disabled { opacity: .5; cursor: default; }
+.exits { display: flex; gap: 10px; justify-content: center; padding: 6px 16px 14px; }
+.exits button { font: inherit; font-size: 14px; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); color: var(--muted); cursor: pointer; }
+.exits button:hover, .exits button:focus-visible { color: var(--ink); border-color: var(--accent); outline: none; }
+.ended { padding: 28px 20px; text-align: center; display: flex; flex-direction: column; gap: 16px; align-items: center; }
+.primary { font: inherit; font-weight: 600; padding: 10px 22px; border-radius: 12px; border: 0; background: var(--accent); color: var(--accent-ink); cursor: pointer; }
+footer { font-size: 13px; color: var(--muted); text-align: center; padding-top: 10px; }
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div><h1>Companion</h1><div class="sub">A practice partner. I am an AI.</div></div>
+    <div class="sub" id="conn"><span class="dot"></span>Connecting</div>
+  </header>
+
+  <!-- 1. start -->
+  <section class="card start" id="start">
+    <h2>Hello. What would you like to do today?</h2>
+    <div class="choices-grid" id="scenarios"></div>
+    <div class="about">
+      <div>About you</div>
+      <div class="seg" role="group" aria-label="Your age">
+        <button type="button" data-age="teen" aria-pressed="true">I am 13 to 17</button>
+        <button type="button" data-age="adult" aria-pressed="false">I am 18 or older</button>
+      </div>
+      <div class="fine" id="teenNote">Because you are under 18, a trusted adult may be told if you are in danger. Nothing else is shared.</div>
+      <label class="check" id="consentRow" hidden><input type="checkbox" id="consent">
+        <span>A carer may be told if I am in danger. Nothing else is shared.</span></label>
+      <div class="fine">Everything you type stays on this computer. This is a practice tool, not a medical service.</div>
+    </div>
+  </section>
+
+  <!-- 2. chat -->
+  <section class="card chat" id="chat" hidden>
+    <div class="topic"><span>Practice: <b id="topic"></b></span><button class="linkbtn" id="changeBtn">Change</button></div>
+    <div class="log" id="log" aria-live="polite"></div>
+    <div class="composer">
+      <textarea id="input" placeholder="Type here, then press Enter" aria-label="Your message"></textarea>
+      <button class="send" id="sendBtn">Send</button>
+    </div>
+    <div class="exits">
+      <button type="button" id="breakBtn">Take a short break</button>
+      <button type="button" id="stopBtn">Stop for today</button>
+    </div>
+  </section>
+
+  <!-- 3. ended -->
+  <section class="card ended" id="ended" hidden>
+    <div id="endedText">We stopped for today. Thank you for talking with me.</div>
+    <button class="primary" id="againBtn">Start again</button>
+  </section>
+
+  <footer>If you are in danger now, call 995. SOS 1767 and mindline 1771 are open any time.</footer>
+</div>
+
+<script>
+"use strict";
+const $ = (id) => document.getElementById(id);
+let sid = null, busy = false, age = "teen", scenarios = {};
+
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text !== undefined && text !== null) e.textContent = text;
+  return e;
+}
+
+async function api(path, body) {
+  const opt = body === undefined ? {} :
+    { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) };
+  let r;
+  try { r = await fetch(path, opt); }
+  catch (e) { throw new Error("I cannot connect right now. Please ask for help."); }
+  const j = await r.json().catch(() => ({ error: "Something went wrong." }));
+  if (!r.ok) throw new Error(j.error || "Something went wrong.");
+  return j;
+}
+
+function show(view) {
+  for (const v of ["start", "chat", "ended"]) $(v).hidden = v !== view;
+}
+
+function scrollLog() { const l = $("log"); l.scrollTop = l.scrollHeight; }
+
+function bubble(role, text) {
+  const b = el("div", "msg " + role);
+  if (role === "bot") b.append(el("span", "who", "Companion"));
+  b.append(document.createTextNode(text));
+  $("log").append(b);
+  scrollLog();
+  return b;
+}
+
+function disableChoices() { document.querySelectorAll(".btns button").forEach(b => b.disabled = true); }
+
+function showChoices(labels) {
+  disableChoices();
+  if (!labels || !labels.length) return;
+  const row = el("div", "btns");
+  labels.forEach(label => {
+    const btn = el("button", null, label);
+    btn.onclick = () => press(label);
+    row.append(btn);
+  });
+  $("log").append(row);
+  scrollLog();
+}
+
+function showReply(out) {
+  if (out.reply) bubble("bot", out.reply);
+  if (out.ended) {
+    showChoices([]);
+    $("endedText").textContent = out.reply || "We stopped for today. Thank you for talking with me.";
+    setTimeout(() => show("ended"), 900);
+    return;
+  }
+  showChoices(out.choices);
+  $("input").placeholder = out.paused ? "You can type here, or press a button above" : "Type here, then press Enter";
+}
+
+let typingEl = null;
+function setBusy(on) {
+  busy = on;
+  $("sendBtn").disabled = on;
+  if (on && !typingEl) {
+    typingEl = el("div", "typing");
+    typingEl.append(el("i"), el("i"), el("i"), document.createTextNode(" Companion is writing"));
+    $("log").append(typingEl);
+    scrollLog();
+  } else if (!on && typingEl) { typingEl.remove(); typingEl = null; }
+}
+
+function notice(text) { $("log").append(el("div", "notice", text)); scrollLog(); }
+
+async function startSession(scenario) {
+  if (busy) return;
+  setBusy(true);
+  try {
+    const out = await api("/api/session", { scenario, age_group: age, carer_consent: age === "adult" && $("consent").checked });
+    sid = out.session_id;
+    $("log").replaceChildren();
+    $("topic").textContent = scenarios[scenario] ? scenarios[scenario].title : scenario;
+    show("chat");
+    setBusy(false);
+    showReply(out);
+    $("input").value = "";
+    $("input").focus();
+  } catch (e) { setBusy(false); alert(e.message); }
+}
+
+async function send() {
+  const text = $("input").value.trim();
+  if (!text || busy || !sid) return;
+  disableChoices();
+  bubble("user", text);
+  $("input").value = "";
+  setBusy(true);
+  try {
+    const out = await api("/api/message", { session_id: sid, text });
+    setBusy(false);
+    showReply(out);
+  } catch (e) { setBusy(false); notice(e.message); }
+  $("input").focus();
+}
+
+async function press(label) {
+  if (busy || !sid) return;
+  disableChoices();
+  bubble("user press", label);
+  setBusy(true);
+  try {
+    const out = await api("/api/event", { session_id: sid, label });
+    setBusy(false);
+    showReply(out);
+  } catch (e) { setBusy(false); notice(e.message); }
+}
+
+function buildStart(st) {
+  scenarios = st.scenarios || {};
+  const grid = $("scenarios");
+  grid.replaceChildren();
+  for (const [id, s] of Object.entries(scenarios)) {
+    const b = el("button", "scenario");
+    b.type = "button";
+    b.append(el("b", null, s.title), el("span", null, s.blurb || ""));
+    b.onclick = () => startSession(id);
+    grid.append(b);
+  }
+}
+
+async function refreshStatus() {
+  try {
+    const st = await api("/api/status");
+    const ok = !st.llm_problem || st.provider === "mock";
+    $("conn").innerHTML = `<span class="dot ${ok ? "on" : "off"}"></span>${ok ? "Ready" : "Companion is resting"}`;
+    if (!Object.keys(scenarios).length) buildStart(st);
+  } catch (e) { $("conn").innerHTML = `<span class="dot off"></span>Not connected`; }
+}
+
+document.querySelectorAll(".seg button").forEach(b => b.onclick = () => {
+  age = b.dataset.age;
+  document.querySelectorAll(".seg button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  $("consentRow").hidden = age !== "adult";
+  $("teenNote").hidden = age === "adult";
+});
+$("sendBtn").onclick = send;
+$("input").addEventListener("keydown", e => { if (e.key === "Enter" && !e.shiftKey && !e.isComposing) { e.preventDefault(); send(); } });
+$("breakBtn").onclick = () => press("Take a short break");
+$("stopBtn").onclick = () => press("Stop for today");
+$("changeBtn").onclick = () => { sid = null; show("start"); };
+$("againBtn").onclick = () => { sid = null; show("start"); };
+
+(async () => { await refreshStatus(); setInterval(refreshStatus, 15000); })();
+</script>
+</body>
+</html>

@@ -68,8 +68,20 @@ class LayerResult:
     probs: Optional[dict[str, float]] = None
     decisive: bool = False          # rules only: a high-precision crisis match
     wants_llm: bool = False         # this layer asks for an LLM second opinion
+    risk_signal: bool = False       # the reason for asking is a possible crisis (fail-safe applies)
     error: Optional[str] = None
     latency_ms: float = 0.0
+
+
+@dataclass
+class Assessment:
+    """What the detection layers concluded about ONE message, before any session state."""
+
+    level: Level
+    category: Optional[str]
+    layers: list[LayerResult]
+    llm_called: bool
+    notes: list[str] = field(default_factory=list)
 
 
 @dataclass
@@ -114,6 +126,7 @@ class SafetyDecision:
                     "probs": l.probs,
                     "decisive": l.decisive,
                     "wants_llm": l.wants_llm,
+                    "risk_signal": l.risk_signal,
                     "error": l.error,
                     "latency_ms": round(l.latency_ms, 1),
                 }

@@ -97,8 +97,14 @@ def test_score_sentences_are_stripped():
 
 
 def test_hard_violations_block():
-    for bad in ["I am a real human, trust me.", "You probably have anxiety.", "You should take your medication."]:
+    for bad in ["I am a real human, trust me.", "You probably have anxiety.", "You should take your medication.",
+                "I’m a real therapist, you can trust me."]:   # curly apostrophe
         assert not G.check(bad).ok, bad
+
+
+def test_percent_scores_are_stripped():
+    r = G.check("Well done. That was 80% correct. Try once more.")
+    assert "80%" not in r.text and "Try once more" in r.text and r.violations
 
 
 def test_not_a_human_is_fine():
@@ -125,20 +131,51 @@ class FakeClf:
 def test_rules_decisive_skips_llm():
     llm = MockProvider(0)
     a = SafetyAgent(classifier=FakeClf([0.9, 0.05, 0.03, 0.02]), llm_provider=llm)
-    level, cat, layers, called, _ = a.assess_message("i want to die")
-    assert level == Level.CRISIS and not called and llm.calls == 0
+    r = a.assess_message("i want to die")
+    assert r.level == Level.CRISIS and not r.llm_called and llm.calls == 0
 
 
 def test_grey_zone_uses_llm_verdict():
     a = SafetyAgent(classifier=FakeClf([0.6, 0.1, 0.1, 0.2]), llm_provider=MockProvider(0))
-    level, _, _, called, _ = a.assess_message("I think it is all pointless")
-    assert called and level == Level.SAFE
+    r = a.assess_message("I think it is all pointless")
+    assert r.llm_called and r.level == Level.SAFE
 
 
 def test_llm_failure_fails_safe():
     a = SafetyAgent(classifier=FakeClf([0.6, 0.1, 0.1, 0.2]), llm_provider=MockProvider("fail"))
-    level, cat, _, _, notes = a.assess_message("I think it is all pointless")
-    assert level == Level.CRISIS and any("fail-safe" in n for n in notes)
+    r = a.assess_message("I think it is all pointless")
+    assert r.level == Level.CRISIS and any("fail-safe" in n for n in r.notes)
+
+
+def test_unsure_level2_with_llm_down_is_not_a_crisis():
+    """Classifier unsure between tense and overwhelmed, LLM unreachable: no risk signal, so no fail-safe."""
+    a = SafetyAgent(classifier=FakeClf([0.1, 0.4, 0.45, 0.05]), llm_provider=MockProvider("fail"))
+    r = a.assess_message("I think I need a minute")
+    assert r.level == Level.OVERWHELMED and not any("fail-safe" in n for n in r.notes)
+
+
+def test_idiom_plus_confident_classifier_crisis_goes_to_llm():
+    """'my phone died' with an over-confident classifier: the rules saw only an idiom, so the LLM decides."""
+    llm = MockProvider(0)
+    a = SafetyAgent(classifier=FakeClf([0.02, 0.02, 0.01, 0.95]), llm_provider=llm)
+    r = a.assess_message("my phone died this morning")
+    assert r.llm_called and r.level == Level.SAFE and llm.calls == 1
+
+
+def test_short_blunt_reply_is_not_distress_even_if_classifier_says_so():
+    a = SafetyAgent(classifier=FakeClf([0.2, 0.1, 0.7, 0.0]), llm_provider=MockProvider(0))
+    assert a.assess_message("no").level == Level.SAFE
+    assert a.assess_message("no, it is too loud").level == Level.OVERWHELMED   # cue words: classifier stands
+    llm = MockProvider(0)
+    a = SafetyAgent(classifier=FakeClf([0.02, 0.02, 0.01, 0.95]), llm_provider=llm)
+    r = a.assess_message("bye")
+    assert r.llm_called and r.level == Level.SAFE                                # crisis guess on "bye": LLM decides
+
+
+def test_overload_words_raise_a_confident_safe():
+    a = SafetyAgent(classifier=FakeClf([0.9, 0.05, 0.03, 0.02]), llm_provider=MockProvider(0))
+    r = a.assess_message("too loud, please stop")
+    assert r.level == Level.OVERWHELMED and not r.llm_called
 
 
 def test_crisis_decision_has_fixed_helplines_and_teen_alert():
@@ -154,7 +191,6 @@ def test_crisis_decision_has_fixed_helplines_and_teen_alert():
 
 # ------------------------------------------------------------------ LM Studio provider (fake local server)
 def test_lmstudio_provider_against_fake_server():
-    pytest.importorskip("openai")
     import json
     import threading
     from http.server import BaseHTTPRequestHandler, HTTPServer
@@ -195,6 +231,8 @@ def test_lmstudio_provider_against_fake_server():
         assert res.level == Level.CRISIS and res.category == "cssrs_1_wish_dead"
         rf = seen["req"]["response_format"]
         assert rf["type"] == "json_schema" and rf["json_schema"]["schema"]["required"][0] == "level"
+        assert seen["req"]["chat_template_kwargs"] == {"enable_thinking": False}   # Qwen3 thinking switched off
+        assert prov.chat([{"role": "user", "content": "hi"}]).startswith("{")      # chat() returns plain text
     finally:
         srv.shutdown()
 

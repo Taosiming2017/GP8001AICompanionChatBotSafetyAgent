@@ -58,6 +58,11 @@ class RuleOutput:
         return not self.decisive and bool(self.soft or self.negated)
 
     @property
+    def has_cues(self) -> bool:
+        """Any risk, tension or overload words at all (idioms do not count)."""
+        return bool(self.decisive or self.soft or self.negated or self.tension or self.overwhelm)
+
+    @property
     def cue_level(self) -> Optional[Level]:
         """Level suggested by explicit words, ignoring decisive matches."""
         if self.overwhelm:
@@ -91,6 +96,7 @@ class RuleOutput:
             reasons=reasons,
             decisive=self.is_decisive,
             wants_llm=self.wants_llm,
+            risk_signal=self.wants_llm,   # soft cues and negated matches are possible crises
             latency_ms=self.latency_ms,
         )
 

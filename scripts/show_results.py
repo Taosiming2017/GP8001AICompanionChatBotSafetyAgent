@@ -121,6 +121,9 @@ def main():
             print("  - data/test_set.jsonl is still the draft. Final numbers need the team's rewritten test set.")
         if ev["meta"]["llm"].startswith("mock"):
             print("  - mock LLM: the rules+llm and full rows are not real results.")
+        if ev["meta"].get("llm_errors"):
+            print(f"  - LLM CALLS FAILED {ev['meta']['llm_errors']}: LM Studio was not reachable during evaluate, so the "
+                  "rules+llm and full rows are NOT real results. Start LM Studio, then: python scripts/train.py --start-at evaluate")
 
 
 if __name__ == "__main__":
